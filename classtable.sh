@@ -8,7 +8,8 @@ function init() {
     fi
     # $table: formatted as 3 fields: class id \t room \t name
     export table=$(cat table.cache | egrep -o '"[0-9]+_[0-9]+":{"acy":"107",[^}]+}' | sed -r \
-        -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1\t\2\t\3/')
+        -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1\t\2\t\3/' \
+        -e 's/\\r//g')
 
     if [ ! -e mytable ]; then
         for i in {1..112}; do echo 0 >> mytable; done
@@ -21,6 +22,7 @@ function init() {
     export show_class_name_room='name' # (name|room|nameroom)
     export show_extra_time='true'
 }
+
 
 function print_table() {
     printf 'x |Mon.          |Tue.          |Wed.          |Thu.          |Fri.          |'
@@ -160,13 +162,30 @@ function add_class() {
     export mytable="$(cat mytable.tmp)"
 }
 
+function show_table() {
+    print_table "$(generate_classtable_from_id)" > print_table
+    dialog --textbox print_table 130 130
+}
+
+function show_select_class() {
+    lst=$(printf "$table" | sed -r -e "s/^([0-9]+)(.*)$/\"\1\" \"\2\"/" | tr '\n' ' ')
+    # printf "$lst"
+    eval "dialog --menu 'Select Class' 30 130 30 $lst"
+}
+
+
 init
 
-generate_classtable_from_id
-print_table "$(generate_classtable_from_id)"
-add_class "1166_2G5CD-EC115"
-generate_classtable_from_id
-print_table "$(generate_classtable_from_id)"
+# while true; do
+    show_table
+    show_select_class
+# done
+
+# generate_classtable_from_id
+# print_table "$(generate_classtable_from_id)"
+# add_class "1166_2G5CD-EC115"
+# generate_classtable_from_id
+# print_table "$(generate_classtable_from_id)"
 
 # add_class "1174_2IJK-EC220,5CD-EC114"
 # generate_classtable_from_id
