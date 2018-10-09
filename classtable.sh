@@ -11,10 +11,11 @@ function init() {
         -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1\t\2\t\3/')
 
     if [ ! -e mytable ]; then
-        printf '%77s' | tr ' ' '\n' > mytable
+        for i in {1..112}; do echo 0 >> mytable; done
     fi
-    # $mytable: a 55-line file (or string) from 1A-7A then 1B-7B ... 1J-7J
-    export mytable=$(cat mytable)
+    # $mytable: a 112-line file (or string) from 1M-7M then 1N-7N ... 1L-7L
+    # 112 = 7 * 16
+    export mytable="$(cat mytable)"
 
     # other flags
     export show_class_name_room='name' # (name|room|nameroom)
@@ -32,20 +33,34 @@ function print_table() {
         printf '  ------------+--------------+'
     fi
     printf '\n'
-    printf "$1" | awk '''
-        BEGIN {FS="/"; letter=65}
+    printf "$1" | awk -v "show_extra_time=$show_extra_time" '''
+        BEGIN {
+            FS="/"
+            letter_idx=1
+            if (show_extra_time == "true") {
+                letters_s = "MNABCDXEFGHYIJKL"
+            }
+            else {
+                letters_s = "ABCDEFGHIJK"
+            }
+            split(letters_s, letters, "")
+        }
         {
             for (j=0; j<4; j++) {
-                if (j == 0) printf("%c |", letter)
+                if (j == 0) printf("%c |", letters[letter_idx])
                 else printf ". |"
 
-                for (i=1; i<=5; i++) {
+                for (i=1; i<=NF; i++) {
                     printf("%-14s|", substr($i, 14*j, 14))
                 }
                 printf "\n"
             }
-            print "--+--------------+--------------+--------------+--------------+--------------+"
-            letter += 1
+            printf "--+--------------+--------------+--------------+--------------+--------------+"
+            if (show_extra_time == "true") {
+                printf "--------------+--------------+"
+            }
+            printf "\n"
+            letter_idx += 1
         }
     '''
 }
@@ -55,27 +70,39 @@ function generate_classtable_from_id() {
     while read classid; do
         # echo classid=$classid
         i=$(( $i + 1 ))
-        printf "$table" | awk -F "\t" """
-        BEGIN {flag=\"$show_class_name_room\"; query=\"$classid\"; found=0}
+        if [ "$show_extra_time" = "false" ]; then
+            if [ "$(( $i % 7 ))" = "6" ] || [ "$(( $i % 7 ))" = "7" ]; then
+                continue
+            fi
+        fi
+        printf "$table" | awk -F "\t" -v "flag=$show_class_name_room" -v "query=$classid" '''
+        BEGIN {found=0}
         {
-            if (\$1 == query && !found) {
+            if ($1 == query && !found) {
                 found=1
-                if (flag == \"name\")
-                    printf \$3
-                else if (flag == \"room\")
-                    printf \$2
-                else if (flag == \"nameroom\")
-                    printf \$3 \"___\" \$2
+                if (flag == "name")
+                    printf $3
+                else if (flag == "room")
+                    printf $2
+                else if (flag == "nameroom")
+                    printf $3 "___" $2
             }
         }
-        """
-        if [ $(( $i%5 )) == 0 ]; then
+        '''
+
+        if [ $show_extra_time = true ]; then
+            weekdays=7
+        else
+            weekdays=5
+        fi
+
+        if [ $(( $i%$weekdays )) == 0 ]; then
             printf '\n'
         else
             printf '/'
         fi
     done < mytable
-    printf '\n'
+    printf '/\n'
 }
 
 function add_class() {
@@ -86,7 +113,7 @@ function add_class() {
         -e "s/,//g")
     # class_room=$(echo "$1" | sed -r -e "s/^[0-9]+_(.*)/\1/g" \
     #     -e "s/([0-9][A-Z]+)+-//g")
-    add_list="add_list"
+    add_list=""
     weekday=0
     for (( i=0; i<${#class_time}; i++ )); do
         ch=${class_time:i:1}
@@ -95,41 +122,54 @@ function add_class() {
             # is a number
             weekday=$ch # 1 ~ 7
         else
-            if [ $ch = A ]; then time=1; fi
-            if [ $ch = B ]; then time=2; fi
-            if [ $ch = C ]; then time=3; fi
-            if [ $ch = D ]; then time=4; fi
-            if [ $ch = E ]; then time=5; fi
-            if [ $ch = F ]; then time=6; fi
-            if [ $ch = G ]; then time=7; fi
-            if [ $ch = H ]; then time=8; fi
-            if [ $ch = I ]; then time=9; fi
-            if [ $ch = J ]; then time=10; fi
-            if [ $ch = K ]; then time=11; fi
+            if [ $ch = M ]; then time=1; fi
+            if [ $ch = N ]; then time=2; fi
+            if [ $ch = A ]; then time=3; fi
+            if [ $ch = B ]; then time=4; fi
+            if [ $ch = C ]; then time=5; fi
+            if [ $ch = D ]; then time=6; fi
+            if [ $ch = X ]; then time=7; fi
+            if [ $ch = E ]; then time=8; fi
+            if [ $ch = F ]; then time=9; fi
+            if [ $ch = G ]; then time=10; fi
+            if [ $ch = H ]; then time=11; fi
+            if [ $ch = Y ]; then time=12; fi
+            if [ $ch = I ]; then time=13; fi
+            if [ $ch = J ]; then time=14; fi
+            if [ $ch = K ]; then time=15; fi
+            if [ $ch = L ]; then time=16; fi
             index=$(( ($time-1)*7 + $weekday ))
             echo "debug: weekday=$weekday; time=$time; index=$index"
             add_list="$add_list $index"
         fi
     done
-    echo "debug: class=$class; class_time=$class_time; add_list=$add_list"
-    printf "$add_list\n$mytable" | awk '''
-    /^add_list/ {split($0, arr, " ")}
+    echo "debug: class=$class; class_time=$class_time; add_list=$add_list; add_id=$class"
+    printf "$mytable" | awk -v "add_list=$add_list" -v "add_id=$class" '''
+    BEGIN {split(add_list, add_arr, " ")}
     {
-        print "NR" NR
-        for (i=2; i<=length(arr); i++) {
-            if (arr[i] == NR) {
-                print "adding" arr[i]
+        found = 0
+        for (i=1; i<=length(add_arr); i++) {
+            if (add_arr[i] == NR) {
+                found = 1
+                print add_id
             }
         }
+        if (!found) print 0
     }
-    '''
+    ''' > mytable.tmp
+    export mytable="$(cat mytable.tmp)"
 }
 
 init
 
-add_class "1010_2G5CD-EC115"
+generate_classtable_from_id
+print_table "$(generate_classtable_from_id)"
+add_class "1166_2G5CD-EC115"
+generate_classtable_from_id
+print_table "$(generate_classtable_from_id)"
+
 # add_class "1174_2IJK-EC220,5CD-EC114"
-# print_table "$(generate_classtable_from_id)"
+# generate_classtable_from_id
 # echo "$table" | awk '{print $1 "_" $2}' > /tmp/xxx
 # while read line; do
 #     add_class "$line"
@@ -137,6 +177,9 @@ add_class "1010_2G5CD-EC115"
 
 echo done
 exit 0
+
+1166
+1165
 
 "1071_0411": {
                 "acy": "107",
