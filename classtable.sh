@@ -7,12 +7,14 @@ init() {
         name=**&m_teaname=**&m_cos_id=**&m_cos_code=**&m_crstime=**&m_crsoutline=**&m_costype=**' > table.cache
     fi
     # $table: formatted as 3 fields: class id \t room \t name
-    export table=$(cat table.cache | egrep -o '"[0-9]+_[0-9]+":{"acy":"107",[^}]+}' | sed -r \
+    cat table.cache | egrep -o '"[0-9]+_[0-9]+":{"acy":"107",[^}]+}' | \
+        sed -r \
         -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1\t\2\t\3/' \
-        -e 's/\\r//g')
+        -e 's/\\r//g' > table
+    export table="$(cat table)"
 
     if [ ! -e mytable ]; then
-        for i in {1..112}; do echo 0 >> mytable; done
+        for i in $(seq 1 112); do echo 0 >> mytable; done
     fi
     cp mytable mytable.tmp
     # $mytable: a 112-line file (or string) from 1M-7M then 1N-7N ... 1L-7L
@@ -97,7 +99,7 @@ generate_classtable_from_id() {
         }
         '''
 
-        if [ $(( $i%7 )) == 0 ]; then
+        if [ $(( $i%7 )) = 0 ]; then
             printf '\n'
         else
             printf '/'
@@ -116,9 +118,9 @@ add_class() {
     #     -e "s/([0-9][A-Z]+)+-//g")
     add_list=""
     weekday=0
-    for (( i=0; i<${#class_time}; i++ )); do
-        ch=${class_time:i:1}
-        echo ch=$ch
+    for i in $(seq 1 ${#class_time}); do
+        ch=$(printf $class_time | cut -c $i-$i)
+        # echo ch=$ch
         if [ -z "${ch#[0-9]}" ]; then
             # is a number
             weekday=$ch # 1 ~ 7
@@ -196,7 +198,7 @@ show_conflict() {
 
 
 init
-generate_classtable_from_id > gen # debug
+# generate_classtable_from_id > gen # debug
 
 while true; do
     show_table
@@ -208,7 +210,7 @@ while true; do
         add_class $classid
         if [ -e '/tmp/conflict' ]; then
             show_conflict
-            # rm /tmp/conflict
+            rm /tmp/conflict
         fi
     else
         # todo: detect conflict
