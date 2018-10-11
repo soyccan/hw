@@ -39,30 +39,34 @@ function print_table() {
     printf "$1" | awk -v "show_extra_time=$show_extra_time" '''
         BEGIN {
             FS="/"
-            letter_idx=1
-            if (show_extra_time == "true") {
-                letters_s = "MNABCDXEFGHYIJKL"
-            }
-            else {
-                letters_s = "ABCDEFGHIJK"
-            }
+            letter_idx = 1
+            letters_s = "MNABCDXEFGHYIJKL"
             split(letters_s, letters, "")
         }
         {
-            for (j=0; j<4; j++) {
-                if (j == 0) printf("%c |", letters[letter_idx])
-                else printf ". |"
+            if (show_extra_time == "true" \
+                || letter_idx == 3  || letter_idx == 4  || letter_idx == 5 \
+                || letter_idx == 6  || letter_idx == 8  || letter_idx == 9 \
+                || letter_idx == 10 || letter_idx == 11 || letter_idx == 13 \
+                || letter_idx == 14 || letter_idx == 15) {
 
-                for (i=1; i<=NF; i++) {
-                    printf("%-14s|", substr($i, 14*j, 14))
+                for (j=0; j<5; j++) {
+                    if (j == 0) printf("%c |", letters[letter_idx])
+                    else printf ". |"
+
+                    for (i=1; i<=NF; i++) {
+                        if (show_extra_time == "true" || i <= 5) {
+                            printf("%-14s|", substr($i, 14*j, 14))
+                        }
+                    }
+                    printf "\n"
+                }
+                printf "--+--------------+--------------+--------------+--------------+--------------+"
+                if (show_extra_time == "true") {
+                    printf "--------------+--------------+"
                 }
                 printf "\n"
             }
-            printf "--+--------------+--------------+--------------+--------------+--------------+"
-            if (show_extra_time == "true") {
-                printf "--------------+--------------+"
-            }
-            printf "\n"
             letter_idx += 1
         }
     '''
@@ -73,11 +77,11 @@ function generate_classtable_from_id() {
     while read classid; do
         # echo classid=$classid
         i=$(( $i + 1 ))
-        if [ "$show_extra_time" = "false" ]; then
-            if [ "$(( $i % 7 ))" = "6" ] || [ "$(( $i % 7 ))" = "7" ]; then
-                continue
-            fi
-        fi
+        # if [ "$show_extra_time" = "false" ]; then
+        #     if [ "$(( $i % 7 ))" = "6" ] || [ "$(( $i % 7 ))" = "7" ]; then
+        #         continue
+        #     fi
+        # fi
         printf "$table" | awk -F "\t" -v "flag=$show_class_name_room" -v "query=$classid" '''
         BEGIN {found=0}
         {
@@ -93,19 +97,13 @@ function generate_classtable_from_id() {
         }
         '''
 
-        if [ $show_extra_time = true ]; then
-            weekdays=7
-        else
-            weekdays=5
-        fi
-
-        if [ $(( $i%$weekdays )) == 0 ]; then
+        if [ $(( $i%7 )) == 0 ]; then
             printf '\n'
         else
             printf '/'
         fi
     done < mytable.tmp
-    printf '/\n'
+    printf '\n'
 }
 
 function add_class() {
@@ -150,15 +148,20 @@ function add_class() {
     printf "$mytable" | awk -v "add_list=$add_list" -v "add_id=$class" '''
     BEGIN {split(add_list, add_arr, " ")}
     {
-        if ($0 == "0") {
-            found = 0
-            for (i=1; i<=length(add_arr); i++) {
-                if (add_arr[i] == NR) {
-                    found = 1
-                    print add_id
-                }
+        to_add = 0
+        for (i=1; i<=length(add_arr); i++) {
+            if (add_arr[i] == NR) {
+                to_add = 1
             }
-            if (!found) print 0
+        }
+        if (to_add) {
+            if ($0 == "0" || $0 == add_id) {
+                print add_id
+            }
+            else {
+                print add_id > "/tmp/conflict"
+                print $0
+            }
         }
         else {
             print $0
@@ -169,8 +172,8 @@ function add_class() {
 }
 
 function show_table() {
-    print_table "$(generate_classtable_from_id)" > print_table
-    dialog --textbox print_table 130 130
+    print_table "$(generate_classtable_from_id)" > /tmp/print_table
+    dialog --textbox /tmp/print_table 130 130
 }
 
 function show_select_class() {
@@ -187,8 +190,13 @@ function ask_save() {
     dialog --yesno 'Save current classtable?' 30 130
 }
 
+function show_conflict() {
+    dialog --msgbox "Class time conflict: $(cat /tmp/conflict)" 30 130
+}
+
 
 init
+generate_classtable_from_id > gen # debug
 
 while true; do
     show_table
@@ -198,7 +206,10 @@ while true; do
         classid=$(cat /tmp/classid)
         # echo debug: classid=$classid
         add_class $classid
-        generate_classtable_from_id
+        if [ -e '/tmp/conflict' ]; then
+            show_conflict
+            # rm /tmp/conflict
+        fi
     else
         # todo: detect conflict
         ask_save
