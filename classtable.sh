@@ -14,13 +14,14 @@ function init() {
     if [ ! -e mytable ]; then
         for i in {1..112}; do echo 0 >> mytable; done
     fi
+    cp mytable mytable.tmp
     # $mytable: a 112-line file (or string) from 1M-7M then 1N-7N ... 1L-7L
     # 112 = 7 * 16
-    export mytable="$(cat mytable)"
+    export mytable="$(cat mytable.tmp)"
 
     # other flags
-    export show_class_name_room='name' # (name|room|nameroom)
-    export show_extra_time='true'
+    export show_class_name_room="$(cat show_class_name_room)" # (name|room|nameroom)
+    export show_extra_time="$(cat show_extra_time)"
 }
 
 
@@ -103,7 +104,7 @@ function generate_classtable_from_id() {
         else
             printf '/'
         fi
-    done < mytable
+    done < mytable.tmp
     printf '/\n'
 }
 
@@ -149,14 +150,19 @@ function add_class() {
     printf "$mytable" | awk -v "add_list=$add_list" -v "add_id=$class" '''
     BEGIN {split(add_list, add_arr, " ")}
     {
-        found = 0
-        for (i=1; i<=length(add_arr); i++) {
-            if (add_arr[i] == NR) {
-                found = 1
-                print add_id
+        if ($0 == "0") {
+            found = 0
+            for (i=1; i<=length(add_arr); i++) {
+                if (add_arr[i] == NR) {
+                    found = 1
+                    print add_id
+                }
             }
+            if (!found) print 0
         }
-        if (!found) print 0
+        else {
+            print $0
+        }
     }
     ''' > mytable.tmp
     export mytable="$(cat mytable.tmp)"
@@ -168,18 +174,40 @@ function show_table() {
 }
 
 function show_select_class() {
-    lst=$(printf "$table" | sed -r -e "s/^([0-9]+)(.*)$/\"\1\" \"\2\"/" | tr '\n' ' ')
+    lst=$(printf "$table" | sed -r -e "s/^([0-9]+)\t(.*)\t(.*)$/\"\1_\2\" \"\3\"/" | tr '\n' ' ')
     # printf "$lst"
-    eval "dialog --menu 'Select Class' 30 130 30 $lst"
+    eval "dialog --menu 'Select Class' 30 130 30 $lst" 2> /tmp/classid
+}
+
+function ask_select() {
+    dialog --yesno 'Continue class selecting?\nYES to continue, NO to quit' 30 130
+}
+
+function ask_save() {
+    dialog --yesno 'Save current classtable?' 30 130
 }
 
 
 init
 
-# while true; do
+while true; do
     show_table
-    show_select_class
-# done
+    ask_select
+    if [ "$?" = 0 ]; then
+        show_select_class
+        classid=$(cat /tmp/classid)
+        # echo debug: classid=$classid
+        add_class $classid
+        generate_classtable_from_id
+    else
+        # todo: detect conflict
+        ask_save
+        if [ "$?" = 0 ]; then
+            cp mytable.tmp mytable
+        fi
+        break
+    fi
+done
 
 # generate_classtable_from_id
 # print_table "$(generate_classtable_from_id)"
