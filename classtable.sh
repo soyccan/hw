@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function init() {
+init() {
     if [ ! -e table.cache ]; then
         curl 'https://timetable.nctu.edu.tw/?r=main/get_cos_list' --data \
         'm_acy=107&m_sem=1&m_degree=3&m_dep_id=17&m_group=**&m_grade=**&m_class=**&m_option=**&m_crs \
@@ -25,7 +25,7 @@ function init() {
 }
 
 
-function print_table() {
+print_table() {
     printf 'x |Mon.          |Tue.          |Wed.          |Thu.          |Fri.          |'
     if [ "$show_extra_time" = "true" ]; then
         printf 'Sat.          |Sun.          |'
@@ -72,7 +72,7 @@ function print_table() {
     '''
 }
 
-function generate_classtable_from_id() {
+generate_classtable_from_id() {
     i=0
     while read classid; do
         # echo classid=$classid
@@ -106,7 +106,7 @@ function generate_classtable_from_id() {
     printf '\n'
 }
 
-function add_class() {
+add_class() {
     # ex: $2 = 1010_2G5CD-EC115 or 1174_2IJK-EC220,5CD-EC114
     class=$(echo "$1" | egrep -o "^[0-9]*")
     class_time=$(echo "$1" | sed -r -e "s/^[0-9]+_(.*)/\1/g" \
@@ -171,26 +171,26 @@ function add_class() {
     export mytable="$(cat mytable.tmp)"
 }
 
-function show_table() {
+show_table() {
     print_table "$(generate_classtable_from_id)" > /tmp/print_table
     dialog --textbox /tmp/print_table 130 130
 }
 
-function show_select_class() {
+show_select_class() {
     lst=$(printf "$table" | sed -r -e "s/^([0-9]+)\t(.*)\t(.*)$/\"\1_\2\" \"\3\"/" | tr '\n' ' ')
     # printf "$lst"
     eval "dialog --menu 'Select Class' 30 130 30 $lst" 2> /tmp/classid
 }
 
-function ask_select() {
+ask_select() {
     dialog --yesno 'Continue class selecting?\nYES to continue, NO to quit' 30 130
 }
 
-function ask_save() {
+ask_save() {
     dialog --yesno 'Save current classtable?' 30 130
 }
 
-function show_conflict() {
+show_conflict() {
     dialog --msgbox "Class time conflict: $(cat /tmp/conflict)" 30 130
 }
 
@@ -233,37 +233,4 @@ done
 #     add_class "$line"
 # done < /tmp/xxx
 
-echo done
 exit 0
-
-1166
-1165
-
-"1071_0411": {
-                "acy": "107",
-                "sem": "1",
-                "cos_id": "0411",
-                "cos_code": "DAM1367",
-                "num_limit": "120",
-                "dep_limit": "N",
-                "URL": null,
-                "cos_cname": "\u5fae\u7a4d\u5206\u7532\uff08\u4e00\uff09",
-                "cos_credit": "4.00",
-                "cos_hours": "4.00",
-                "TURL": "http://jupiter.math.nctu.edu.tw/~smchang/",
-                "teacher": "\u5f35\u66f8\u9298",
-                "cos_time": "1GH4CD-SA321",
-                "memo": "\u5927\u73ed\u6388\u8ab2",
-                "cos_ename": "Calculus (I)",
-                "brief": "",
-                "degree": "3",
-                "dep_id": "17",
-                "dep_primary": "2",
-                "dep_cname": "\u8cc7\u8a0a\u5de5\u7a0b\u5b78\u7cfb",
-                "dep_ename": "Department of Computer Science",
-                "cos_type": "\u5fc5\u4fee",
-                "cos_type_e": "Required",
-                "crsoutline_type": "data",
-                "reg_num": "120",
-                "depType": "U"
-            },
