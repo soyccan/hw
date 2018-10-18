@@ -22,10 +22,26 @@ init() {
     export mytable="$(cat mytable.tmp)"
 
     # other flags
-    export show_class_name_room="$(cat show_class_name_room)" # (name|room|nameroom)
-    export show_extra_time="$(cat show_extra_time)"
+    load_options
 }
 
+load_options() {
+    if [ ! -e options ]; then touch options; fi
+    options="$(cat options)"
+    echo options=$options
+    export show_class_name_room="false"
+    export show_extra_time="false"
+    for line in $options; do
+        echo line=$line
+        if [ "$line" = 1 ]; then
+            export show_extra_time="true"
+        fi
+        if [ "$line" = 2 ]; then
+            export show_class_name_room='true'
+        fi
+    done
+    echo show_class_name_room=$show_class_name_room, show_extra_time=$show_extra_time
+}
 
 print_table() {
     printf 'x |Mon.          |Tue.          |Wed.          |Thu.          |Fri.          |'
@@ -74,6 +90,23 @@ print_table() {
     '''
 }
 
+get_name_by_id() {
+    classid="$1"
+    flag="$2" # true or false, whether also get classroom, pass global show_class_name_room at most cases
+    printf "$table" | awk -F "\t" -v "flag=$flag" -v "query=$classid" '''
+    BEGIN {found=0}
+    {
+        if ($1 == query && !found) {
+            found=1
+            if (flag == "true")
+                printf $3 "___" $2
+            else
+                printf $3
+        }
+    }
+    '''
+}
+
 generate_classtable_from_id() {
     i=0
     while read classid; do
@@ -84,20 +117,8 @@ generate_classtable_from_id() {
         #         continue
         #     fi
         # fi
-        printf "$table" | awk -F "\t" -v "flag=$show_class_name_room" -v "query=$classid" '''
-        BEGIN {found=0}
-        {
-            if ($1 == query && !found) {
-                found=1
-                if (flag == "name")
-                    printf $3
-                else if (flag == "room")
-                    printf $2
-                else if (flag == "nameroom")
-                    printf $3 "___" $2
-            }
-        }
-        '''
+
+        get_name_by_id "$classid" "$show_class_name_room"
 
         if [ $(( $i%7 )) = 0 ]; then
             printf '\n'
@@ -162,6 +183,7 @@ add_class() {
             }
             else {
                 print add_id > "/tmp/conflict"
+                print '\n' >> "/tmp/conflict"
                 print $0
             }
         }
@@ -193,7 +215,36 @@ ask_save() {
 }
 
 show_conflict() {
-    dialog --msgbox "Class time conflict: $(cat /tmp/conflict)" 30 130
+    echo > /tmp/conflict.name
+    for line in $(cat /tmp/conflict | sort | uniq); do
+        printf "$(get_name_by_id $line true)" >> /tmp/conflict.name
+    done
+    dialog --msgbox "Class time conflict: $(cat /tmp/conflict.name)" 30 130
+}
+
+show_options() {
+    if [ "$show_extra_time" = 'true' ]; then
+        stat1='on'
+    else
+        stat1='off'
+    fi
+    if [ "$show_class_name_room" = 'true' ]; then
+        stat2='on'
+    else
+        stat2='off'
+    fi
+    dialog --checklist 'Options' 30 130 30 \
+        '1' 'Show MNXYL and Sat. and Sun.' "$stat1" \
+        '2' 'Show class room' "$stat2" 2> options
+}
+
+show_menu() {
+    dialog --menu 'Class Management System' 30 130 30 \
+        'showtable' 'Show Current Class Table' \
+        'addclass' 'Add Class' \
+        'options' 'Options' \
+        'clear' 'Remove All Class in Current Classtable' \
+        'quit' 'Quit' 2> /tmp/menu
 }
 
 
@@ -201,25 +252,38 @@ init
 # generate_classtable_from_id > gen # debug
 
 while true; do
-    show_table
-    ask_select
-    if [ "$?" = 0 ]; then
-        show_select_class
-        classid=$(cat /tmp/classid)
-        # echo debug: classid=$classid
-        add_class $classid
-        if [ -e '/tmp/conflict' ]; then
-            show_conflict
-            rm /tmp/conflict
-        fi
-    else
-        # todo: detect conflict
-        ask_save
-        if [ "$?" = 0 ]; then
-            cp mytable.tmp mytable
-        fi
-        break
-    fi
+    show_menu
+    case "$(cat /tmp/menu)" in
+        'showtable')
+            show_table
+        ;;
+        'addclass')
+            show_select_class
+            classid=$(cat /tmp/classid)
+            # echo debug: classid=$classid
+            add_class $classid
+            if [ -e '/tmp/conflict' ]; then
+                show_conflict
+                rm /tmp/conflict
+            fi
+        ;;
+        'options')
+            show_options
+            load_options
+        ;;
+        'clear')
+            rm mytable
+            rm mytable.tmp
+            init
+        ;;
+        'quit')
+            ask_save
+            if [ "$?" = 0 ]; then
+                cp mytable.tmp mytable
+            fi
+            break
+        ;;
+    esac
 done
 
 # generate_classtable_from_id
