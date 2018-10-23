@@ -170,9 +170,14 @@ add_class() {
             add_list="$add_list $index"
         fi
     done
+
     echo "debug: class=$class; class_time=$class_time; add_list=$add_list; add_id=$class"
+    echo mytable=$mytable
+
     printf "$mytable" | awk -v "add_list=$add_list" -v "add_id=$class" '''
-    BEGIN {split(add_list, add_arr, " ")}
+    BEGIN {
+        split(add_list, add_arr, " ")
+    }
     {
         to_add = 0
         for (i=1; i<=length(add_arr); i++) {
@@ -187,6 +192,8 @@ add_class() {
             else {
                 print $0 > "/tmp/conflict"
                 print '\n' >> "/tmp/conflict"
+                print add_id > "/tmp/conflict_new"
+                print '\n' >> "/tmp/conflict_new"
                 print $0
             }
         }
@@ -195,7 +202,33 @@ add_class() {
         }
     }
     ''' > mytable.tmp
+
     export mytable="$(cat mytable.tmp)"
+    echo debug:conflict_list=$([ -e /tmp/conflict_new ] && cat /tmp/conflict_new)
+    echo mytable=$mytable
+
+    printf "$mytable" | awk -v "conflict_list=$([ -e /tmp/conflict_new ] && cat /tmp/conflict_new)" '''
+    BEGIN {
+        split(conflict_list, conflict_arr, "\n")
+    }
+    {
+        conflict = 0
+        for (i=1; i<=length(conflict_arr); i++) {
+            if (conflict_arr[i] == $0) {
+                conflict = 1
+            }
+        }
+        if (conflict) {
+            print "0"
+        }
+        else {
+            print $0
+        }
+    }
+    ''' > mytable.tmp
+
+    export mytable="$(cat mytable.tmp)"
+    echo mytable=$mytable
 }
 
 show_table() {
