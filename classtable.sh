@@ -207,9 +207,9 @@ add_class() {
     echo debug:conflict_list=$([ -e /tmp/conflict_new ] && cat /tmp/conflict_new)
     echo mytable=$mytable
 
-    printf "$mytable" | awk -v "conflict_list=$([ -e /tmp/conflict_new ] && cat /tmp/conflict_new)" '''
+    printf "$mytable" | awk -v "conflict_list=$([ -e /tmp/conflict_new ] && cat /tmp/conflict_new | tr '\n' ' ')" '''
     BEGIN {
-        split(conflict_list, conflict_arr, "\n")
+        split(conflict_list, conflict_arr, " ")
     }
     {
         conflict = 0
@@ -301,7 +301,7 @@ while true; do
             add_class $classid
             if [ -e '/tmp/conflict' ]; then
                 show_conflict
-                rm /tmp/conflict
+                rm /tmp/conflict /tmp/conflict_new
             fi
         ;;
         'options')
