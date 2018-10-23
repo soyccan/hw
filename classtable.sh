@@ -185,7 +185,7 @@ add_class() {
                 print add_id
             }
             else {
-                print add_id > "/tmp/conflict"
+                print $0 > "/tmp/conflict"
                 print '\n' >> "/tmp/conflict"
                 print $0
             }
