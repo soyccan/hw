@@ -139,6 +139,7 @@ add_class() {
         -e "s/,//g")
     # class_room=$(echo "$1" | sed -r -e "s/^[0-9]+_(.*)/\1/g" \
     #     -e "s/([0-9][A-Z]+)+-//g")
+    echo debug:class=$class, class_time=$class_time
     add_list=""
     weekday=0
     for i in $(seq 1 ${#class_time}); do
@@ -203,8 +204,8 @@ show_table() {
 }
 
 show_select_class() {
-    lst=$(printf "$table" | sed -r -e "s/^([0-9]+)\t(.*)\t(.*)$/\"\1_\2\" \"\3\"/" | tr '\n' ' ')
-    # printf "$lst"
+    lst=$(printf "$table" | sed -Er -e "s/^([0-9]+)	(.*)	(.*)$/\"\1_\2\" \"\3\"/" | tr '\n' ' ')
+    #printf "$lst"
     eval "dialog --menu 'Select Class' 30 130 30 $lst" 2> /tmp/classid
 }
 
