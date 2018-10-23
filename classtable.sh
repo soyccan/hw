@@ -7,10 +7,12 @@ init() {
         name=**&m_teaname=**&m_cos_id=**&m_cos_code=**&m_crstime=**&m_crsoutline=**&m_costype=**' > table.cache
     fi
     # $table: formatted as 3 fields: class id \t room \t name
-    cat table.cache | egrep -o '"[0-9]+_[0-9]+":{"acy":"107",[^}]+}' | \
-        sed -r \
-        -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1\t\2\t\3/' \
-        -e 's/\\r//g' > table
+    if [ ! -e table ]; then
+        cat table.cache | egrep -o '"[0-9]+_[0-9]+":{"acy":"107",[^}]+}' | \
+            sed -r \
+            -e 's/^.*"cos_id":"([0-9]*)".*"cos_time":"([^"]*)".*"cos_ename":"([^"]*)".*$/\1	\2	\3/' \
+            -e 's/\\r//g' > table
+    fi
     export table="$(cat table)"
 
     if [ ! -e mytable ]; then
@@ -132,7 +134,7 @@ generate_classtable_from_id() {
 add_class() {
     # ex: $2 = 1010_2G5CD-EC115 or 1174_2IJK-EC220,5CD-EC114
     class=$(echo "$1" | egrep -o "^[0-9]*")
-    class_time=$(echo "$1" | sed -r -e "s/^[0-9]+_(.*)/\1/g" \
+    class_time=$(echo "$1" | sed -Er -e "s/^[0-9]+_(.*)/\1/g" \
         -e "s/-[A-Za-z0-9]*//g" \
         -e "s/,//g")
     # class_room=$(echo "$1" | sed -r -e "s/^[0-9]+_(.*)/\1/g" \
@@ -215,6 +217,7 @@ ask_save() {
 }
 
 show_conflict() {
+    echo "show_conflict"
     echo > /tmp/conflict.name
     for line in $(cat /tmp/conflict | sort | uniq); do
         printf "$(get_name_by_id $line true)" >> /tmp/conflict.name
