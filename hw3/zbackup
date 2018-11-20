@@ -1,0 +1,116 @@
+#!/usr/bin/env python3.7
+
+import sys, datetime, subprocess
+
+def usage():
+    print('Usage: zbackup [[--list | --delete | --export] target-dataset [ID]')
+    print('                | [--import] target-dataset filename')
+    print('                | target-dataset [rotation count]]')
+    exit(1)
+
+def get_snapshots(dataset=None):
+    snapshots = []
+    output = subprocess.run('zfs list -t snapshot'.split(' '), capture_output=True).stdout
+    output = output.decode()
+    for i, line in enumerate(output.split('\n')[1:]):
+        cols = line.split(' ')
+        if cols:
+            s = cols[0].split('@')
+            if s[1:] and (not dataset or s[0] == dataset):
+                snapshots.append({
+                    'id': i,
+                    'dataset': s[0],
+                    'create_time': s[1]})
+    return snapshots
+
+def delete_snapshots(dataset, Id=None):
+    print(f'delete_snapshots({dataset}, {Id})')
+    snapshots = get_snapshots(dataset)
+    for ss in snapshots:
+        if not Id or ss['id'] == Id:
+            subprocess.run(['zfs', 'destroy', f'{dataset}@{ss["create_time"]}'])
+
+if sys.argv[1] == '--list':
+    if sys.argv[2:]:
+        target_dataset = sys.argv[2]
+    else:
+        target_dataset = ''
+
+    if sys.argv[3:]:
+        try:
+            Id = int(sys.argv[3])
+        except ValueError:
+            print('id should be integer')
+            usage()
+    else:
+        Id = None
+
+    print(f'list: target={target_dataset} id={Id}')
+
+    snapshots = get_snapshots(target_dataset)
+    print('%-20s%-20s%-20s' % ('ID', 'Dataset', 'Time'))
+    for ss in snapshots:
+        if not Id or Id == ss['id']:
+            print('%-20d%-20s%-20s' % (ss['id'], ss['dataset'], ss['create_time']))
+
+elif sys.argv[1] == '--delete':
+    if not sys.argv[2:]:
+        usage()
+    target_dataset = sys.argv[2]
+    Id = None
+    if sys.argv[3:]:
+        try:
+            Id = int(sys.argv[3])
+        except ValueError:
+            print('id should be integer')
+            usage()
+
+    print(f'delete: target={target_dataset} id={Id}')
+
+    delete_snapshots(target_dataset)
+
+elif sys.argv[1] == '--export':
+    if not sys.argv[2:]:
+        usage()
+    target_dataset = sys.argv[2]
+    Id = None
+    if sys.argv[3:]:
+        try:
+            Id = int(sys.argv[3])
+        except ValueError:
+            print('id should be integer')
+            usage()
+
+    print(f'export: target={target_dataset} id={Id}')
+
+elif sys.argv[1] == '--import':
+    if not sys.argv[3:]:
+        usage()
+    target_dataset = sys.argv[2]
+    filename = sys.argv[3]
+
+    print(f'import: target={target_dataset} filename={filename}')
+
+else:
+    # create new snapshot
+    target_dataset = sys.argv[1]
+
+    if sys.argv[2:]:
+        try:
+            rotation_count = int(sys.argv[2])
+        except ValueError:
+            print('rotation count should be integer')
+            usage()
+    else:
+        rotation_count = 20
+
+    print(f'target_dataset={target_dataset}, rotation_count={rotation_count}')
+
+    snapshots = get_snapshots(target_dataset)
+    if len(snapshots) >= rotation_count:
+        oldest = min(snapshots, key = lambda el: el['create_time'])
+        delete_snapshots(target_dataset, oldest['id'])
+
+    create_time = datetime.datetime.now().strftime('%Y.%m.%d_%H:%M:%S')
+    print(f'creating snapshot {target_dataset}@{create_time}')
+    subprocess.run(['zfs', 'snapshot', f'{target_dataset}@{create_time}'])
