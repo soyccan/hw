@@ -18,7 +18,7 @@ def get_snapshots(dataset=None):
             s = cols[0].split('@')
             if s[1:] and (not dataset or s[0] == dataset):
                 snapshots.append({
-                    'id': i,
+                    'id': i+1,
                     'dataset': s[0],
                     'create_time': s[1]})
     return snapshots
@@ -26,9 +26,16 @@ def get_snapshots(dataset=None):
 def delete_snapshots(dataset, Id=None):
     print(f'delete_snapshots({dataset}, {Id})')
     snapshots = get_snapshots(dataset)
+    action = False
     for ss in snapshots:
-        if not Id or ss['id'] == Id:
+        if Id == None or ss['id'] == Id:
+            action = True
             subprocess.run(['zfs', 'destroy', f'{dataset}@{ss["create_time"]}'])
+    if not action:
+        print('the specific snapshot not found, do nothing')
+
+if not sys.argv[1:]:
+    usage()
 
 if sys.argv[1] == '--list':
     if sys.argv[2:]:
@@ -50,7 +57,7 @@ if sys.argv[1] == '--list':
     snapshots = get_snapshots(target_dataset)
     print('%-20s%-20s%-20s' % ('ID', 'Dataset', 'Time'))
     for ss in snapshots:
-        if not Id or Id == ss['id']:
+        if Id == None or Id == ss['id']:
             print('%-20d%-20s%-20s' % (ss['id'], ss['dataset'], ss['create_time']))
 
 elif sys.argv[1] == '--delete':
@@ -67,7 +74,7 @@ elif sys.argv[1] == '--delete':
 
     print(f'delete: target={target_dataset} id={Id}')
 
-    delete_snapshots(target_dataset)
+    delete_snapshots(target_dataset, Id)
 
 elif sys.argv[1] == '--export':
     if not sys.argv[2:]:
@@ -106,11 +113,13 @@ else:
 
     print(f'target_dataset={target_dataset}, rotation_count={rotation_count}')
 
+    rotate = False
     snapshots = get_snapshots(target_dataset)
     if len(snapshots) >= rotation_count:
         oldest = min(snapshots, key = lambda el: el['create_time'])
         delete_snapshots(target_dataset, oldest['id'])
+        rotate = True
 
-    create_time = datetime.datetime.now().strftime('%Y.%m.%d_%H:%M:%S')
-    print(f'creating snapshot {target_dataset}@{create_time}')
-    subprocess.run(['zfs', 'snapshot', f'{target_dataset}@{create_time}'])
+    create_time = datetime.datetime.now()
+    print(f'{"Rotate" if rotate else "Snap"} {target_dataset}@{create_time.strftime("%c")}')
+    subprocess.run(['zfs', 'snapshot', f'{target_dataset}@{create_time.strftime("%Y.%m.%d_%H:%M:%S")}'])
