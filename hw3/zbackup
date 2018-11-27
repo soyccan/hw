@@ -1,6 +1,7 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3.6
 
-import sys, datetime, subprocess
+import sys, datetime, subprocess, os, re
+from Crypto.Cipher import AES
 
 def usage():
     print('Usage: zbackup [[--list | --delete | --export] target-dataset [ID]')
@@ -10,7 +11,7 @@ def usage():
 
 def get_snapshots(dataset=None):
     snapshots = []
-    output = subprocess.run('zfs list -t snapshot'.split(' '), capture_output=True).stdout
+    output = subprocess.run(['zfs', 'list', '-t', 'snapshot'], stdout=subprocess.PIPE).stdout
     output = output.decode()
     for i, line in enumerate(output.split('\n')[1:]):
         cols = line.split(' ')
@@ -80,7 +81,7 @@ elif sys.argv[1] == '--export':
     if not sys.argv[2:]:
         usage()
     target_dataset = sys.argv[2]
-    Id = None
+    Id = 1
     if sys.argv[3:]:
         try:
             Id = int(sys.argv[3])
@@ -90,6 +91,33 @@ elif sys.argv[1] == '--export':
 
     print(f'export: target={target_dataset} id={Id}')
 
+    found = False
+    snapshots = get_snapshots(target_dataset)
+    for ss in snapshots:
+        if ss['id'] == Id:
+            found = True
+            target_name = f"{ss['dataset']}@{ss['create_time']}"
+            filename = target_name.replace('/', ']') + ".xz"
+            print(f'Exporting to {filename}')
+            with subprocess.Popen(
+                    ['zfs', 'send', '-R', '-v', target_name],
+                    stdout=subprocess.PIPE) as proc:
+                with open(filename, 'wb') as file:
+                    subprocess.run(['xz'], stdin=proc.stdout, stdout=file)
+                    proc.wait()
+            with open(filename, 'rb') as xz_file:
+                key = b''
+                while len(key) != 32:
+                    key = input('Please enter the key for encryption (32 bytes): ').strip().encode()
+                    if len(key) == 32: break
+                    print('enter again')
+                cipher = AES.new(key) # default: ECB
+                with open(filename+'.enc', 'wb') as enc_file:
+                    enc_file.write(cipher.encrypt(xz_file.read()))
+                os.remove(filename)
+    if not found:
+        print('specified dataset snapshot not found')
+
 elif sys.argv[1] == '--import':
     if not sys.argv[3:]:
         usage()
@@ -97,6 +125,33 @@ elif sys.argv[1] == '--import':
     filename = sys.argv[3]
 
     print(f'import: target={target_dataset} filename={filename}')
+
+    print(f'Importing {filename}')
+    if not re.match(r'.*\.xz\.enc$', filename):
+        print('invalid filename, should be ended in .xz.enc')
+
+    # target_name = filename[-8:].replace(']', '/')
+
+    with open(filename, 'rb') as enc_file:
+        key = b''
+        while len(key) != 32:
+            key = input('Please enter the key for encryption (32 bytes): ').strip().encode()
+            if len(key) == 32: break
+            print('enter again')
+        cipher = AES.new(key) # default: ECB
+        with open(filename[:-4], 'wb') as xz_file:
+            xz_file.write(cipher.decrypt(enc_file.read()))
+
+    with open(filename[:-7], 'wb') as raw_file:
+        subprocess.run(['xzcat', filename[:-4]], stdout=raw_file)
+
+    with open(filename[:-7], 'rb') as raw_file:
+        subprocess.run(
+            ['zfs', 'recv', '-Fv', target_dataset],
+            stdin=raw_file)
+
+    os.remove(filename[:-4])
+    os.remove(filename[:-7])
 
 else:
     # create new snapshot
