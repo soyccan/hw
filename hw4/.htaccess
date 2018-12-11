@@ -1,0 +1,7 @@
+<Files ".ht*">
+    Require all denied
+</Files>
+AuthType Basic
+AuthName "THIS PAGE IS PROTECTED"
+AuthUserFile /usr/local/var/.htpasswd
+Require valid-user
