@@ -113,7 +113,10 @@ elif sys.argv[1] == '--export':
                     print('enter again')
                 cipher = AES.new(key) # default: ECB
                 with open(filename+'.enc', 'wb') as enc_file:
-                    enc_file.write(cipher.encrypt(xz_file.read()))
+                    data = xz_file.read()
+                    while len(data) % 16 != 0:
+                        data += b'\0'
+                    enc_file.write(cipher.encrypt(data))
                 os.remove(filename)
     if not found:
         print('specified dataset snapshot not found')

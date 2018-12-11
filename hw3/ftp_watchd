@@ -1,4 +1,5 @@
 #!/bin/sh
+# vim: filetype=sh
 
 # this is ftp_watchd
 # which reads command from /etc/rc.conf
@@ -25,9 +26,18 @@ start_cmd="${name}_start"
 stop_cmd="${name}_stop"
 restart_cmd="${name}_restart"
 status_cmd="${name}_status"
+poll_cmd="${name}_poll"
+
+ftp_watchd_poll() {
+	pid=$(check_pidfile ${pidfile} ${command})
+	if [ -n "$pid" ]; then
+		echo Waiting "${command} PID=$pid"
+		pwait "$pid"
+	fi
+}
 
 ftp_watchd_status() {
-	pid=$(pgrep ${procname})
+	pid=$(check_pidfile ${pidfile} ${command})
 	if [ -n "$pid" ]; then
 		echo "${procname} is running, PID=${pid}"
 	else
@@ -36,13 +46,14 @@ ftp_watchd_status() {
 }
 
 ftp_watchd_start() {
-	cmdscript='/tmp/__uploadscript'
+	cmdscript='/usr/local/bin/my-pure-uploadscript.sh'
+	echo cmdscript at ${cmdscript}
 	echo "#!/bin/sh" > ${cmdscript}
 	echo ${ftp_watchd_command} >> ${cmdscript}
 	chmod +x ${cmdscript}
 
-	res="$(pgrep ${procname})"
-	if [ -z "$res" ]; then
+	pid=$(check_pidfile ${pidfile} ${command})
+	if [ -z "$pid" ]; then
 		echo "Starting ${command}."
 		${command} -B -p ${pidfile} -r ${cmdscript}
 	else
@@ -52,9 +63,6 @@ ftp_watchd_start() {
 
 ftp_watchd_stop() {
 	pid=$(check_pidfile ${pidfile} ${command})
-	if [ -z ${pid} ]; then
-		pid=$(pgrep ${procname})
-	fi
 	if [ -z ${pid} ]; then
 		echo "Upload script not running? (check ${pidfile}) pid=${pid}"
 		return 1
