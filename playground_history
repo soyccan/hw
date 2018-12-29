@@ -1,0 +1,374 @@
+#+1545909624
+sudo
+#+1545910512
+cat /etc/passwd
+#+1545910515
+cat /etc/master.passwd
+#+1545910523
+sudo cat /etc/master.passwd
+#+1545910532
+cat /etc/sudoers
+#+1545910538
+cat /usr/local/sudoers
+#+1545910542
+cat /usr/local/etc/sudoers
+#+1545910647
+sudo cat /usr/local/etc/sudoers
+#+1545910679
+cat /etc/passwd /etc/master.passwd
+#+1545910685
+sudo diff /etc/passwd /etc/master.passwd
+#+1545910710
+ls -l /etc/passwd /etc/master.passwd
+#+1545911255
+sudo vim /etc/rc.conf
+#+1545911342
+service ypinit
+#+1545911346
+service ypinit status
+#+1545911354
+ls /etc/rc.d
+#+1545911357
+ls /etc/rc.d | grep yp
+#+1545911606
+cat /etc/rc.conf
+#+1545911893
+sudo reboot
+#+1545912039
+rpcbind
+#+1545912044
+rpcinfo
+#+1545912047
+rpcinfo -p
+#+1545912524
+rpcinfo -p
+#+1545912531
+sudo vim /etc/host
+#+1545912538
+sudo vim /etc/hosts
+#+1545912548
+service ypbind status
+#+1545912764
+service ypserv status
+#+1545912770
+sudo vim /etc/rc.conf
+#+1545912826
+service ypserv status
+#+1545912831
+sudo service ypserv start
+#+1545912834
+ls
+#+1545912839
+cd /var/yp/sa
+#+1545912841
+cd /var/yp/
+#+1545912842
+ls
+#+1545912853
+sudo ypinit -s pro sa
+#+1545912875
+sudo vim /etc/hosts
+#+1545912898
+sudo ypinit -s pro sa
+#+1545912905
+l
+#+1545912905
+ls
+#+1545912907
+ls sa
+#+1545912909
+sudo ls sa
+#+1545912935
+ypcat hosts
+#+1545912941
+ypcat passwd
+#+1545912966
+ypcat master.passwd
+#+1545912973
+ypcat group
+#+1545912977
+ypcat netgroup
+#+1545913255
+ypcat group
+#+1545913767
+ypcat netgroup
+#+1545913770
+ypcat group
+#+1545913804
+ypcat group
+#+1545913806
+ypcat netgroup
+#+1545913968
+ypxfr
+#+1545913988
+rpcinfo -p
+#+1545913989
+rpcinfo -u
+#+1545914012
+vim /etc/rc.conf
+#+1545914020
+sudo vim /etc/rc.conf
+#+1545914086
+sudo service ypbind stop
+#+1545914090
+sudo service ypserv stop
+#+1545914107
+sudo service rpcbind restart
+#+1545914114
+sudo service ypserv start
+#+1545914121
+sudo service ypbind start
+#+1545914122
+l
+#+1545914123
+ls
+#+1545914128
+sudo ls sa
+#+1545914138
+sudo ypinit -u
+#+1545914161
+sudo ypinit -s
+#+1545914164
+sudo ypinit -s pro sa
+#+1545914175
+ls sa
+#+1545914178
+sudo ls sa
+#+1545914370
+ypcat netgroup
+#+1545914372
+ypcat netgroupe
+#+1545914373
+ypcat netgroup
+#+1545914381
+yptest
+#+1545914384
+ypwhich
+#+1545914536
+ypcat netgroup
+#+1545914648
+yp group
+#+1545914651
+ypcat group
+#+1545914729
+ypcat group
+#+1545914732
+ypcat netgroup
+#+1545914736
+ls
+#+1545914754
+sudo cat sa/
+#+1545914765
+sudo cat sa/netgroup
+#+1545914770
+sudo ls sa/netgroup
+#+1545914772
+sudo ls sa/
+#+1545914777
+sudo cat sa/netgroup.byhost
+#+1545914926
+passwd god
+#+1545914933
+rpcinfo
+#+1545914935
+rpcinfo -p
+#+1545914944
+yptest
+#+1545915134
+ypcat passwd
+#+1545915136
+ypcat master.passwd
+#+1545915149
+sudo ypcat master.passwd
+#+1545915956
+ypcat group
+#+1545915960
+ypcat passwd
+#+1545915966
+ypcat master.passwd
+#+1545915969
+sudo ypcat master.passwd
+#+1545916025
+sudo -u god
+#+1545916031
+sudo passwd god
+#+1545916099
+ypcat passwd
+#+1545916108
+sudo passwd god
+#+1545916117
+sudo service yppasswdd
+#+1545916119
+sudo service yppasswdd status
+#+1545916126
+sudo vim /etc/rc.conf
+#+1545916177
+ls
+#+1545916254
+sudo service yppasswdd status
+#+1545916256
+sudo service yppasswdd start
+#+1545916276
+sudo vim /etc/rc.conf
+#+1545916287
+sudo passwd god
+#+1545916291
+sudo -u
+#+1545916293
+sudo -u god
+#+1545916295
+sudo -u gode
+#+1545916298
+sudo -u 0710029
+#+1545916308
+sudo service ypbind stop
+#+1545916312
+sudo service ypserv stop
+#+1545916319
+sudo service rpcbind restart
+#+1545916323
+sudo service ypserv start
+#+1545916326
+sudo service ypbind start
+#+1545916330
+sudo -u 0710029
+#+1545916336
+ls
+#+1545916343
+ypcat ypservers
+#+1545916488
+ypcat ypservers
+#+1545916491
+ypcat passwd
+#+1545916496
+cat /etc/passwd
+#+1545916617
+ypcat u
+#+1545916618
+ypcat a
+#+1545916622
+ypcat passwd
+#+1545916628
+passwd user
+#+1545916632
+yppasswd user
+#+1545916641
+cat /etc/rc.conf
+#+1545916703
+yppasswd user
+#+1545916706
+ypcat passwd
+#+1545916914
+cat /etc/rc.conf
+#+1545917064
+ps auxww
+#+1545917069
+ps auxwww | grep
+#+1545917073
+ps auxwww | grep yp
+#+1545917097
+ypcat -x
+#+1545917111
+ypcat passwd.byname
+#+1545917133
+ypcat hosts
+#+1545917144
+ypcat sudoers
+#+1545917197
+sudo vipw
+#+1545917216
+sudo vipw
+#+1545917286
+cat /etc/passwd
+#+1545917296
+sudo vipw
+#+1545917308
+sudo vim /etc/group
+#+1545917323
+passwd god
+#+1545917327
+passwd gode
+#+1545917330
+sudo passwd god
+#+1545917340
+sudo -u god
+#+1545917347
+sudo -u god ls
+#+1545917351
+sudo -u gode ls
+#+1545917353
+sudo -u god ls
+#+1545917587
+sudo -u 0710029 ls
+#+1545917639
+sudo vim /etc/nsswitch.conf
+#+1545917820
+sudo vim /etc/rc.conf
+#+1545918050
+ypcat hosts
+#+1545918056
+ping ymctu.edu.tw
+#+1545918063
+ping pro
+#+1545918070
+cat /etc/hosts
+#+1546106683
+ssh god@pro
+#+1546106848
+cat /etc/inetd.conf
+#+1546107365
+ypcat netgroup
+#+1546107567
+sudo cat /var/yp/sa/netgroup*
+#+1546107570
+sudo cat /var/yp/sa/netgr
+#+1546107579
+sudo ls /var/yp/sa/
+#+1546107584
+sudo cat /var/yp/sa/netgroup
+#+1546107594
+sudo cat /var/yp/sa/netgroup.byhost
+#+1546107598
+sudo cat /var/yp/sa/netgroup.byuser
+#+1546107707
+ypcat netgroup
+#+1546107758
+sudo cat /var/yp/sa/netgroup
+#+1546107773
+sudo cat /var/yp/sa/netgroup.byhost
+#+1546107819
+sudo cat /var/yp/sa/netgroup
+#+1546107826
+sudo cat /var/yp/sa/netgroup | grep admin
+#+1546108087
+ssh god@pro
+#+1546108114
+ssh 0710029@pro
+#+1546108309
+ssh god@pro
+#+1546108319
+ssh user@pro
+#+1546108350
+ssh 0710029@pro
+#+1546108424
+cat /etc/hosts.allow
+#+1546108478
+sudo poweroff
+#+1546109322
+sudo visudo
+#+1546109398
+cat /net/datas/sudoers
+#+1546109404
+ll /net/datas/sudoers
+#+1546109487
+ls /usr/local/etc/sudoers
+#+1546109491
+ll /usr/local/etc/sudoers
+#+1546109510
+sudo touch /net/datas/hahah
+#+1546109515
+sudo touch /net/datas/hahah
+#+1546109544
+sudo visudo
+#+1546109578
+sudo ls
