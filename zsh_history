@@ -1,0 +1,3656 @@
+: 1541512865:0;tmux
+: 1541512870:0;ll
+: 1541512872:0;tmux 
+: 1541512884:0;vim .oh-my-zsh/custom/alias.zsh
+: 1541512934:0;ls
+: 1541512938:0;. .zshrc
+: 1541512944:0;source .zshrc
+: 1541513038:0;cat .zshrc
+: 1541513251:0;ll
+: 1541513251:0;l
+: 1541513255:0;source .zshrc
+: 1541513256:0;l
+: 1541513258:0;ll
+: 1541513268:0;vim .oh-my-zsh/custom/alias.zsh
+: 1541513275:0;source .zshrc
+: 1541513278:0;l
+: 1541513283:0;ls 
+: 1541513284:0;ll
+: 1541513288:0;l
+: 1541513291:0;\ls
+: 1541513293:0;\ls -l
+: 1541513295:0;\ls -la
+: 1541513299:0;man ls
+: 1541513308:0;\ls -Gla
+: 1541513317:0;vim .oh-my-zsh/custom/alias.zsh
+: 1541513327:0;source .zshrc
+: 1541513328:0;l
+: 1541513393:0;ln -s ~/misc/.vimrc .vimrc
+: 1541513394:0;ll
+: 1541513395:0;l
+: 1541513400:0;ls .vim
+: 1541513444:0;python
+: 1541513449:0;pkg show python
+: 1541513451:0;pkg show python3
+: 1541513461:0;pkg info python
+: 1541513469:0;pkg update
+: 1541513474:0;sudo pkg update
+: 1541513493:0;pkg info python
+: 1541513493:0;pkg info python3
+: 1541513525:0;sudo portsnap fetch extract update
+: 1541520434:0;cd /usr/ports
+: 1541520435:0;ll
+: 1541520436:0;l
+: 1541520437:0;ls
+: 1541520443:0;cd ..
+: 1541520448:0;cd
+: 1541520452:0;cd /usr/ports
+: 1541520459:0;psearch python3
+: 1541520482:0;sudo pkg install psearch ports-mgmt
+: 1541520528:0;psearch
+: 1541520537:0;sudo pkg install psearch 
+: 1541520562:0;psearch python3
+: 1541520581:0;pkg search python3
+: 1541520592:0;sudo pkg install python37
+: 1541520796:0;cd ftp
+: 1541520797:0;ls
+: 1541520800:0;cd pure-ftpd
+: 1541520801:0;ls
+: 1541520803:0;make
+: 1541520897:0;ls /usr/ports/distfiles
+: 1541520900:0;ls /usr/ports/distfiles -ld
+: 1541520901:0;ls /usr/ports/distfiles -d
+: 1541520907:0;ls -d /usr/ports/distfiles 
+: 1541520911:0;ls -dl /usr/ports/distfiles 
+: 1541520918:0;sudo make
+: 1541521118:0;sudo make install
+: 1541521290:0;vim  /etc/rc.d/ftpd
+: 1541521316:0;cat ~/.vimrc
+: 1541521477:0;ls 
+: 1541521479:0;ll
+: 1541521482:0;cd
+: 1541521484:0;cd /home
+: 1541521485:0;ls
+: 1541521487:0;cd
+: 1541521504:0;zfs
+: 1541521555:0;cd /usr/ports/ports-mgmt
+: 1541521558:0;cd portmaster
+: 1541521558:0;ls
+: 1541521565:0;sudo make
+: 1541521599:0;sudo make install
+: 1541521601:0;cd
+: 1541521764:0;vim /etc/rc.d/zfs
+: 1541521771:0;vim 
+: 1541521785:0;vim a
+: 1541521791:0;ll
+: 1541521798:0;cat .vimrc
+: 1541521811:0;vim 
+: 1541521822:0;cat .vimrc
+: 1541521835:0;vim --version
+: 1541521916:0;vim 
+: 1541521925:0;vim /etc/rc.d/zfs
+: 1541521929:0;vim /etc/rc.d/zfsd
+: 1541521934:0;vim /etc/rc.d/zfs
+: 1541521941:0;vim /etc/rc.d/zfsd
+: 1541521961:0;sudo vim /etc/rc.d
+: 1541521974:0;sudo vim /etc/rc
+: 1541521979:0;sudo vim /etc/rc.conf
+: 1541522016:0;service
+: 1541522057:0;service zfs start
+: 1541522062:0;sudo service zfs start
+: 1541522064:0;sudo service zfsd start
+: 1541522102:0;sudo service pure-ftpd start
+: 1541522107:0;sudo vim /etc/rc.conf
+: 1541522121:0;sudo service pure-ftpd start
+: 1541522126:0;sudo vim /etc/rc.conf
+: 1541522132:0;sudo service pure-ftpd start
+: 1541522146:0;ls /usr/local/etc/pure-ftpd.conf
+: 1541522155:0;cd /usr/local/etc/
+: 1541522156:0;ls
+: 1541522171:0;sudo cp pure-ftpd.conf.sample pure-ftpd.conf
+: 1541522174:0;sudo service pure-ftpd start
+: 1541522190:0;sudo netstat
+: 1541522193:0;sudo netstat -lnpt
+: 1541522195:0;sudo netstat -lnp
+: 1541522198:0;sudo netstat -ln
+: 1541522366:0;geom
+: 1541522370:0;geom disk list
+: 1541522548:0;zpool create mipool
+: 1541522557:0;zpool create mipool mirror
+: 1541522578:0;zpool create mipool mirror /dev/da1 /dev/da2
+: 1541522583:0;sudo zpool create mipool mirror /dev/da1 /dev/da2
+: 1541522589:0;sudo zpool list
+: 1541522651:0;sudo zfs create mipool/upload
+: 1541522655:0;sudo zfs create mipool/public
+: 1541522659:0;sudo zfs create mipool/hidden
+: 1541522688:0;zfs list
+: 1541522718:0;zfs get all mipool/hidden
+: 1541522730:0;zfs get compression mipool/hidden 
+: 1541522736:0;zfs set compression  on mipool/hidden 
+: 1541522742:0;zfs set compression  mipool/hidden 
+: 1541522778:0;zfs set   mipool/hidden 
+: 1541522790:0;zfs set compression=on  mipool/hidden 
+: 1541522796:0;sudo zfs set compression=on  mipool/hidden 
+: 1541522799:0;sudo zfs set compression=on  mipool/public
+: 1541522805:0;sudo zfs set compression=on  mipool/upload
+: 1541522835:0;ls /mipool/hidden
+: 1541522852:0;sudo mkdir /home/ftp/upload
+: 1541522854:0;sudo mkdir /home/ftp/
+: 1541522856:0;sudo mkdir /home/ftp/upload
+: 1541522859:0;sudo mkdir /home/ftp/public
+: 1541522862:0;sudo mkdir /home/ftp/hidden
+: 1541522864:0;ll /home
+: 1541522867:0;ll /home/
+: 1541522871:0;ll /home/ftp
+: 1541522881:0;sudo zfs get all  mipool/upload
+: 1541522926:0;sudo zfs set mountpoint=/home/ftp/upload  mipool/upload
+: 1541522934:0;sudo zfs set mountpoint=/home/ftp/public  mipool/public
+: 1541522940:0;sudo zfs set mountpoint=/home/ftp/hidden  mipool/hidden
+: 1541522946:0;sudo service zfs restart
+: 1541522949:0;sudo service zfsd restart
+: 1541522955:0;ls /mipool
+: 1541522964:0;ls /home/ftp
+: 1541522967:0;ls /home/ftp -l/
+: 1541522968:0;ls /home/ftp -l
+: 1541522975:0;ll /home/ftp
+: 1541523216:0;sudo service stop zfsd
+: 1541523222:0;sudo service zfsd stop
+: 1541523228:0;ls /home/ftp/hidden
+: 1541523233:0;sudo service zfs stop
+: 1541523239:0;sudo rmdir /home/ftp/public
+: 1541523242:0;sudo rmdir /home/ftp/hidden
+: 1541523244:0;sudo rmdir /home/ftp/upload
+: 1541523248:0;sudo service zfsd start
+: 1541523252:0;ls /home/ftp
+: 1541523255:0;sudo service zfs start
+: 1541523257:0;ls /home/ftp
+: 1541523259:0;ls /home/ftp -l
+: 1541523264:0;ll /home/ftp
+: 1541523389:0;cat /etc/passwd
+: 1541523403:0;sudo adduser
+: 1541557158:0;tmux a
+: 1541557220:0;ls
+: 1541557222:0;cd 
+: 1541557225:0;popd
+: 1541557233:0;sudo vim pure-ftpd.conf
+: 1541557510:0;sudo ln -s ~/misc/.vimrc /etc/vim/vimrc
+: 1541557521:0;sudo mkdir /etc/vim
+: 1541557522:0;sudo ln -s ~/misc/.vimrc /etc/vim/vimrc
+: 1541557525:0;sudo vim pure-ftpd.conf
+: 1541557535:0;man vimrc
+: 1541557538:0;man .vimrc
+: 1541557541:0;man vim
+: 1541557581:0;sudo mv /etc/vim /usr/local/etc/
+: 1541557591:0;ll /usr/local/etc/vim
+: 1541557599:0;cat /usr/local/etc/vim/vimrc
+: 1541557604:0;cat /usr/local/etc/vim/vimrc.sample
+: 1541557613:0;sudo rm -r /etc/vim/
+: 1541557633:0;sudo ln -sf ~/misc/.vimrc /usr/local/etc/vim/vimrc
+: 1541557637:0;sudo vim pure-ftpd.conf
+: 1541557682:0;sudo vim /usr/local/etc/vim/vimrc
+: 1541557696:0;sudo vim /usr/local/etc/vim/vimrc.sample m
+: 1541557788:0;cd ../share/doc/pure-ftpd
+: 1541557788:0;ll
+: 1541557796:0;vim README.Virtual-Users
+: 1541557829:0;tmux a
+: 1541557834:0;tmux 
+: 1541557836:0;tmux a
+: 1541557848:0;tmux
+: 1541557860:0;cd ../share/doc/pure-ftpd
+: 1541557865:0;cd /usr/local/share/doc/pure-ftpd
+: 1541557866:0;ll
+: 1541557873:0;less README.Virtual-Users
+: 1541557967:0;pure-pw
+: 1541558318:0;pure-pw useradd ftp-vip -d /home/ftp -u sysadm -g sysadm
+: 1541558353:0;pure-pw usermod ftp-vip -d /home/ftp -u sysadm -g sysadm
+: 1541558360:0;pure-pw useradd ftp-vip -d /home/ftp -u sysadm -g sysadm
+: 1541558384:0;sudo pure-pw useradd ftp-vip -d /home/ftp -u sysadm -g sysadm
+: 1541558417:0;cd /home/ftp/upload
+: 1541558418:0;ll
+: 1541558419:0;cd ..
+: 1541558420:0;ll
+: 1541558427:0;mount
+: 1541558434:0;cat /etc/fstab
+: 1541558460:0;zpool list
+: 1541558463:0;zfs list
+: 1541558471:0;zfs list get mipool/hidden
+: 1541558474:0;zfs list get all mipool/hidden
+: 1541558478:0;zfs get all mipool/hidden
+: 1541558815:0;man zfs-mount
+: 1541558820:0;man zfs
+: 1541558947:0;sudo service zfs stop
+: 1541558955:0;ll
+: 1541558960:0;sudo service zfsd stop
+: 1541558961:0;ll
+: 1541558965:0;mount
+: 1541558977:0;sudo chown sysadm.sysadm hidden
+: 1541558984:0;sudo chown sysadm:sysadm hidden
+: 1541558988:0;sudo chown sysadm:sysadm public
+: 1541558991:0;sudo chown sysadm:sysadm upload
+: 1541558992:0;ll
+: 1541558998:0;sudo chown sysadm:sysadm .
+: 1541558999:0;cd ..
+: 1541558999:0;l
+: 1541559010:0;cd ftp
+: 1541559011:0;l
+: 1541559021:0;sudo service zfs start
+: 1541559022:0;ll
+: 1541559131:0;sudo service zfs stop
+: 1541559133:0;sudo service zfsd stop
+: 1541559136:0;ll
+: 1541559137:0;cd ..
+: 1541559138:0;l
+: 1541559141:0;cd ftp
+: 1541559143:0;l
+: 1541559181:0;cat /etc/rc.conf
+: 1541559266:0;cat /usr/local/etc/pureftpd.passwd
+: 1541559271:0;sudo cat /usr/local/etc/pureftpd.passwd
+: 1541559597:0;sudo vim /usr/local/etc/rc.d/pure-ftpd
+: 1541559654:0;sudo vim /etc/rc.conf
+: 1541559758:0;sudo purepw mkdb
+: 1541559762:0;sudo pure-pw mkdb
+: 1541559772:0;ll /usr/local/etc/pure*
+: 1541559818:0;sudo service pure-ftpd reload
+: 1541559824:0;sudo service pure-ftpd restart
+: 1541559849:0;sudo service pure-ftpd status
+: 1541559869:0;sudo service pure-ftpd start 
+: 1541559910:0;man pure-ftpd
+: 1541559936:0;sudo service pure-ftpd start 
+: 1541559972:0;ls
+: 1541559990:0;sudo service pure-ftpd start
+: 1541559997:0;sudo service pure-ftpd start &
+: 1541560057:0;less README.Configuration-File
+: 1541560106:0;less README.TLS
+: 1541560359:0;mkdir -p /etc/ssl/private
+: 1541560363:0;ls /etc/ssl
+: 1541560369:0;sudo mkdir -p /etc/ssl/private
+: 1541560375:0;cd /etc/ssl/private
+: 1541560385:0;openssl dhparam -out /etc/ssl/private/pure-ftpd-dhparams.pem 2048
+: 1541560413:0;sudo openssl dhparam -out /etc/ssl/private/pure-ftpd-dhparams.pem 2048
+: 1541560699:0;ls
+: 1541560781:0;sudo openssl req -x509 -nodes -newkey rsa:2048 -sha256 \\
+  -keyout /etc/ssl/private/pure-ftpd.pem \\
+  -out /etc/ssl/private/pure-ftpd.pem
+: 1541560937:0;ll
+: 1541560954:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1541561011:0;sudo service pure-ftpd restart
+: 1541561019:0;job
+: 1541561021:0;jobs
+: 1541561026:0;sudo service pure-ftpd restart &
+: 1541561032:0;jobs
+: 1541561078:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1541561120:0;less /var/log/xferlog
+: 1541561126:0;sudo less /var/log/xferlog
+: 1541561195:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1541561220:0;sudo service pure-ftpd sotp
+: 1541561222:0;sudo service pure-ftpd stop
+: 1541561229:0;jobs
+: 1541561233:0;sudo service pure-ftpd start &
+: 1541561238:0;sudo service pure-ftpd stop
+: 1541561241:0;jobs
+: 1541561250:0;sudo service pure-ftpd start &
+: 1541561284:0;pure-ftpd --version
+: 1541561286:0;pure-ftpd -v
+: 1541561291:0;man pure-ftpd 
+: 1541561313:0;ll
+: 1541561323:0;sudo chmod 600 pure-ftpd.pem
+: 1541561325:0;l
+: 1541561331:0;cat pure-ftpd.pem
+: 1541561334:0;sudo cat pure-ftpd.pem
+: 1541561359:0;sudo vim /etc/rc.conf
+: 1541561372:0;sudo service pure-ftpd stop
+: 1541561375:0;sudo service pure-ftpd start &
+: 1541561404:0;man pure-ftpd
+: 1541561467:0;ll
+: 1541561472:0;sudo service pure-ftpd start &
+: 1541561477:0;l
+: 1541561500:0;cat /etc/ssl/private/pure-ftpd.pem
+: 1541561674:0;man openssl
+: 1541561730:0;openssl req -x509 -nodes -newkey rsa:2048 -sha256 \\
+  -keyout /etc/ssl/private/pure-ftpd.pem \\
+  -out /etc/ssl/private/pure-ftpd.pem
+: 1541561736:0;sudo openssl req -x509 -nodes -newkey rsa:2048 -sha256 \\
+  -keyout /etc/ssl/private/pure-ftpd.pem \\
+  -out /etc/ssl/private/pure-ftpd.pem
+: 1541561744:0;ll
+: 1541561749:0;sudo cat pure-ftpd.pem
+: 1541561764:0;sudo service pure-ftpd start &
+: 1541561868:0;ll
+: 1541561871:0;cd 
+: 1541561876:0;cd /home/ftp
+: 1541561877:0;ll
+: 1541561897:0;chmod +w upload
+: 1541561898:0;ll
+: 1541561904:0;sudo chmod +w upload
+: 1541561905:0;ll
+: 1541561913:0;sudo chmod +w upload
+: 1541561916:0;ll
+: 1541561926:0;sudo chmod 777 upload
+: 1541561927:0;ll
+: 1541561947:0;sudo chmod 755 upload
+: 1541561948:0;ll
+: 1541561991:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1541562172:0;sudo service pure-ftpd stop
+: 1541562176:0;sudo service pure-ftpd start &
+: 1541562355:0;ll
+: 1541562362:0;less README.Authentication-Modules
+: 1541562371:0;less README.Configuration-File
+: 1541562384:0;less README
+: 1541562473:0;sudo pure-pw useradd 
+: 1541562476:0;sudo pure-pw useradd ftp
+: 1541562643:0;sudo pw useradd ftp 
+: 1541562649:0;cat /etc/passwd
+: 1541562673:0;sudo pw usermod ftp  -g ftp
+: 1541562676:0;cat /etc/passwd
+: 1541562682:0;groups
+: 1541562691:0;sudo pw groupadd ftp
+: 1541562701:0;sudo pw 
+: 1541562720:0;sudo pw usermod ftp  
+: 1541562724:0;sudo pw usermod 
+: 1541562727:0;sudo pw usermod ftp
+: 1541562823:0;ll
+: 1541562829:0;sudo chgrp ftp hidden
+: 1541562835:0;sudo chgrp ftp public
+: 1541562837:0;sudo chgrp ftp upload
+: 1541562838:0;ll
+: 1541562840:0;cd ..
+: 1541562847:0;sudo chgrp ftp ftp
+: 1541562848:0;l
+: 1541562855:0;cd ftp
+: 1541562856:0;l
+: 1541562887:0;sudo chgrp sysadm .
+: 1541562887:0;l
+: 1541562920:0;umask
+: 1541562956:0;sudo chgrp sysadm *
+: 1541562957:0;l
+: 1541562971:0;sudo chmod o-x hidden
+: 1541563012:0;l
+: 1541563279:0;cd hidden
+: 1541563284:0;sudo su
+: 1541563359:0;ls
+: 1541563360:0;l
+: 1541563363:0;cd hidden
+: 1541563363:0;ls
+: 1541563365:0;cd ..
+: 1541563367:0;cd hidden
+: 1541563369:0;cd treasure
+: 1541563370:0;ls
+: 1541563371:0;l
+: 1541563414:0;ls
+: 1541563415:0;cd ..
+: 1541563415:0;l
+: 1541563416:0;cd ..
+: 1541563417:0;l
+: 1541568850:0;tmux a
+: 1541568871:0;ll
+: 1541569018:0;ls
+: 1541569021:0;cd hidden
+: 1541569022:0;ls
+: 1541569025:0;touch a
+: 1541569028:0;sudo touch a
+: 1541569033:0;ls
+: 1541569034:0;cd ..
+: 1541569038:0;ls hidden/treasure
+: 1541569047:0;sudo touch hidden/treasure/b
+: 1541569056:0;sudo touch public/c
+: 1541569060:0;sudo touch upload/d
+: 1541569068:0;ll
+: 1541569070:0;ll hidden
+: 1541569073:0;ll pb
+: 1541569076:0;ll public/
+: 1541569232:0;less README.TLS
+: 1541569287:0;less README
+: 1541569294:0;cd /etc/ssl/private
+: 1541569295:0;ls
+: 1541569302:0;openssl req -x509 -nodes -newkey rsa:2048 -sha256 \\
+  -keyout /etc/ssl/private/pure-ftpd.pem \\
+  -out /etc/ssl/private/pure-ftpd.pem
+: 1541569306:0;sudo openssl req -x509 -nodes -newkey rsa:2048 -sha256 \\
+  -keyout /etc/ssl/private/pure-ftpd.pem \\
+  -out /etc/ssl/private/pure-ftpd.pem
+: 1541569376:0;ll
+: 1541569389:0;sudo service pure-ftpd stop
+: 1541569394:0;sudo service pure-ftpd start &
+: 1541569419:0;popd
+: 1541569420:0;ls
+: 1541569421:0;find
+: 1541569424:0;find .
+: 1541569515:0;l
+: 1541569520:0;l public
+: 1541570068:0;vim README
+: 1541570183:0;vim /etc/rc.conf
+: 1541570195:0;sudo vim /etc/rc.conf
+: 1541570261:0;sudo service pure-ftpd stop
+: 1541570265:0;sudo service pure-ftpd start &
+: 1541570276:0;l
+: 1541570288:0;cd up
+: 1541570633:0;chmod  o+w upload
+: 1541570637:0;sudo chmod  o+w upload
+: 1541570643:0;sudo chmod  o-r upload
+: 1541570643:0;l
+: 1541570692:0;l upload
+: 1541570694:0;sudo l upload
+: 1541570697:0;sudo ls upload
+: 1541570704:0;sudo find .
+: 1541570891:0;sudo ls upload
+: 1541570896:0;sudo find .
+: 1541570916:0;mkdir upload/hh
+: 1541570918:0;sudo find .
+: 1541570941:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1541570976:0;sudo service pure-ftpd stop
+: 1541570979:0;sudo service pure-ftpd start &
+: 1541571021:0;sudo find .
+: 1541571040:0;sudo vim /etc/rc.conf
+: 1541571059:0;sudo service pure-ftpd stop
+: 1541571061:0;sudo service pure-ftpd start &
+: 1541571094:0;sudo find .
+: 1541571174:0;sudo o+r upload
+: 1541571178:0;sudo chmod o+r upload
+: 1541571179:0;ll
+: 1541571248:0;man chmod
+: 1541571267:0;sudo chmod +t upload
+: 1541571268:0;l
+: 1541571276:0;cd upload
+: 1541571277:0;ll
+: 1541571296:0;rm -r *
+: 1541571716:0;cd ..
+: 1541571719:0;l
+: 1541571722:0;cd hidden
+: 1541571723:0;ls
+: 1541571725:0;cd ..
+: 1541571726:0;sudo find .
+: 1541571934:0;ll
+: 1541571936:0;ls
+: 1541577020:0;sudo pw usermod sysadm 
+: 1541577030:0;sudo pw usermod sysadm -s /bin/tcsh
+: 1541577039:0;cat /etc/passwd
+: 1541577078:0;cat /etc/group
+: 1541577257:0;mount
+: 1541577437:0;sudo zfs list
+: 1541577447:0;sudo zfs get all
+: 1541577453:0;sudo zfs get compression
+: 1541577464:0;sudo zfs set compression=gzip mipool/*
+: 1541577468:0;sudo zfs set compression=gzip mipool/hidden
+: 1541577470:0;sudo zfs set compression=gzip mipool/public
+: 1541577473:0;sudo zfs set compression=gzip mipool/upload
+: 1541577476:0;sudo zfs get compression
+: 1541577513:0;sudo zfs get compression,compression_ratio
+: 1541577519:0;sudo zfs get compression,compressratio
+: 1541577524:0;sudo zfs get compressratio
+: 1541659859:0;cat ~/.zshrc
+: 1541659911:0;hwtime
+: 1541659916:0;time
+: 1541659917:0;date
+: 1541659958:0;ntp
+: 1541659960:0;ntpd
+: 1541659969:0;sudo service ntpd status
+: 1541659982:0;vim /etc/ntp.conf
+: 1541659989:0;sudo vim /etc/ntp.conf
+: 1541660011:0;ll
+: 1541660013:0;date
+: 1541660049:0;î‚°  /
+: 1541660057:0;printf "î‚°  /" |hd
+: 1541660080:0;printf " soyccan@working-machine î‚°  /home/ftp î‚° # î‚°"|th
+: 1541660086:0;printf " soyccan@working-machine î‚°  /home/ftp î‚° # î‚°"|hd
+: 1541660399:0;vim ~/.zshrc
+: 1541661375:0;cat ~/.vimrc
+: 1541661382:0;vim ~/.zshrc
+: 1541661420:0;source ~/.zshrc
+: 1541662349:0;cd
+: 1541662353:0;git clone https://github.com/gabrielelana/awesome-terminal-fonts
+: 1541662411:0;cd awesome-terminal-fonts
+: 1541662412:0;ls
+: 1541662445:0;./build
+: 1541662447:0;./build.sh
+: 1541662450:0;cd ..
+: 1541662451:0;./build.sh
+: 1541662458:0;ls
+: 1541662460:0;ls build
+: 1541662472:0;ls ~
+: 1541662503:0;ls
+: 1541662513:0;cp build ~/.fonts
+: 1541662516:0;cd
+: 1541662517:0;ls
+: 1541662723:0;ll
+: 1541662723:0;l
+: 1541667664:0;tmux a
+: 1541701704:0;printf "ãƒ£½(`Ðƒ´Â´)ãƒ£ƒ®" | hd\
+
+: 1541701710:0;printf 'ãƒ£½(`Ðƒ´Â´)ãƒ£ƒ®' | hd\
+
+: 1541701725:0;printf 'ãƒ£½(`Ðƒ´Â´)ãƒ£ƒ®' | iconv -t utf8 | hd\
+
+: 1541701728:0;printf 'ãƒ£½(`Ðƒ´Â´)ãƒ£ƒ®' | iconv -t utf16 | hd\
+
+: 1542698521:0;sudo poweroff
+: 1542698779:0;ip addr
+: 1542698781:0;ifconfig
+: 1542698812:0;ls
+: 1542698814:0;l
+: 1542698837:0;vim .zshrc
+: 1542698853:0;source .zshrc
+: 1542698863:0;cat .zshrc
+: 1542698874:0;source .zshrc
+: 1542698880:0;tmux a
+: 1542698972:0;sudo zfs status
+: 1542698978:0;sudo zfs list
+: 1542698985:0;ls /home/ftp/
+: 1542698987:0;ls /home/ftp/hidden
+: 1542698991:0;mount
+: 1542699013:0;sudo zfs list
+: 1542699048:0;sudo zfs status mipool
+: 1542699062:0;sudo zpool status mipool
+: 1542699112:0;cat /etc/rc.local
+: 1542699114:0;cat /etc/rc.conf
+: 1542699159:0;less /var/log/dmesg.today
+: 1542699163:0;sudo less /var/log/dmesg.today
+: 1542699217:0;vim /etc/syslog.conf
+: 1542699237:0;vim /var/log/messages
+: 1542699277:0;grep -i ftp /var/log/*
+: 1542699279:0;sudo grep -i ftp /var/log/*
+: 1542699291:0;vim /var/log/xferlog
+: 1542699297:0;sudo vim /var/log/xferlog
+: 1542699331:0;find -type f /var/log/
+: 1542699340:0;man find
+: 1542699367:0;find /var/log/ -type f
+: 1542699388:0;find /var/log/ -type f |xargs grep -i ftp
+: 1542699392:0;find /var/log/ -type f |sudo xargs grep -i ftp
+: 1542699401:0;find /var/log/ -type f |sudo xargs grep -i ftp|less
+: 1542699457:0;vim /etc/syslog.conf 
+: 1542699522:0;sudo zfs get compression,compressratio *
+: 1542699528:0;sudo zfs get compression,compressratio mipool/*
+: 1542699532:0;sudo zfs get compression,compressratio mipool/hidden
+: 1542699542:0;sudo zfs get compression,compressratio mipool/upload
+: 1542699620:0;sudo zfs set compressratio=1.2 mipool/upload
+: 1542699704:0;sudo zfs set compression=gzip5 mipool/upload
+: 1542699714:0;sudo zfs set compression=gzip-5 mipool/upload
+: 1542699720:0;sudo zfs set compression=gzip-5 mipool/hidden
+: 1542699723:0;sudo zfs set compression=gzip-5 mipool/public
+: 1542699726:0;sudo zfs get compression,compressratio mipool/upload
+: 1542699732:0;sudo zfs get compression,compressratio mipool/hidden
+: 1542699735:0;sudo zfs get compression,compressratio mipool/public
+: 1542700051:0;cd hw
+: 1542700071:0;git clone https://github.com/soyccan/hw
+: 1542700128:0;touch zbackup
+: 1542700134:0;chmod +x zbackup
+: 1542700135:0;.
+: 1542700136:0;ls
+: 1542700142:0;mv zbackup hw/
+: 1542700144:0;cd hw
+: 1542700144:0;ls
+: 1542700155:0;mkdir hw2 
+: 1542700166:0;mv classtable.sh filestat.sh hw2
+: 1542700179:0;rm mytable mytable.tmp options table table.cache
+: 1542700182:0;ls
+: 1542700186:0;rm mytable mytable.tmp options table table.cache
+: 1542700188:0;ls
+: 1542700192:0;mv ptable hw2
+: 1542700193:0;ls
+: 1542700193:0;ll
+: 1542700201:0;mkdir hw3
+: 1542700203:0;mv zbackup
+: 1542700206:0;mv zbackup hw3
+: 1542700207:0;ls
+: 1542700210:0;git add -A
+: 1542700212:0;git status
+: 1542700223:0;git commit -m 'add hw3'
+: 1542700261:0;git config --global user.email soyccan@gmail.com
+: 1542700265:0;git commit -m 'add hw3'
+: 1542700268:0;git push
+: 1542700287:0;ls
+: 1542700745:0;getopts
+: 1542700751:0;getopts --long-options
+: 1542700753:0;getopts --long-options dd
+: 1542700757:0;getopts --long-option dd
+: 1542700768:0;man getopts
+: 1542700843:0;echo $@
+: 1542701007:0;man shift
+: 1542701995:0;ls
+: 1542701997:0;cd hw3
+: 1542701997:0;ls
+: 1542702000:0;./zbackup
+: 1542702012:0;./zbackup --list
+: 1542702015:0;./zbackup --list 33
+: 1542702031:0;./zbackup --list 33 4
+: 1542702035:0;./zbackup --list
+: 1542702036:0;./zbackup --list   
+: 1542702041:0;./zbackup --delete 4 1
+: 1542702047:0;./zbackup --export jwe 3
+: 1542702053:0;./zbackup --import 3 a
+: 1542702119:0;./zbackup --e
+: 1542702123:0;./zbackup --export dj3 2
+: 1542702128:0;./zbackup --import dj 1
+: 1542702133:0;./zbackup da 1 
+: 1542702134:0;./zbackup da
+: 1542702137:0;./zbackup da 3901 d
+: 1542702286:0;man zfs
+: 1542702696:0;dpkg
+: 1542702700:0;pkg list 
+: 1542702714:0;pkg show bash-completion
+: 1542702718:0;pkg show| bash-completion
+: 1542702723:0;pkg info bash-completion
+: 1542702739:0;pkg list|grep bash-completion
+: 1542702857:0;./zbackup --list 
+: 1542702863:0;./zbackup --list mipool/public
+: 1542702870:0;./zbackup --list public
+: 1542702901:0;man zfs
+: 1542702994:0;sudo zfs snapshot mipool/public@aa
+: 1542702999:0;zfs list
+: 1542703006:0;zfs list -t snapshot
+: 1542703012:0;zfs list -t snapshot mipool/public@aa
+: 1542703014:0;zfs list -t snapshot mipool/public
+: 1542703108:0;zfs list -t snapshot 
+: 1542703126:0;zfs list -t snapshot | awk 'mipool/public {}'
+: 1542703130:0;zfs list -t snapshot | awk 'mipool\/public {}'
+: 1542703136:0;zfs list -t snapshot | awk '"mipool/public" {}'
+: 1542703141:0;zfs list -t snapshot | awk '"^mipool/public" {}'
+: 1542703145:0;zfs list -t snapshot | awk '"^mipoo {}'
+: 1542703148:0;zfs list -t snapshot | awk '^mipoo {}'
+: 1542703152:0;zfs list -t snapshot | awk '^m {}'
+: 1542703155:0;zfs list -t snapshot | awk 'm {}'
+: 1542703162:0;zfs list -t snapshot | awk '// {}'
+: 1542703166:0;zfs list -t snapshot | awk '/mipool/ {}'
+: 1542703168:0;zfs list -t snapshot | awk '/^mipool/ {}'
+: 1542703197:0;zfs list -t snapshot | awk '// {}'
+: 1542703200:0;zfs list -t snapshot | awk '// {print $1}'
+: 1542703203:0;zfs list -t snapshot | awk '/^m/ {print $1}'
+: 1542703211:0;zfs list -t snapshot | awk '/^mipool/public/ {print $1}'
+: 1542703217:0;zfs list -t snapshot | awk '/^mipool\/public/ {print $1}'
+: 1542703240:0;zfs list -t snapshot | awk '/^mipool\/public/ {print $NR $1}'
+: 1542703245:0;zfs list -t snapshot | awk '/^mipool\/public/ {print $NR " " $1}'
+: 1542703311:0;a=mipool/public
+: 1542703318:0;print a
+: 1542703319:0;print $a
+: 1542703331:0;zfs list -t snapshot | awk "/^/ {print $NR ' ' $1}"
+: 1542703336:0;zfs list -t snapshot | awk "/$a/ {print $NR ' ' $1}"
+: 1542703346:0;zfs list -t snapshot | awk "/$(printf $a )/ {print $NR ' ' $1}"
+: 1542703349:0;zfs list -t snapshot | awk "/$(printf $a)/ {print $NR ' ' $1}"
+: 1542703362:0;zfs list -t snapshot | awk "/$(printf $a|tr '/' '\')/ {print $NR ' ' $1}"
+: 1542703365:0;zfs list -t snapshot | awk "/$(printf $a|tr '/' '\/')/ {print $NR ' ' $1}"
+: 1542703369:0;zfs list -t snapshot | awk "/$(printf $a|tr '/' '\\/')/ {print $NR ' ' $1}"
+: 1542703372:0;zfs list -t snapshot | awk "/$(printf $a|tr '/' '\\\/')/ {print $NR ' ' $1}"
+: 1542703391:0;zfs list -t snapshot | awk "/$a/ {print $NR ' ' $1}"
+: 1542703493:0;zfs list -t snapshot | awk "/$/ {print $NR ' ' $1}"
+: 1542703495:0;$a
+: 1542703499:0;echo $a
+: 1542703504:0;echo ${a///}
+: 1542703513:0;echo ${a//\//\\/}
+: 1542703518:0;sh
+: 1542703829:0;./zbackup
+: 1542703836:0;./zbackup --list mipool/public
+: 1542703844:0;cat zbackup
+: 1542703859:0;./zbackup --list mipool/public
+: 1542704133:0;zfs list -t snapshot | awk "/mipool/public/ {print $NR ' ' $1}"
+: 1542704136:0;zfs list -t snapshot | awk "/mipool\/public/ {print $NR ' ' $1}"
+: 1542704144:0;zfs list -t snapshot | awk "/^mipool\/public/ {print $NR ' ' $1}"
+: 1542704153:0;zfs list -t snapshot | awk '/mipool\/public/ {print $NR}'
+: 1542704156:0;zfs list -t snapshot | awk '/mipool\/public/ {print NR}'
+: 1542704160:0;zfs list -t snapshot | awk '/mipool/public/ {print NR}'
+: 1542704163:0;zfs list -t snapshot | awk '/mipool\/public/ {print NR}'
+: 1542704176:0;b'/mipool\/public/ {print NR}'
+: 1542704180:0;b='/mipool\/public/ {print NR}'
+: 1542704185:0;print $b
+: 1542704195:0;awk $b
+: 1542704204:0;zfs list -t snapshot | awk $b
+: 1542704220:0;zfs list -t snapshot | awk '/mipool/public/ {print NR}'
+: 1542704224:0;zfs list -t snapshot | awk '/mipool\/public/ {print NR}'
+: 1542704226:0;zfs list -t snapshot | awk '/mipool/public/ {print NR}'
+: 1542704228:0;zfs list -t snapshot | awk $b
+: 1542704302:0;./zbackup --list mipool/public
+: 1542704432:0;zfs list -t snapshot | awk '$0~p {print NR}' p='mipool/pr'
+: 1542704435:0;zfs list -t snapshot | awk '$0~p {print NR}' p='mipool/public'
+: 1542704441:0;zfs list -t snapshot | awk '$0~p {print NR $1}' p='mipool/public'
+: 1542704449:0;zfs list -t snapshot | awk '~p {print NR $1}' p='mipool/public'
+: 1542704452:0;zfs list -t snapshot | awk '$0~p {print NR $1}' p='mipool/public'
+: 1542704550:0;./zbackup --list mipool/public
+: 1542704712:0;zfs list -t snapshot 
+: 1542704752:0;zfs snapshot mipool/hidden
+: 1542704755:0;sudo zfs snapshot mipool/hidden
+: 1542704780:0;sudo zfs snapshot mipool/hidden@2018.11.20_17:06
+: 1542704784:0;zfs list -t snapshot 
+: 1542704799:0;./zbackup --list 
+: 1542704804:0;./zbackup --list mipool/hidden
+: 1542704810:0;./zbackup --list mipool/public
+: 1542705619:0;python3
+: 1542705621:0;python
+: 1542705906:0;./zbackup mipool/hidden
+: 1542705919:0;sudo pkg install python3
+: 1542705928:0;sudo pkg show python3
+: 1542705933:0;sudo pkg search python3
+: 1542705969:0;sudo pkg install python37
+: 1542705979:0;python3
+: 1542705981:0;python
+: 1542706004:0;locate python3
+: 1542706010:0;sudo locate.updatedb
+: 1542706015:0;sudo updatedb
+: 1542706026:0;sudo /usr/libexec/locate.updatedb
+: 1542706039:0;/usr/libexec/locate.updatedb
+: 1542706069:0;sudo /usr/libexec/locate.updatedb
+: 1542706088:0;locate python3
+: 1542706101:0;locate python3|less
+: 1542706108:0;python3.7
+: 1542706110:0;env
+: 1542706207:0;env python
+: 1542706211:0;env python3.7
+: 1542706249:0;./zbackup mipool/hidden
+: 1542706361:0;./zbackup aa mipool/hidden 
+: 1542706539:0;sudo ./zbackup aa mipool/hidden 
+: 1542706547:0;./zbackup --list
+: 1542706554:0;./zbackup --list mipool/hidden
+: 1542706627:0;python3.7
+: 1542707293:0;./zbackup --list mipool/hidden
+: 1542707683:0;./zbackup --list mipool/hidden 0
+: 1542707726:0;./zbackup --list mipool/hidden 
+: 1542707727:0;./zbackup --list mipool/hidden 1
+: 1542707759:0;./zbackup --list mipool/hidden s
+: 1542707830:0;./zbackup --list mipool/hidden 0
+: 1542707836:0;./zbackup --list mipool/hidden 
+: 1542707837:0;./zbackup --list mipool/hidden 5
+: 1542707839:0;./zbackup --list mipool/hidden 
+: 1542707840:0;./zbackup --list mipool/hidden 1
+: 1542707916:0;./zbackup --list mipool/public 1
+: 1542707920:0;./zbackup --list mipool/ftp 1
+: 1542707927:0;./zbackup --list mipool/hidden 1
+: 1542707962:0;./zbackup --list mipool/hidden
+: 1542708431:0;./zbackup mipool/hidden
+: 1542708461:0;sudo ./zbackup mipool/hidden
+: 1542708466:0;./zbackup --list mipool/hidden
+: 1542708469:0;./zbackup --list 
+: 1542708470:0;./zbackup --list mipool/hidden
+: 1542708546:0;./zbackup --list
+: 1542708593:0;./zbackup --list mipool/hidden
+: 1542708597:0;./zbackup --list mipool/public
+: 1542708605:0;./zbackup --list 
+: 1542708611:0;./zbackup --list mipool/public
+: 1542708933:0;./zbackup mipool/public
+: 1542708936:0;./zbackup mipool/public 1
+: 1542708939:0;sudo ./zbackup mipool/public 1
+: 1542708991:0;sudo ./zbackup --list mipool/public 1
+: 1542708993:0;sudo ./zbackup --list mipool/public 
+: 1542709024:0;sudo zfs destroy
+: 1542709032:0;sudo zfs destroy mipool/public@aa
+: 1542709035:0;sudo ./zbackup --list mipool/public 
+: 1542709041:0;./zbackup mipool/public 1
+: 1542709061:0;./zbackup mipool/public 4
+: 1542709186:0;sudo zfs destroy mipool/public@aa
+: 1542709190:0;./zbackup mipool/public 4
+: 1542709350:0;sudo ./zbackup mipool/public 4
+: 1542709356:0;./zbackup --list mipool/public 
+: 1542709359:0;sudo ./zbackup mipool/public 4
+: 1542709361:0;./zbackup --list mipool/public 
+: 1542709366:0;./zbackup --delete mipool/public 
+: 1542709370:0;sudo ./zbackup --delete mipool/public 
+: 1542709373:0;./zbackup --delete mipool/public 
+: 1542709377:0;./zbackup --list mipool/public 
+: 1542709383:0;sudo zfs list
+: 1542709426:0;cat zbackup
+: 1542709434:0;./zbackup --list mipool/public 
+: 1542709438:0;./zbackup  mipool/public 3
+: 1542709442:0;sudo ./zbackup  mipool/public 3
+: 1542709455:0;sudo ./zbackup --list  mipool/public
+: 1542709457:0;sudo ./zbackup  mipool/public 3
+: 1542709458:0;sudo ./zbackup --list  mipool/public
+: 1542709461:0;sudo ./zbackup  mipool/public 3
+: 1542709462:0;sudo ./zbackup --list  mipool/public
+: 1542709468:0;sudo ./zbackup --list 
+: 1542709475:0;git add zbackup
+: 1542709479:0;git add -A
+: 1542709480:0;git status
+: 1542709489:0;git commit -m 'hw3 zbackup'
+: 1542709491:0;git push
+: 1543253479:0;tmux a
+: 1543253484:0;ifconfig
+: 1543253503:0;tmux a
+: 1543253516:0;ll
+: 1543253519:0;cd hw
+: 1543253520:0;ls
+: 1543253522:0;cd hw3
+: 1543253522:0;ll
+: 1543253527:0;rsub zbackup
+: 1543253544:0;pip
+: 1543253545:0;pip3
+: 1543253557:0;cd
+: 1543253562:0;git clone https://github.com/henrikpersson/rsub
+: 1543253570:0;cd rsub
+: 1543253571:0;ls
+: 1543253575:0;python3
+: 1543253577:0;python
+: 1543253587:0;python3
+: 1543253589:0;python3.7
+: 1543253592:0;python3.7 rsub.py
+: 1543253608:0;cd
+: 1543253611:0;git clone https://github.com/textmate/rmate
+: 1543253618:0;cd rmate
+: 1543253620:0;ls
+: 1543253622:0;cd bin
+: 1543253623:0;ls
+: 1543253628:0;cd
+: 1543253631:0;cd hw/hw3
+: 1543253632:0;ll
+: 1543253634:0;git status
+: 1543253641:0;~/rmate/bin/rmate zbackup
+: 1543253698:0;sudo ./zbackup
+: 1543253732:0;sudo ./zbackup --list
+: 1543253749:0;sudo ./zbackup mipool/h
+: 1543253753:0;sudo ./zbackup mipool/hidden
+: 1543253756:0;sudo ./zbackup --list
+: 1543253760:0;sudo ./zbackup mipool/hidden 4
+: 1543253769:0;sudo ./zbackup --list
+: 1543253819:0;sudo ./zbackup --delete 0
+: 1543253821:0;sudo ./zbackup --list
+: 1543253841:0;sudo ./zbackup --delete mipool/hidden 0
+: 1543253843:0;sudo ./zbackup --list
+: 1543253893:0;sudo ./zbackup mipool/hidden
+: 1543253898:0;sudo ./zbackup --list
+: 1543253900:0;sudo ./zbackup mipool/hidden 4
+: 1543253901:0;sudo ./zbackup --list
+: 1543253914:0;sudo ./zbackup --delete mipool/hidden 0
+: 1543253916:0;sudo ./zbackup --list
+: 1543253927:0;sudo ./zbackup --list mipool/public
+: 1543253935:0;sudo ./zbackup --list mipool/public 0
+: 1543253937:0;sudo ./zbackup --list mipool/public 3
+: 1543253962:0;sudo ./zbackup --list mipool/public 0
+: 1543253965:0;sudo ./zbackup --list mipool/public 3
+: 1543254024:0;sudo ./zbackup --list mipool/public 
+: 1543254025:0;sudo ./zbackup --list mipool/public 4
+: 1543254027:0;sudo ./zbackup --list mipool/public 
+: 1543254029:0;sudo ./zbackup --list 
+: 1543254039:0;sudo ./zbackup --delete 1
+: 1543254094:0;sudo ./zbackup --delete 3
+: 1543254106:0;sudo ./zbackup --delete mipool/hidden 
+: 1543254112:0;sudo ./zbackup --list
+: 1543254118:0;sudo ./zbackup --delet mipool/public
+: 1543254122:0;sudo ./zbackup --delete mipool/public
+: 1543254124:0;sudo ./zbackup --list
+: 1543254163:0;sudo service ftp start
+: 1543254166:0;sudo service pureftp start
+: 1543254169:0;sudo service pure-ftp start
+: 1543254171:0;sudo service pure-ftpd start
+: 1543254175:0;sudo service pure-ftpd start &
+: 1543254209:0;cd /mipool
+: 1543254210:0;ls
+: 1543254211:0;ll
+: 1543254216:0;cd
+: 1543254217:0;ll
+: 1543254220:0;mount
+: 1543254228:0;cd /usr/home/ftp/hidden
+: 1543254229:0;ll
+: 1543254233:0;l
+: 1543254239:0;sudo mkdir treasure 
+: 1543254431:0;l
+: 1543254441:0;sudo chown sysadm:sysadm treasure
+: 1543254520:0;ls /home
+: 1543254522:0;cd /home
+: 1543254523:0;l
+: 1543254536:0;cd ftp
+: 1543254536:0;l
+: 1543254539:0;cd hidden
+: 1543254540:0;ls
+: 1543254541:0;ll
+: 1543254543:0;cd treasure
+: 1543254543:0;ls
+: 1543254545:0;cd ..
+: 1543254546:0;mount
+: 1543254555:0;cd ..
+: 1543254557:0;ls
+: 1543254559:0;cd s
+: 1543254564:0;cd sysadm
+: 1543254565:0;ls
+: 1543254566:0;ll
+: 1543254567:0;cd ..
+: 1543254569:0;cd ftp
+: 1543254571:0;ll 
+: 1543254575:0;cd public
+: 1543254575:0;ls
+: 1543254582:0;ll
+: 1543254583:0;cd ..
+: 1543254584:0;ls
+: 1543254600:0;l
+: 1543254612:0;ls upload
+: 1543254613:0;ll
+: 1543254615:0;cd upload
+: 1543254616:0;ls
+: 1543254617:0;cd ..
+: 1543254620:0;l
+: 1543254749:0;sudo zfs unmount mipool
+: 1543254753:0;ls
+: 1543254756:0;findh
+: 1543254758:0;find
+: 1543254759:0;find .
+: 1543254762:0;cd hidden
+: 1543254763:0;l
+: 1543254765:0;cd ..
+: 1543254765:0;l
+: 1543254774:0;mount
+: 1543254781:0;sudo zfs unmount mipool/hidden
+: 1543254793:0;sudo service pure-ftpd stop
+: 1543254795:0;sudo zfs unmount mipool/hidden
+: 1543254798:0;sudo zfs unmount mipool/*
+: 1543254800:0;sudo zfs unmount mipool/public
+: 1543254803:0;sudo zfs unmount mipool/upload
+: 1543254804:0;ll
+: 1543254807:0;find .
+: 1543254826:0;sudo service pure-ftpd start
+: 1543254829:0;sudo service pure-ftpd start &
+: 1543254929:0;cd hidden
+: 1543254929:0;ls
+: 1543254940:0;sudo su
+: 1543255037:0;ls
+: 1543255038:0;cd ..
+: 1543255038:0;ls
+: 1543255041:0;cd upload
+: 1543255041:0;ls
+: 1543255042:0;l
+: 1543255056:0;cd lala
+: 1543255057:0;l
+: 1543255059:0;cd ..
+: 1543255120:0;sudo vim /usr/local/etc/pure
+: 1543255125:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543255177:0;sudo service pure-ftpd stop
+: 1543255180:0;sudo service pure-ftpd start &
+: 1543255200:0;l
+: 1543255244:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543255268:0;sudo service pure-ftpd stop
+: 1543255270:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543255278:0;sudo service pure-ftpd start &
+: 1543255315:0;man pure-ftpd
+: 1543255331:0;sudo vim /etc/rc.conf
+: 1543255367:0;sudo service pure-ftpd stop
+: 1543255369:0;sudo service pure-ftpd start &
+: 1543255963:0;ls
+: 1543255970:0;sudo rm -rf *
+: 1543255977:0;ls
+: 1543255978:0;cd ..
+: 1543255978:0;ls
+: 1543255980:0;cd public
+: 1543255983:0;ls
+: 1543255986:0;sudo rm -rf 
+: 1543255988:0;ls
+: 1543255990:0;sudo rm -rf *
+: 1543255991:0;cd ..
+: 1543255992:0;ls
+: 1543255994:0;cd hidden
+: 1543255995:0;ll
+: 1543256009:0;sudo rm -rf treasure/*
+: 1543256011:0;cd ..
+: 1543256192:0;ls
+: 1543256198:0;l
+: 1543256381:0;cd ..
+: 1543256388:0;mount
+: 1543256397:0;sudo zfs mount mipool/hidden
+: 1543256405:0;sudo zfs mount mipool/upload
+: 1543256408:0;sudo zfs mount mipool/public
+: 1543256409:0;ll
+: 1543256413:0;cd ftp
+: 1543256414:0;ls
+: 1543256415:0;ll
+: 1543256429:0;sudo service pure-ftpd stop
+: 1543256446:0;sudo vim /etc/rc.conf
+: 1543256710:0;cd
+: 1543256714:0;ls
+: 1543256721:0;./zbackup mipool/public
+: 1543256735:0;sudo ./zbackup mipool/public
+: 1543256797:0;sudo ./zbackup --list
+: 1543256865:0;sudo ./zbackup mipool/public
+: 1543256867:0;sudo ./zbackup --list
+: 1543256870:0;sudo ./zbackup mipool/public 3
+: 1543256873:0;sudo ./zbackup --list
+: 1543256958:0;git status
+: 1543256960:0;git diff
+: 1543256968:0;git add -A
+: 1543256970:0;git status
+: 1543256983:0;git commit -m 'fix hw3/zbackup'
+: 1543256986:0;git push
+: 1543257006:0;ll
+: 1543257052:0;man pure-uploadscript
+: 1543257218:0;cd hw/hw3
+: 1543257219:0;ll
+: 1543257232:0;rmate ftp_watchd 
+: 1543257238:0;ls /etc/rc.d
+: 1543257248:0;~/rmate/bin/rmate ftp_watchd 
+: 1543257252:0;ll
+: 1543257258:0;chmod +x ftp_watchd
+: 1543257259:0;ll
+: 1543257268:0;readlink -f ftp_watchd
+: 1543257275:0;$(readlink -f ftp_watchd)
+: 1543257278:0;echo $(readlink -f ftp_watchd)
+: 1543257305:0;sudo ln -s $(readlink -f ftp_watchd ) /etc/rc.d
+: 1543257317:0;ls /etc/rc.d
+: 1543257319:0;ls /etc/rc.d -l
+: 1543257323:0;l /etc/rc.d 
+: 1543257348:0;ll
+: 1543257349:0;l
+: 1543257360:0;sudo service ftp_watchd
+: 1543257364:0;sudo service ftp_watchd stop
+: 1543257442:0;/etc/rc.d/ftpd
+: 1543257445:0;vim /etc/rc.d/ftpd
+: 1543257506:0;vim /usr/local/etc/rc.d/pure-ftpd
+: 1543257523:0;cat ftp_watchd
+: 1543257538:0;cp /usr/local/etc/rc.d/pure-ftpd ftp_watchd
+: 1543257550:0;~/rmate/bin/rmate ftp_watchd
+: 1543259557:0;ps auxww
+: 1543259563:0;ps auxww|grep pure
+: 1543259639:0;vim .zshrc
+: 1543259685:0;vim ~/.tmux.conf
+: 1543259691:0;tmux a
+: 1543259698:0;tmux 
+: 1543259720:0;echo $TERM
+: 1543259774:0;cat 
+: 1543259799:0;bindkey "^[[1~" begging-of-line
+: 1543259810:0;bindkey "^[[1~" beginning-of-line
+: 1543259825:0;bindkey "^[[4~" end-of-line
+: 1543259855:0;vim .zsh
+: 1543259857:0;vim .zshrc
+: 1543259897:0;cat 
+: 1543259906:0;vim .vimrc
+: 1543259938:0;vim .zshrc
+: 1543259945:0;cd misc
+: 1543259945:0;ls
+: 1543259947:0;git status
+: 1543259954:0;cat oh-my-zsh/custom/alias.zsh
+: 1543259957:0;diff
+: 1543259960:0;git diff
+: 1543260027:0;ll
+: 1543260031:0;git reset --help
+: 1543260065:0;git reset --hard HEAD oh-my-zsh/zshrc
+: 1543260075:0;git reset HEAD oh-my-zsh/zshrc
+: 1543260080:0;vim oh-my-zsh/zshrc
+: 1543260089:0;git diff
+: 1543260108:0;git add -A 
+: 1543260116:0;git commit -m 'update oh-my-zsh config'
+: 1543260117:0;git push
+: 1543260145:0;tmux a
+: 1543260147:0;tmux
+: 1543260727:0;ps aux
+: 1543260729:0;ps auxw
+: 1543260731:0;ps auxww
+: 1543260744:0;ps auxww | grep pure-uploadscript
+: 1543260911:0;l
+: 1543260919:0;service ftp_watchd
+: 1543260922:0;service ftp_watchd status
+: 1543260929:0;sudo vim /etc/rc.conf
+: 1543260981:0;service ftp_watchd status
+: 1543261011:0;service ftp_watchd start
+: 1543261017:0;sudo vim /etc/rc.conf
+: 1543261027:0;service ftp_watchd start
+: 1543261028:0;sudo vim /etc/rc.conf
+: 1543261040:0;service ftp_watchd start
+: 1543261042:0;sudo vim /etc/rc.conf
+: 1543261077:0;service ftp_watchd start
+: 1543261079:0;service ftp_watchd stop
+: 1543261105:0;service ftp_watchd start
+: 1543261108:0;service ftp_watchd stop
+: 1543261132:0;ps auxww |grep pure-uplo
+: 1543261165:0;pure-uploadscript
+: 1543261207:0;ps auxww |grep pure-uplo
+: 1543261209:0;ps auxwwwwww |grep pure-uplo
+: 1543261214:0;ps auxw |grep pure-uplo
+: 1543261266:0;ps aux
+: 1543261287:0;ps aux|grep
+: 1543261289:0;ps aux|grep a
+: 1543261311:0;ps aux
+: 1543261349:0;service ftp_watchd start
+: 1543261351:0;sudo service ftp_watchd start
+: 1543261358:0;ps aux |grep pure
+: 1543261369:0;sudo service ftp_watchd stop
+: 1543261372:0;ps aux |grep pure
+: 1543261405:0;man pure-uploadscript
+: 1543261847:0;kill 5071
+: 1543261855:0;kill 4612
+: 1543261868:0;pgrep pur
+: 1543261872:0;pgrep pur -l
+: 1543261875:0;pgrep p -l
+: 1543261878:0;pgrep p -lp 
+: 1543261889:0;ps ef
+: 1543261894:0;ps -ef
+: 1543261899:0;ps aux
+: 1543261918:0;ps aux |grep pure
+: 1543261972:0;pure-uploadscript
+: 1543261974:0;sudo pure-uploadscript
+: 1543262091:0;sudo pure-uploadscript -B -p /var/run/pure-uploadscript -r /usr/bin/touch
+: 1543262098:0;pgrep pure-uploadscript
+: 1543262101:0;pgrep pure-uploadscript -l
+: 1543262102:0;pgrep pure-uploadscript 
+: 1543262108:0;man pgrep
+: 1543262173:0;ll
+: 1543262188:0;ps aux
+: 1543262192:0;ps aux|grep uploa
+: 1543262200:0;sudo pure-uploadscript 
+: 1543262202:0;sudo pure-uploadscript  -B 
+: 1543262208:0;sudo pure-uploadscript  -B -r /usr/bin/touch
+: 1543262210:0;sudo pure-uploadscript  -B 
+: 1543262212:0;ps aux|grep uploa
+: 1543262230:0;kill 5379
+: 1543262232:0;sudo kill 5379
+: 1543262235:0;ps aux|grep uploa
+: 1543262248:0;sudo service ftp_watchd start
+: 1543262250:0;ps aux|grep uploa
+: 1543262254:0;sudo service ftp_watchd stop
+: 1543262256:0;ps aux|grep uploa
+: 1543262387:0;sudo service ftp_watchd status
+: 1543262389:0;sudo service ftp_watchd start
+: 1543262393:0;ps aux|grep uploa
+: 1543262396:0;sudo service ftp_watchd status
+: 1543262431:0;sudo service ftp_watchd start
+: 1543262432:0;sudo service ftp_watchd status
+: 1543262435:0;sudo service ftp_watchd stop
+: 1543308260:0;sudo pip instalr
+: 1543308261:0;pip
+: 1543324410:0;service pure-ftpd status
+: 1543324419:0;sudo service pure-ftpd start &
+: 1543324425:0;sudo service pure-ftpd start 
+: 1543324432:0;sudo service pure-ftpd start &
+: 1543324437:0;service pure-ftpd status
+: 1543324449:0;service ftp_watchd status
+: 1543324467:0;ps aux|grep pureftp-upload
+: 1543324469:0;ps aux|grep pureftpd-upload
+: 1543324474:0;ps aux|grep pure-upload
+: 1543324478:0;ps aux|grep pur
+: 1543324481:0;ps aux|grep pure-upload
+: 1543324483:0;ps aux | grep pure-upload
+: 1543324505:0;./rmate/bin/rmate hw/hw3/ftp_watchd
+: 1543324600:0;service ftp_watchd status
+: 1543324830:0;service ftp_watchd start
+: 1543324832:0;sudo service ftp_watchd start
+: 1543324839:0;sudo service ftp_watchd status
+: 1543324847:0;pgrep pure-uplo
+: 1543324849:0;pgrep pure-uplo -l
+: 1543324857:0;ps auxw|grep pure-uplo
+: 1543324877:0;ps auxw
+: 1543324890:0;jobs
+: 1543324892:0;kill 1
+: 1543324895:0;sudo kill 1
+: 1543325015:0;rmate/bin/rmate hw/hw3/ftp_watchd
+: 1543325029:0;service pureftpd
+: 1543325032:0;service pureftpd status
+: 1543325035:0;service pure_ftpd status
+: 1543325037:0;service pure-ftpd status
+: 1543325045:0;service ftp_watchd status
+: 1543325049:0;sudo service ftp_watchd start
+: 1543325054:0;sudo service ftp_watchd status
+: 1543325062:0;ps aux|grep pure-uplo
+: 1543325069:0;cat /var/run/pure-ftpd
+: 1543325073:0;suod ls /var/run/pure-ftpd
+: 1543325076:0;sudo ls /var/run/pure-ftpd
+: 1543325094:0;cat /var/run/pure-uploadscript.pid
+: 1543325096:0;sudo cat /var/run/pure-uploadscript.pid
+: 1543325108:0;pgrep pure-upl
+: 1543325110:0;pgrep pure-up
+: 1543325115:0;pgrep pure-
+: 1543325119:0;ps aux|grep pure-uplo
+: 1543325126:0;sudo service ftp_watchd status
+: 1543325128:0;sudo service ftp_watchd start
+: 1543325130:0;ps aux|grep pure-uplo
+: 1543325133:0;pgrep pure-
+: 1543325135:0;ps aux|grep pure-uplo
+: 1543325150:0;cat /var/run/pure-uploadscript.pid
+: 1543325152:0;ps aux|grep pure-uplo
+: 1543325156:0;sudo cat /var/run/pure-uploadscript.pid
+: 1543325157:0;ps aux|grep pure-uplo
+: 1543325161:0;jobs
+: 1543325163:0;ps auxw
+: 1543325288:0;ps aux|grep pure-uplo
+: 1543325291:0;sudo cat /var/run/pure-uploadscript.pid
+: 1543325295:0;sudo service ftp_watchd start
+: 1543325298:0;sudo service ftp_watchd status
+: 1543325300:0;ps aux|grep pure-uplo
+: 1543325401:0;man pure-uploadscript
+: 1543325431:0;man /var/run/pure-ftpd
+: 1543325438:0;man pure-uploadscript
+: 1543325532:0;sudo service ftp_watchd status
+: 1543325543:0;ps aux|grep pure-uplo
+: 1543325545:0;sudo service ftp_watchd start
+: 1543325546:0;ps aux|grep pure-uplo
+: 1543325553:0;ps auxw|grep pure-uplo
+: 1543325556:0;ps auxww|grep pure-uplo
+: 1543325575:0;sudo service ftp_watchd status
+: 1543325576:0;sudo service ftp_watchd start
+: 1543325578:0;ps auxww|grep pure-uplo
+: 1543325618:0;sudo service ftp_watchd start
+: 1543325620:0;ps auxww|grep pure-uplo
+: 1543325621:0;sudo service ftp_watchd start
+: 1543325623:0;ps auxww|grep pure-uplo
+: 1543325644:0;check_pidfile
+: 1543325685:0;sudo service ftp_watchd start
+: 1543325687:0;sudo service ftp_watchd stop
+: 1543325696:0;sudo service ftp_watchd start
+: 1543325697:0;sudo service ftp_watchd stop
+: 1543325700:0;ps auxww|grep pure-uplo
+: 1543325706:0;sudo service ftp_watchd start
+: 1543325707:0;ps auxww|grep pure-uplo
+: 1543325713:0;sudo kill 1236
+: 1543325715:0;ps auxww|grep pure-uplo
+: 1543325764:0;man pgrep
+: 1543325894:0;sudo service ftp_watchd start
+: 1543325898:0;sudo service ftp_watchd stop
+: 1543325917:0;pgrep pure-uploadscript
+: 1543325934:0;sudo service ftp_watchd stop
+: 1543325936:0;sudo service ftp_watchd start
+: 1543325938:0;sudo service ftp_watchd stop
+: 1543325951:0;sudo service ftp_watchd status
+: 1543325953:0;sudo service ftp_watchd start
+: 1543325955:0;sudo service ftp_watchd status
+: 1543325957:0;sudo service ftp_watchd stop
+: 1543326106:0;sudo service ftp_watchd status
+: 1543326111:0;sudo service ftp_watchd start
+: 1543326112:0;sudo service ftp_watchd status
+: 1543326115:0;sudo service ftp_watchd stop
+: 1543326116:0;sudo service ftp_watchd status
+: 1543326150:0;sudo service ftp_watchd start
+: 1543326152:0;sudo service ftp_watchd status
+: 1543326153:0;sudo service ftp_watchd start
+: 1543326221:0;sudo service ftp_watchd status
+: 1543326224:0;sudo service ftp_watchd restart
+: 1543326229:0;sudo service ftp_watchd status
+: 1543326245:0;sudo service ftp_watchd start
+: 1543326246:0;sudo service ftp_watchd status
+: 1543326251:0;sudo service ftp_watchd restart
+: 1543326253:0;sudo service ftp_watchd status
+: 1543326282:0;cat /etc/rc.conf
+: 1543326287:0;ls ~
+: 1543326294:0;sudo service pure-ftpd start
+: 1543326325:0;bg
+: 1543326327:0;jobs
+: 1543326331:0;sudo zfs list
+: 1543326339:0;sudo zfs unmount mipool/hidden
+: 1543326340:0;sudo zfs unmount mipool/public
+: 1543326343:0;sudo zfs unmount mipool/upload
+: 1543326355:0;sudo service pure-ftpd stop
+: 1543326357:0;sudo zfs unmount mipool/upload
+: 1543326360:0;sudo service pure-ftpd start
+: 1543326362:0;bg
+: 1543326385:0;l
+: 1543326387:0;ls
+: 1543326445:0;man pure-uploadscript
+: 1543326631:0;sudo service pure-ftpd status
+: 1543326634:0;sudo service pure-ftpd stop
+: 1543326637:0;sudo service pure-ftpd status
+: 1543326639:0;sudo service pure-ftpd start
+: 1543326643:0;sudo service pure-ftpd start &
+: 1543326647:0;sudo service pure-ftpd status
+: 1543326654:0;sudo service ftp_watchd status
+: 1543326656:0;sudo service ftp_watchd start
+: 1543326659:0;sudo service ftp_watchd status
+: 1543326672:0;ps auxwww|grep pure-
+: 1543326679:0;cat /tmp/__uploadscript
+: 1543326706:0;ls
+: 1543326723:0;less /var/log/dmesg.today
+: 1543326725:0;sudo less /var/log/dmesg.today
+: 1543326876:0;man pure-ftpd
+: 1543326911:0;sudo vim /etc/rc.conf
+: 1543326991:0;sudo service pure-ftpd restart
+: 1543326998:0;sudo service pure-ftpd status
+: 1543327025:0;sudo service pure-ftpd start
+: 1543327044:0;/usr/local/sbin/pure-uploadscript
+: 1543327047:0;sudo /usr/local/sbin/pure-uploadscript
+: 1543327048:0;sudo /usr/local/sbin/pure-uploadscript -B
+: 1543327071:0;sudo /usr/local/sbin/pure-uploadscript -B  -p /var/run/pure-uploadscript.pid -r /usr/bin/touch
+: 1543327088:0;ps auxwww|grep pure-
+: 1543327093:0;sudo kill 2158
+: 1543327095:0;ps auxwww|grep pure-
+: 1543327100:0;sudo /usr/local/sbin/pure-uploadscript -B  -p /var/run/pure-uploadscript.pid -r /usr/bin/touch
+: 1543327105:0;sudo service pure-ftpd status
+: 1543327108:0;sudo service pure-ftpd start
+: 1543327153:0;sudo service pure-ftpd status
+: 1543327156:0;ps auxwww|grep pure-
+: 1543327162:0;sudo service pure-ftpd start
+: 1543327165:0;sudo service pure-ftpd start &
+: 1543327167:0;ps auxwww|grep pure-
+: 1543327174:0;sudo service pure-ftpd stop
+: 1543327207:0;sudo ~/rmate/bin/rmate /usr/local/etc/rc.d/pure-ftpd
+: 1543327246:0;sudo service pure-ftpd start
+: 1543327250:0;sudo service pure-ftpd start &
+: 1543327253:0;ps auxwww|grep pure-
+: 1543327262:0;sudo service pure-ftpd stop
+: 1543327266:0;ps auxwww|grep pure-
+: 1543327280:0;ps auxwww|grep pure-u
+: 1543327282:0;ps auxwww|grep pure-up
+: 1543327284:0;ps aux|grep pure-up
+: 1543327314:0;sudo vim /etc/rc.conf
+: 1543327338:0;sudo service pure-ftpd stop
+: 1543327340:0;sudo service pure-ftpd start
+: 1543327353:0;sudo service pure-ftpd status
+: 1543327357:0;sudo service pure-ftpd start &
+: 1543327361:0;sudo service pure-ftpd status
+: 1543327363:0;ps aux|grep pure-up
+: 1543327371:0;sudo service pure-ftpd status
+: 1543327401:0;ps aux|grep pure
+: 1543327411:0;sudo service pure-ftpd stop
+: 1543327420:0;ps aux|grep pure
+: 1543327429:0;sudo service ftp_watchd status
+: 1543327431:0;sudo service ftp_watchd stop
+: 1543327433:0;ps aux|grep pure
+: 1543327470:0;sudo service pure-ftpd start
+: 1543327486:0;pure-ftpd
+: 1543327488:0;sudo pure-ftpd
+: 1543327498:0;sudo pure-ftpd --help
+: 1543327506:0;sudo pure-ftpd -B
+: 1543327530:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543327603:0;sudo service pure-ftpd restart
+: 1543327609:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543327617:0;sudo service pure-ftpd restart
+: 1543327622:0;sudo service pure-ftpd stop
+: 1543327624:0;sudo service pure-ftpd start
+: 1543327634:0;sudo vim /etc/rc.conf
+: 1543327643:0;sudo service pure-ftpd start
+: 1543327646:0;sudo service pure-ftpd stop
+: 1543327650:0;sudo service pure-ftpd status
+: 1543327653:0;sudo service pure-ftpd start
+: 1543327661:0;ps aux|grep pure
+: 1543327670:0;sudo service pure-ftpd stop
+: 1543327671:0;ps aux|grep pure
+: 1543327679:0;sudo service ftp_watchd stop
+: 1543327681:0;sudo service ftp_watchd status
+: 1543327683:0;ps aux|grep pure
+: 1543327692:0;sudo service pure-ftpd start
+: 1543327694:0;ps aux|grep pure
+: 1543327711:0;ps auxww|grep pure
+: 1543327724:0;sudo vim /etc/rc.conf
+: 1543327734:0;sudo service pure-ftpd restart
+: 1543327736:0;ps auxww|grep pure
+: 1543327743:0;sudo service ftp_watchd start
+: 1543327745:0;ps auxww|grep pure
+: 1543327767:0;ls
+: 1543327789:0;l
+: 1543327802:0;ps auxww|grep pure
+: 1543327828:0;sudo service ftp_watchd start
+: 1543327830:0;ps auxww|grep pure
+: 1543327854:0;ls
+: 1543327857:0;/tmp/__uploadscript
+: 1543327859:0;ls
+: 1543327861:0;rm hello
+: 1543328183:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543328228:0;sudo service pure-ftpd restart
+: 1543328234:0;ps auxww|grep pure
+: 1543328253:0;ls
+: 1543328263:0;ps auxww|grep pure
+: 1543328269:0;sudo service ftp_watchd start
+: 1543328273:0;ps auxww|grep pure
+: 1543328283:0;ls
+: 1543328289:0;man pure-ftpd
+: 1543328297:0;man pure-uploadscript
+: 1543328318:0;man pure-ftpd
+: 1543328343:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543328356:0;sudo vim /etc/rc.conf
+: 1543328371:0;sudo service pure-ftpd restart
+: 1543328382:0;sudo service ftp_watchd restart
+: 1543328395:0;ls
+: 1543330566:0;service pure-ftpd status
+: 1543330647:0;service ftp_watchd status
+: 1543330664:0;man pure-uploadscript
+: 1543330814:0;cat /var/run/pure-uploadscript.pid
+: 1543330818:0;ps auxww|grep pure
+: 1543330862:0;ls
+: 1543330876:0;cat /var/run/pure-ftpd.pid
+: 1543330883:0;cat /var/run/pure-ftpd.upload.lock
+: 1543330888:0;cat /var/run/pure-ftpd.upload.pipe
+: 1543330892:0;cat /var/run/pure-uploadscript.pid
+: 1543330901:0;sudo service ftp_watchd stop
+: 1543330908:0;sudo service pure-ftpd stop
+: 1543330913:0;sudo service ftp_watchd stop
+: 1543330917:0;sudo service pure-ftpd start
+: 1543330922:0;sudo service ftp_watchd start
+: 1543330925:0;ps auxww|grep pure
+: 1543330937:0;less /var/log/pureftpd.log
+: 1543330939:0;sudo less /var/log/pureftpd.log
+: 1543330953:0;ls
+: 1543330958:0;/tmp/__uploadscript
+: 1543330959:0;ls
+: 1543330962:0;rm hello y
+: 1543331076:0;echo dens > /var/run/pure-ftpd.upload.pipe
+: 1543331078:0;sudo echo dens > /var/run/pure-ftpd.upload.pipe
+: 1543331083:0;l /var/run/pure-ftpd.upload.pipe
+: 1543331093:0;echo dens |sudo tee /var/run/pure-ftpd.upload.pipe
+: 1543331096:0;ls
+: 1543331110:0;cat /var/run/pure-uploadscript.pid
+: 1543331146:0;mutt
+: 1543331147:0;man mutt
+: 1543331173:0;vim /tmp/__uploadscript
+: 1543331182:0;sudo vim /tmp/__uploadscript
+: 1543331197:0;rmate/bin/rmate
+: 1543331206:0;rmate/bin/rmate hw/hw3/ftp_watchd
+: 1543331248:0;sudo service ftp_watchd restart
+: 1543331254:0;cat /tmp/__uploadscript
+: 1543331256:0;ll
+: 1543331265:0;l
+: 1543331268:0;ls
+: 1543331282:0;/tmp/__uploadscript
+: 1543331284:0;ll
+: 1543331286:0;rm hello
+: 1543331288:0;ll
+: 1543331432:0;sudo less /var/log/xferlog
+: 1543331460:0;sudo less /var/log/utx.log
+: 1543331469:0;sudo less /var/log/messages
+: 1543331486:0;sudo less /var/log/lpd-errs
+: 1543331490:0;sudo less /var/log/auth.log
+: 1543331591:0;rmate/bin/rmate hw/hw3/zbackup
+: 1543331614:0;man zfs
+: 1543331667:0;locate snapshot
+: 1543331673:0;locate snapshot|grep zfs
+: 1543331685:0;locate zfs|grep snapshot
+: 1543331692:0;locate snapshot|less
+: 1543331753:0;man zfs
+: 1543332202:0;man xz
+: 1543332256:0;echo eee | xz | hd
+: 1543332695:0;cd hw/hw3
+: 1543332698:0;./zbackup 
+: 1543332701:0;./zbackup --export
+: 1543332709:0;./zbackup --export mipool/hidden
+: 1543332713:0;./zbackup --list
+: 1543332972:0;./zbackup --export mipool/hidden
+: 1543332988:0;./zbackup --export mipool/public
+: 1543333005:0;ll
+: 1543333023:0;touch mipool/public@2018.11.26_18:26:31.xz.enc
+: 1543333036:0;touch mipool\/public@2018.11.26_18:26:31.xz.enc
+: 1543333063:0;touch mipool_public@2018.11.26_18:26:31.xz.enc
+: 1543333065:0;ll
+: 1543333067:0;rm mipool_public@2018.11.26_18:26:31.xz.enc
+: 1543333083:0;./zbackup --export mipool/public
+: 1543333085:0;ll
+: 1543333095:0;hd mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543333175:0;zfs send -R -v mipool/public@2018.11.26_18:26:31
+: 1543333182:0;zfs send -R -v mipool/public@2018.11.26_18:26:31 | hd
+: 1543333187:0;sudo zfs send -R -v mipool/public@2018.11.26_18:26:31 | hd
+: 1543333196:0;./zbackup --export mipool/public
+: 1543333198:0;ll
+: 1543333199:0;hd mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543333305:0;./zbackup --export mipool/public
+: 1543333307:0;ll
+: 1543333310:0;file mipool\]public@2018.11.26_18:26:31.xz
+: 1543333318:0;sudo ./zbackup --export mipool/public
+: 1543333320:0;ll
+: 1543333364:0;sudo ./zbackup --export mipool/public
+: 1543333427:0;sudo  ./zbackup --list
+: 1543333432:0;sudo  ./zbackup --export mipool/public 2
+: 1543333434:0;ll
+: 1543333443:0;openssl
+: 1543333448:0;man openssl
+: 1543333540:0;ll
+: 1543333575:0;sudo zfs send -Rv mipool/public@2018.11.26_18:27:45 |xz > a.xz
+: 1543333578:0;ll
+: 1543333588:0;diff a.xz mipool\]public@2018.11.26_18:27:45.xz
+: 1543334089:0;sudo  ./zbackup --export mipool/public 2
+: 1543334112:0;sudo pkg search pip
+: 1543334312:0;sudo pkg install py36-pip
+: 1543334638:0;sudo pip
+: 1543334642:0;sudo pip3
+: 1543334643:0;sudo pip36
+: 1543334675:0;locate pip
+: 1543334698:0;python -m pip
+: 1543334700:0;python37 -m pip
+: 1543334703:0;python3.7 -m pip
+: 1543334709:0;python3.6 -m pip
+: 1543334730:0;python3.6 -m pip install pycrypto
+: 1543334795:0;sudo python3.6 -m pip install pycrypto
+: 1543334865:0;sudo  ./zbackup --export mipool/public 2
+: 1543334973:0;sudo  ./zbackup --list
+: 1543334977:0;sudo  ./zbackup 
+: 1543334980:0;sudo  ./zbackup --list
+: 1543335003:0;sudo  ./zbackup --export mipool/public 2
+: 1543335472:0;ll
+: 1543335499:0;sudo  ./zbackup --export mipool/public 2
+: 1543335508:0;ll
+: 1543335511:0;rm mipool\]public@2018.11.26_18:2*
+: 1543335514:0;sudo  ./zbackup --export mipool/public 2
+: 1543335517:0;ll
+: 1543335528:0;file mipool\]public@2018.11.26_18:27:45.xz.enc
+: 1543335582:0;./zbackup
+: 1543335608:0;man zfs
+: 1543336035:0;ll
+: 1543336055:0;sudo ./zbackup --import mipool\]public@2018.11.26_18:27:45.xz.enc
+: 1543336091:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:27:45.xz.enc
+: 1543336169:0;sudo ./zbackup --export mipool/public
+: 1543336190:0;l
+: 1543336198:0;file mipool\]public@2018.11.26_18:2
+: 1543336201:0;file mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543336213:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543336236:0;l
+: 1543336264:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543336267:0;l
+: 1543336271:0;file *
+: 1543336301:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543336322:0;sudo zfs recv mipool/public 
+: 1543336330:0;sudo zfs recv mipool/public < mipool\]public@2018.11.26_18:26:31.xz
+: 1543336397:0;man zfs
+: 1543336422:0;sudo zfs recv mipool/public < mipool\]public@2018.11.26_18:26:31.xz
+: 1543336426:0;sudo zfs recv -dvu mipool/public < mipool\]public@2018.11.26_18:26:31.xz
+: 1543336441:0;hd mipool\]public@2018.11.26_18:26:31.xz
+: 1543336465:0;xzcat mipool\]public@2018.11.26_18:26:31.xz | sudo zfs recv -dvu mipool/public 
+: 1543336549:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543336782:0;ll
+: 1543336790:0;file mipool\]public@2018.11.26_18:26:31
+: 1543336891:0;sudo zfs receive mipool/public 
+: 1543336898:0;sudo zfs receive mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543336912:0;sudo zfs receive -F mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543336925:0;sudo ./zbackup --list
+: 1543336938:0;sudo ./zbackup --delete mipool 4
+: 1543336949:0;sudo ./zbackup --delete mipool/public/public 4
+: 1543336953:0;sudo ./zbackup --list
+: 1543336981:0;sudo zfs receive -udv mipool/public 
+: 1543336987:0;sudo zfs receive -udv mipool/public  < mipool\]public@2018.11.26_18:26:31
+: 1543336992:0;sudo zfs receive -udv mipool  < mipool\]public@2018.11.26_18:26:31
+: 1543337001:0;sudo zfs receive -v mipool  < mipool\]public@2018.11.26_18:26:31
+: 1543337010:0;sudo zfs receive -v mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337026:0;sudo ./zbackup --list
+: 1543337036:0;sudo ./zbackup --delete mipool/public 1
+: 1543337038:0;sudo ./zbackup --list
+: 1543337040:0;sudo zfs receive -v mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337055:0;sudo zfs receive -vd mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337059:0;sudo zfs receive -v mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337065:0;sudo zfs receive -vu mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337072:0;sudo zfs receive -vuF mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337119:0;sudo ./zbackup --delete mipool/public
+: 1543337121:0;sudo zfs receive -vuF mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337127:0;sudo zfs receive -vu mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337128:0;sudo ./zbackup --delete mipool/public
+: 1543337130:0;sudo zfs receive -vu mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337133:0;sudo zfs receive -v mipool/public < mipool\]public@2018.11.26_18:26:31
+: 1543337155:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543337165:0;sudo ./zbackup --list
+: 1543337168:0;sudo ./zbackup --delete
+: 1543337173:0;sudo ./zbackup --delete mipool/public
+: 1543337175:0;sudo ./zbackup --delete
+: 1543337176:0;sudo ./zbackup --list
+: 1543337185:0;sudo ./zbackup --import mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543337193:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543337197:0;sudo ./zbackup --list
+: 1543337214:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543337226:0;sudo ./zbackup --delete mipool/public
+: 1543337227:0;sudo ./zbackup --list
+: 1543337228:0;sudo ./zbackup --import mipool/public mipool\]public@2018.11.26_18:26:31.xz.enc
+: 1543337231:0;ll
+: 1543337238:0;rm a.xz
+: 1543337241:0;rm z.enc
+: 1543337246:0;ll
+: 1543337249:0;git add -A
+: 1543337262:0;git commit -m 'zbackup add import/export'
+: 1543337265:0;git push
+: 1543390132:0;tmux a
+: 1543390133:0;ls
+: 1543390233:0;git status
+: 1543390260:0;git fetch
+: 1543390263:0;git status
+: 1543390268:0;git log
+: 1543390314:0;sudo service ftp_watchd status
+: 1543390322:0;sudo service pure-ftpd status
+: 1543390357:0;sudo service pure-ftpd stop
+: 1543390361:0;sudo service ftp_watchd stop
+: 1543390366:0;sudo service pure-ftpd start
+: 1543390371:0;ps aux|grep pure
+: 1543390378:0;sudo service ftp_watchd start
+: 1543390379:0;ps aux|grep pure
+: 1543390388:0;cat /var/run/pure-uploadscript.pid
+: 1543390412:0;~/rmate/bin/rmate ftp_watchd
+: 1543390496:0;ls /usr/home/ftp
+: 1543390501:0;ls /usr/home/ftp/hidden
+: 1543390507:0;cd /usr
+: 1543390508:0;ls
+: 1543390510:0;l home
+: 1543390515:0;cdhome
+: 1543390516:0;cd home
+: 1543390520:0;l -i
+: 1543390526:0;l -i /home
+: 1543390597:0;vim /usr/local/etc/pure-ftpd.conf
+: 1543390738:0;sudo service pure-ftpd poll
+: 1543390749:0;sudo service ftp_watchd poll
+: 1543390858:0;sudo service pure-ftpd poll
+: 1543390962:0;sudo service ntpd poll
+: 1543390976:0;cat /etc/rc.d/ntpd
+: 1543391023:0;sudo service pure-ftpd p
+: 1543391025:0;sudo service pure-ftpd poll
+: 1543391033:0;sudo service ftp_watchd poll
+: 1543391034:0;sudo service ftp_watchd pol
+: 1543391042:0;sudo service ftp_watchd enabled
+: 1543391047:0;sudo service ftp_watchd status
+: 1543391078:0;pure-uploadscript
+: 1543391081:0;sudo pure-uploadscript
+: 1543391089:0;sudo pure-uploadscript -B -r /usr/bin/touch
+: 1543391092:0;ps aux|grep pure
+: 1543391108:0;sudo service ftp_watchd stop
+: 1543391123:0;sudo service ftp_watchd start
+: 1543391128:0;sudo service ftp_watchd status
+: 1543391162:0;sudo service ftp_watchd start
+: 1543391165:0;sudo service ftp_watchd status
+: 1543391167:0;sudo service ftp_watchd stop
+: 1543391169:0;sudo service ftp_watchd status
+: 1543391172:0;sudo service ftp_watchd start
+: 1543391173:0;sudo service ftp_watchd status
+: 1543391176:0;sudo service ftp_watchd stop
+: 1543391177:0;sudo service ftp_watchd status
+: 1543391178:0;sudo service ftp_watchd start
+: 1543391180:0;ps aux|grep pure
+: 1543391193:0;sudo pure-uploadscript -B -r /usr/bin/touch
+: 1543391195:0;ps aux|grep pure
+: 1543391198:0;sudo service ftp_watchd status
+: 1543391214:0;cd
+: 1543391217:0;cd hw/hw3
+: 1543391219:0;cat ftp_watchd
+: 1543391247:0;sudo service ftp_watchd status
+: 1543391250:0;sudo service ftp_watchd stop
+: 1543391251:0;sudo service ftp_watchd status
+: 1543391253:0;sudo service ftp_watchd stop
+: 1543391256:0;ps aux|grep pure
+: 1543391265:0;sudo kill 9691
+: 1543391266:0;ps aux|grep pure
+: 1543391268:0;sudo service ftp_watchd start
+: 1543391278:0;sudo service ftp_watchd status
+: 1543391279:0;ps aux|grep pure
+: 1543391336:0;ls ~
+: 1543391339:0;cd
+: 1543391340:0;ls
+: 1543391793:0;cat hw/hw3/ftp_watchd
+: 1543391814:0;rmate/bin/rmate hw/hw3/ftp_watchd
+: 1543391891:0;vim hw/hw3/ftp_watchd
+: 1543392076:0;rmate/bin/rmate hw/hw3/ftp_watchd
+: 1543392187:0;pwait
+: 1543392240:0;sudo service ftp_watchd status
+: 1543392246:0;sudo service ftp_watchd poll
+: 1543392368:0;sudo less /var/log/xferlog
+: 1543392474:0;l /tmp
+: 1543392485:0;sudo service pure-ftpd status
+: 1543392489:0;sudo service ftp_watchd status
+: 1543392493:0;sudo service ftp_watchd restart
+: 1543392496:0;l /tmp
+: 1543392518:0;sudo service ftp_watchd restart
+: 1543392523:0;ls /tmp/
+: 1543392525:0;l /tmp
+: 1543392530:0;rm /tmp/__uploadscript
+: 1543392533:0;sudo rm /tmp/__uploadscript
+: 1543392538:0;sudo service ftp_watchd restart
+: 1543392541:0;l /tmp
+: 1543392590:0;sudo service ftp_watchd status
+: 1543392607:0;l
+: 1543392608:0;ls
+: 1543392618:0;ps aux|grep pure
+: 1543392624:0;ps auxww|grep pure
+: 1543392629:0;ps auxwww|grep pure
+: 1543392688:0;sudo service ftp_watchd restart
+: 1543392693:0;ps auxwww|grep pure
+: 1543392705:0;	ls
+: 1543392726:0;sudo vim /etc/rc.conf
+: 1543392739:0;sudo service ftp_watchd restart
+: 1543392745:0;ls
+: 1543392760:0;sudo vim /etc/rc.conf
+: 1543392769:0;sudo service ftp_watchd restart
+: 1543392778:0;cat hello
+: 1543392788:0;cat /usr/local/bin/my-pure-uploadscript.sh
+: 1543392794:0;sudo vim /etc/rc.conf
+: 1543392802:0;sudo service ftp_watchd restart
+: 1543392806:0;cat /usr/local/bin/my-pure-uploadscript.sh
+: 1543392817:0;cat hello
+: 1543392877:0;cd /home
+: 1543392877:0;ls
+: 1543392879:0;cd ftp
+: 1543392879:0;ls
+: 1543392882:0;mount
+: 1543392891:0;sudo service pure-ftpd stop
+: 1543392897:0;sudo service ftp_watchd stop
+: 1543392899:0;mount
+: 1543392908:0;ls public
+: 1543392910:0;ls
+: 1543392913:0;find .
+: 1543392922:0;sudo zfs mount all
+: 1543392924:0;sudo zfs mount --all
+: 1543392926:0;sudo zfs mount -a
+: 1543392929:0;mount
+: 1543392936:0;sudo zfs list
+: 1543392947:0;sudo zfs destroy mipool/public/public
+: 1543392948:0;sudo zfs list
+: 1543392951:0;mount
+: 1543392973:0;sudo zfs get all mipool/public
+: 1543392983:0;sudo zfs get mountpoint mipool/public
+: 1543392995:0;sudo zfs set mountpoint=/usr/home/ftp/public/ mipool/public
+: 1543393001:0;sudo zfs set mountpoint=/usr/home/ftp/hidden mipool/hidden
+: 1543393005:0;sudo zfs set mountpoint=/usr/home/ftp/hidden mipool/upload
+: 1543393009:0;sudo zfs set mountpoint=/usr/home/ftp/upload mipool/upload
+: 1543393014:0;sudo zfs get all mipool/public
+: 1543393018:0;sudo zfs get all mipool/hidden
+: 1543393022:0;sudo zfs get all mipool/upload
+: 1543393029:0;sudo zfs unmount -a
+: 1543393032:0;mount
+: 1543393035:0;sudo zfs mount -a
+: 1543393036:0;mount
+: 1543393039:0;l
+: 1543393042:0;l hidden
+: 1543393045:0;l public
+: 1543393060:0;sudo zfs unmount -a
+: 1543393061:0;l
+: 1543393081:0;sudo service pure-ftpd start
+: 1543393096:0;sudo service pure-ftpd status
+: 1543393097:0;sudo service pure-ftpd start
+: 1543393098:0;sudo service pure-ftpd status
+: 1543393110:0;sudo less /var/log/xferlog
+: 1543393131:0;sudo service pure-ftpd start
+: 1543393134:0;sudo service pure-ftpd status
+: 1543393136:0;ps auxwww|grep pure
+: 1543393141:0;sudo service pure-ftpd stop
+: 1543393143:0;ps auxwww|grep pure
+: 1543393148:0;sudo killall pure-ftpd
+: 1543393149:0;ps auxwww|grep pure
+: 1543393154:0;sudo service pure-ftpd status
+: 1543393156:0;sudo service pure-ftpd start
+: 1543393157:0;sudo service pure-ftpd status
+: 1543393159:0;ps auxwww|grep pure
+: 1543393197:0;sudo service pure-ftpd stop
+: 1543393200:0;ps auxwww|grep pure
+: 1543393202:0;sudo service pure-ftpd stop
+: 1543393210:0;sudo poweroff
+: 1543393308:0;sudo service pure-ftpd status
+: 1543393325:0;mount
+: 1543393328:0;sudo service pure-ftpd
+: 1543393331:0;sudo service pure-ftpd stop
+: 1543393334:0;sudo service pure-ftpd status
+: 1543393339:0;sudo zfs unmount -a
+: 1543393341:0;sudo service pure-ftpd start
+: 1543393343:0;sudo service pure-ftpd status
+: 1543393426:0;cat hello
+: 1543393523:0;ls
+: 1543393530:0;cd /home/ftp/public
+: 1543393531:0;ls
+: 1543393532:0;cd ..
+: 1543393533:0;cd upload
+: 1543393534:0;l
+: 1543393555:0;sudo vim /usr/local/etc/pure-ftpd.conf
+: 1543393601:0;sudo vim /etc/rc.conf
+: 1543393612:0;sudo service pure-ftpd restart
+: 1543393662:0;cd ..
+: 1543393665:0;ll
+: 1543393679:0;rm upload/* -rf
+: 1543393694:0;sudo rm -rf upload/* 
+: 1543393700:0;sudo rm -rf public/*
+: 1543393708:0;sudo rm -rf hidden/treasure
+: 1543393730:0;l
+: 1543393734:0;sudo ls hidden
+: 1543393739:0;sudo su
+: 1543393836:0;ls
+: 1543393846:0;sudo ls -l hidden/treasure
+: 1543393851:0;sudo ls -l hidden/treasure -a
+: 1543393855:0;sudo ls -la hidden/treasure 
+: 1543393874:0;ls hidden/treasure
+: 1543393876:0;ls hidden/
+: 1543393877:0;ls hidden/treasure
+: 1543393882:0;ls hidden/treasure/centr.pdf
+: 1543393886:0;head hidden/treasure/centr.pdf
+: 1543393945:0;ls
+: 1543393946:0;ll
+: 1543393952:0;ls upload
+: 1543393956:0;ll upload
+: 1543394093:0;ll
+: 1543394095:0;l upload
+: 1543394103:0;l upload/aa
+: 1543394120:0;sudo vim /etc/rc.conf
+: 1543394134:0;l upload/aa
+: 1543394145:0;sudo service pure-ftpd restart
+: 1543394195:0;find .
+: 1543394197:0;sudo find .
+: 1543394202:0;sudo rm upload/aa/centr.pdf
+: 1543394207:0;sudo rmdir upload/aa/
+: 1543394210:0;sudo find .
+: 1543394262:0;cd
+: 1543394266:0;cd hw/hw3
+: 1543394267:0;ll
+: 1543394288:0;sudo service ftp_watchd status
+: 1543394294:0;cat ~/hello
+: 1543394308:0;> ~/hello
+: 1543394311:0;echo > ~/hello
+: 1543394322:0;echo |sudo tee ~/hello
+: 1543394324:0;cat ~/hello
+: 1543394342:0;echo |sudo tee ~/hello
+: 1543394343:0;cat ~/hello
+: 1543395294:0;mount
+: 1543395297:0;l /home/ftp
+: 1543395301:0;l /home/ftp/hidden
+: 1543395308:0;l /home/ftp/hidden/treasure
+: 1543395366:0;sudo vim /usr/local/etc/pure-ftpd.conf 
+: 1543395383:0;sudo vim /etc/rc.conf
+: 1543399575:0;cd /home/ftp/public
+: 1543399578:0;echo aaa > a
+: 1543399581:0;sudo echo aaa > a
+: 1543399586:0;sudo touch a
+: 1543399702:0;sudo zfs mount -a
+: 1543399723:0;l /home/ftp
+: 1543399767:0;sudo reboot
+: 1543399866:0;mount
+: 1543399882:0;sudo zfs list
+: 1543399896:0;sudo zpool status
+: 1543399923:0;sudo zfs get compression mipool/public
+: 1543399942:0;cd hw/hw3
+: 1543399943:0;ls
+: 1543399946:0;./zbackup
+: 1543399967:0;sudo ./zbackup mipool/upload 5
+: 1543399981:0;sudo ./zbackup mipool/upload 
+: 1543399997:0;sudo ./zbackup mipool/upload 5
+: 1543400013:0;sudo ./zbackup --list
+: 1543400035:0;sudo ./zbackup mipool/upload 
+: 1543400043:0;sudo ./zbackup mipool/upload 5
+: 1543400045:0;sudo ./zbackup --list
+: 1543400058:0;sudo ./zbackup mipool/upload 
+: 1543400065:0;sudo ./zbackup mipool/upload 5
+: 1543400068:0;sudo ./zbackup --list
+: 1543400117:0;sudo ./zbackup --delete mipool/upload 4
+: 1543400121:0;sudo ./zbackup --list
+: 1543400139:0;sudo ./zbackup --list mipool/public
+: 1543400143:0;sudo ./zbackup --list mipool/upload
+: 1543400156:0;sudo ./zbackup 
+: 1543400170:0;sudo ./zbackup --export mipool/upload
+: 1543400178:0;sudo ./zbackup --export mipool/upload 2
+: 1543400270:0;cat zbackup
+: 1543400272:0;vim zbackup
+: 1543400346:0;openssl
+: 1543400355:0;openssl --help
+: 1543400388:0;openssl < hello > hello.enc
+: 1543400404:0;openssl enc aes-256-ecb < hello > hello.enc
+: 1543400412:0;openssl enc -aes-256-ecb < hello > hello.enc
+: 1543400439:0;sudo ./zbackup --export mipool/upload 2
+: 1543400506:0;ls
+: 1543400519:0;rm mipool\]*
+: 1543400523:0;sudo ./zbackup --export mipool/upload 2
+: 1543400602:0;vim zbackup
+: 1543400659:0;sudo ./zbackup --export mipool/upload 2
+: 1543400663:0;ll
+: 1543400684:0;sudo ./zbackup --list
+: 1543400696:0;sudo ./zbackup --delete mipool/upload
+: 1543400698:0;sudo ./zbackup --list
+: 1543400709:0;sudo ./zbackup --import mipool/upload mipool\]upload@2018.11.28_10:13:04.xz.enc
+: 1543400714:0;sudo ./zbackup --list
+: 1543400726:0;ls
+: 1543400733:0;cat /etc/rc.conf
+: 1543400744:0;vim ftp_watchd
+: 1543400757:0;cat ~/hello
+: 1543400760:0;cat /etc/rc.conf
+: 1543400788:0;sudo zfs unmount -a
+: 1543400816:0;cat ~/hello
+: 1543400836:0;vim ftp_watchd
+: 1543400968:0;sudo service ftp_watchd status
+: 1543400974:0;sudo service ftp_watchd stop
+: 1543400976:0;sudo service ftp_watchd status
+: 1543400982:0;sudo service ftp_watchd start
+: 1543400990:0;sudo service ftp_watchd poll
+: 1543401043:0;sudo service ftp_watchd stop
+: 1543401054:0;sudo service ftp_watchd start
+: 1543401056:0;sudo service ftp_watchd poll
+: 1543401135:0;sudo vim /etc/rc.conf
+: 1543401150:0;sudo service ftp_watchd restart
+: 1543401165:0;cat ~/new
+: 1544095606:0;sudo pkg install apache2
+: 1544095611:0;sudo pkg install apache2 nginx
+: 1544095767:0;sudo pkg install apache nginx
+: 1544095771:0;sudo pkg install nginx
+: 1544095808:0;sudo pkg install apache24-2.4.35
+: 1544095850:0;sudo service apache24
+: 1544095852:0;sudo service apache24 status
+: 1544095861:0;sudo service nginx status
+: 1544095866:0;sudo vim /etc/rc.
+: 1544095872:0;sudo vim /etc/rc.conf
+: 1544095900:0;sudo service nginx status
+: 1544095906:0;sudo vim /etc/rc.conf
+: 1544095914:0;sudo service nginx status
+: 1544095916:0;sudo service nginx start
+: 1544095918:0;sudo service nginx status
+: 1544095929:0;cd /var/www/html
+: 1544095957:0;vim /usr/local/etc/nginx/nginx.conf
+: 1544095974:0;cd /usr/local/www/nginx
+: 1544095975:0;ls
+: 1544101452:0;uname -a
+: 1544101486:0;cd /usr/obj/usr/sr
+: 1544101487:0;cd /usr/obj/usr/src
+: 1544101489:0;cd /usr/obj/
+: 1544101490:0;ls
+: 1544101498:0;cd /usr/src/sys
+: 1544101501:0;cd /usr/src/
+: 1544101501:0;l
+: 1544101681:0;sysctl -a
+: 1544101690:0;sysctl -a|less
+: 1544101826:0;kldstat
+: 1544151251:0;cd /usr/local/www/
+: 1544151252:0;l
+: 1544151256:0;cd apache24
+: 1544151257:0;ll
+: 1544151258:0;cd ..
+: 1544151267:0;sudo service nginx stop
+: 1544151275:0;sudo service apache24 start
+: 1544151281:0;sudo vim /etc/rc.conf
+: 1544151293:0;service apache24
+: 1544151296:0;service apache24 status
+: 1544151304:0;tmux a
+: 1544151315:0;sudo service apache24 start
+: 1544151356:0;service pure-ftpd status
+: 1544151359:0;sudo service pure-ftpd status
+: 1544151366:0;ps auxww|grep pure
+: 1544151371:0;ll
+: 1544151390:0;ls apache24
+: 1544151395:0;cd nginx
+: 1544151397:0;cd ..
+: 1544151409:0;vim /usr/local/etc/apache24
+: 1544151435:0;sudo vim /usr/local/etc/apache24
+: 1544151465:0;sudo service nginx start
+: 1544151474:0;sudo service apache24 restart
+: 1544151557:0;sudo service apache24 reload
+: 1544151628:0;sudo vim /usr/local/etc/apache24
+: 1544151632:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544151742:0;sudo service apache24 reload
+: 1544151771:0;sudo service nginx start
+: 1544152091:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544152187:0;sudo vim /usr/local/etc/apache24/Includes/no-accf.conf
+: 1544152199:0;grep -i virtual /usr/local/etc/apache24/*
+: 1544152205:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544152233:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544152281:0;vim /usr/local/etc/apache24/extra/httpd-vhosts.conf.sample
+: 1544152315:0;cd /usr/local/www
+: 1544152315:0;l
+: 1544152434:0;sudo service apache24 reload
+: 1544152499:0;vim .htaccess
+: 1544152524:0;ll
+: 1544152527:0;cd apache24
+: 1544152528:0;l
+: 1544152533:0;sudo vim .htaccess
+: 1544152589:0;echo "<h1>Access from IP is disallowed, go back home</h1>" > 403.html
+: 1544152596:0;echo "<h1>Access from IP is disallowed, go back home</h1>" |sudo tee 403.html
+: 1544152610:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544152628:0;sudo service apache24 reload
+: 1544152640:0;ls /usr/local/www/apache24
+: 1544152646:0;l
+: 1544152649:0;cat .htaccess
+: 1544152655:0;vim /var/log/apache24-ngu.nctu.me.log
+: 1544152663:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544152726:0;sudo vim .htaccess
+: 1544152734:0;sudo service apache24 reload
+: 1544152737:0;sudo service apache24 restart
+: 1544152750:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544152791:0;sudo service apache24 restart
+: 1544152824:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544153125:0;sudo service nginx reload
+: 1544153128:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544153203:0;sudo service nginx reload
+: 1544153216:0;ll
+: 1544153219:0;cd nginx
+: 1544153227:0;sudo cp ../apache24/403.html .
+: 1544153228:0;l
+: 1544153251:0;cat 50x.html
+: 1544153260:0;sudo rm 403.html
+: 1544153261:0;ll
+: 1544153262:0;cd ..
+: 1544153263:0;l
+: 1544153291:0;sudo service nginx reload
+: 1544153294:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544153300:0;ll
+: 1544153302:0;l
+: 1544153310:0;sudo echo hihi > index.html
+: 1544153315:0;sudo echo hihi |sudo tee index.html
+: 1544153317:0;l
+: 1544153318:0;cat index.html
+: 1544153656:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544153662:0;sudo service nginx reload
+: 1544153677:0;l
+: 1544153680:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544153703:0;sudo service nginx reload
+: 1544153736:0;l
+: 1544153747:0;sudo mv apache24/403.html .
+: 1544153748:0;l
+: 1544153768:0;sudo cp 403.html apache24
+: 1544153770:0;find
+: 1544153771:0;find .
+: 1544153789:0;l
+: 1544153799:0;sudo service nginx restart
+: 1544153813:0;less /var/log/nginx/error.log
+: 1544153860:0;less /var/log/nginx/access.log
+: 1544153957:0;sudo service nginx restart
+: 1544154012:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544154033:0;sudo service apache24 reload
+: 1544154651:0;curl localhost
+: 1544154657:0;curl localhost:8080
+: 1544154721:0;curl localhost -v
+: 1544154722:0;curl localhost -H
+: 1544154724:0;curl localhost -I
+: 1544154727:0;curl localhost -v
+: 1544154737:0;curl localhost -I
+: 1544154753:0;curl localhost:8080 -I
+: 1544154767:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544154797:0;sudo vim /usr/local/etc/apache24/extra/httpd-autoindex.conf
+: 1544154811:0;sudo vim /usr/local/etc/apache24/extra/httpd-manual.conf
+: 1544154820:0;sudo vim /usr/local/etc/apache24/extra/httpd-default.conf
+: 1544154875:0;sudo service apache24 reload
+: 1544154886:0;curl localhost:8080 -I
+: 1544154892:0;sudo service apache24 restart
+: 1544154894:0;curl localhost:8080 -I
+: 1544183891:0;tmux a
+: 1544183893:0;python3
+: 1544183894:0;python37
+: 1544183896:0;python36
+: 1544183900:0;python3.6
+: 1544372980:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544373007:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544373020:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544373050:0;sudo service apache24 reload
+: 1544373102:0;cd /usr/local/www
+: 1544373103:0;l
+: 1544373109:0;sudo mkdir public
+: 1544373110:0;cd public
+: 1544373190:0;sudo wget 'https://cc.tvbs.com.tw/news3.0/tvbs/news/life/images/2015/12/31/557446_395124863870581_856494236_n.jpg'
+: 1544373202:0;sudo curl 'https://cc.tvbs.com.tw/news3.0/tvbs/news/life/images/2015/12/31/557446_395124863870581_856494236_n.jpg' > a.jpg
+: 1544373215:0;l
+: 1544373285:0;cat /usr/local/etc/apache24/extra/httpd-vhosts.conf.sample
+: 1544373297:0;vim /usr/local/etc/apache24/httpd.conf
+: 1544373338:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544373393:0;sudo service apache24 reload
+: 1544373805:0;cd ..
+: 1544373805:0;l
+: 1544373827:0;sudo vim .htaccess
+: 1544373883:0;cd public
+: 1544373886:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544373903:0;sudo service apache24 reload
+: 1544373906:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544373913:0;sudo service apache24 reload
+: 1544373934:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544374015:0;sudo service apache24 reload
+: 1544374039:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544374055:0;sudo vim ../.htaccess
+: 1544374094:0;sudo rm ../.htaccess
+: 1544374095:0;l
+: 1544374109:0;sudo mkdir admin
+: 1544374111:0;cd admin
+: 1544374115:0;sudo vim .htaccess
+: 1544377372:0;locate htdocs
+: 1544377379:0;locate apache
+: 1544377398:0;sudo locate apache
+: 1544377410:0;sudo locate apache|grep -r ports
+: 1544377413:0;sudo locate apache|grep  ports
+: 1544377417:0;sudo locate apache|grep  -h
+: 1544377419:0;sudo locate apache|grep  --help
+: 1544377444:0;find /usr/local
+: 1544377448:0;find /usr/local|grep apache
+: 1544377464:0;find /usr/local|grep apache|grep docs
+: 1544377468:0;find /usr/local|grep apache|grep doc
+: 1544377474:0;find /usr/local|grep apache|less
+: 1544377523:0;cd /usr/local/share/doc/apache24
+: 1544377524:0;l
+: 1544377592:0;cd
+: 1544377598:0;cd /usr/local/ww
+: 1544377600:0;cd /usr/local/www
+: 1544377600:0;l
+: 1544377604:0;la
+: 1544377609:0;cd public/admin
+: 1544377609:0;l
+: 1544377634:0;htpasswd -c .htpasswd admin
+: 1544377638:0;sudo htpasswd -c .htpasswd admin
+: 1544377653:0;l
+: 1544377674:0;sudo chmod 400 .htpasswd
+: 1544377675:0;l
+: 1544377713:0;sudo mv .htpasswd /usr/local/var/
+: 1544377719:0;ls /usr/local/var
+: 1544377722:0;ls /usr/local/var -a
+: 1544377725:0;ls /usr/local/var -l
+: 1544377728:0;l /usr/local/var 
+: 1544377843:0;sudo service apache24 reload
+: 1544377892:0;sudo vim .htaccess
+: 1544378009:0;sudo service apache24 reload
+: 1544378039:0;l
+: 1544378092:0;echo You're in ADMIN page. Congratulations. | sudo tee index.html
+: 1544378095:0;echo You\'re in ADMIN page. Congratulations. | sudo tee index.html
+: 1544378118:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544378137:0;sudo cat /usr/local/var/.htpasswd
+: 1544378146:0;sudo chmod +r /usr/local/var/.htpasswd
+: 1544378398:0;sudo pkg install py27-certbot
+: 1544378441:0;sudo pkg search certbot
+: 1544378447:0;sudo pkg install py36-certbot
+: 1544378524:0;sudo certbot certonly
+: 1544378539:0;python
+: 1544378545:0;python3.7
+: 1544378551:0;python3.7 -m certbot
+: 1544378554:0;python3.6 -m certbot
+: 1544411251:0;sudo /usr/libexec/locate.updatedb
+: 1544423148:0;cd ..
+: 1544423148:0;ls
+: 1544423151:0;curl
+: 1544423153:0;man curl
+: 1544423218:0;curl 'https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/22549607_1494823160600745_2213120285203123034_n.jpg\?_nc_cat\=104\&_nc_ht\=scontent-tpe1-1.xx\&oh\=32cc4973cfa7444055009c3400e3b563\&oe\=5CA8E133' | sudo tee b.jpg > /dev/null
+: 1544423230:0;l
+: 1544423377:0;sudo mv ~/*.jpg .
+: 1544423377:0;l
+: 1544423389:0;sudo rm b.jpg
+: 1544423391:0;l
+: 1544423473:0;ls /usr/local/share/vim/vim81/synmenu.vim
+: 1544423475:0;cat /usr/local/share/vim/vim81/synmenu.vim
+: 1544423486:0;cat /usr/local/share/vim/vim81/synmenu.vim|grep apache
+: 1544423523:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544437753:0;sudo service apache24 reload
+: 1544437803:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544437829:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544437968:0;sudo service apache24 restrat
+: 1544437971:0;sudo service apache24 restart
+: 1544437988:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544437997:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544437999:0;sudo service apache24 restart
+: 1544438316:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544438537:0;sudo service apache24 restart
+: 1544438543:0;sudo service apache24 reload
+: 1544438572:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544438588:0;sudo service apache24 reload
+: 1544438628:0;curl -v localhost:8080
+: 1544438652:0;curl -v ngu.nctu.me:8080
+: 1544438813:0;sudo service apache24 reload
+: 1544438815:0;curl -v ngu.nctu.me:8080
+: 1544438822:0;sudo service apache24 restart
+: 1544438824:0;curl -v ngu.nctu.me:8080
+: 1544438866:0;sudo service apache24 restart
+: 1544438891:0;curl -v ngu.nctu.me:8080
+: 1544438904:0;curl -v ngu.nctu.me:8080/reverse
+: 1544438924:0;curl -v ngu.nctu.me:8080
+: 1544438941:0;curl -v ngu.nctu.me:8080/public
+: 1544438945:0;curl -v ngu.nctu.me:8080/public/
+: 1544438975:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544439039:0;sudo service apache24 restart
+: 1544439219:0;sudo service apache24 reload
+: 1544439588:0;cd /usr/ports/www/apache24
+: 1544439589:0;l
+: 1544439591:0;make
+: 1544439607:0;grep -R Apache 
+: 1544439612:0;grep -R Apache .
+: 1544439625:0;l
+: 1544439628:0;cd fil
+: 1544439629:0;cd files
+: 1544439629:0;l
+: 1544439631:0;cd ..
+: 1544439668:0;make config
+: 1544439709:0;make fetch
+: 1544439714:0;sudo make fetch
+: 1544439775:0;sudo make checksum
+: 1544463436:0;sudo pkg search mod-security
+: 1544463578:0;sudo pkg search mod_security
+: 1544463589:0;sudo pkg install mod_security3
+: 1544463601:0;sudo pkg install ap24-mod_security-2.9.2_2
+: 1544463661:0;sudo service apache24 reload
+: 1544463697:0;less /usr/local/etc/apache24/modules.d/280_mod_security.conf
+: 1544463746:0;sudo service apache24 reload
+: 1544463839:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544463920:0;sudo service apache24 reload
+: 1544464221:0;l
+: 1544464222:0;cd
+: 1544464227:0;cd /usr/local/www
+: 1544464228:0;l
+: 1544464232:0;cd public/admin
+: 1544464232:0;l
+: 1544464242:0;sudo vim .htaccess
+: 1544464263:0;cd /usr/local/www
+: 1544464266:0;cd public
+: 1544464268:0;cd admin
+: 1544464268:0;l
+: 1544464271:0;sudo vim .htaccess
+: 1544464351:0;sudo service apache24 reload
+: 1544464400:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544464449:0;sudo service apache24 reload
+: 1544464552:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544464627:0;less /var/log/auth.log
+: 1544464630:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544464647:0;sudo service apache24 reload
+: 1544464773:0;ls /usr/local/www/public/admin
+: 1544464777:0;l /usr/local/www/public/admin 
+: 1544464855:0;sudo service apache24 reload
+: 1544464881:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544464943:0;sudo service apache24 reload
+: 1544465011:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544465020:0;sudo service apache24 reload
+: 1544465208:0;sudo pkg install py27-certbot
+: 1544465215:0;sudo certbot
+: 1544465221:0;locate certbot
+: 1544465238:0;sudo certbot-3.6
+: 1544465242:0;sudo certbot-3.6 certonly
+: 1544465425:0;sudo service nginx stop
+: 1544465431:0;sudo certbot-3.6 certonly
+: 1544465520:0;sudo certbot-3.6 certonly --standalone --help
+: 1544465533:0;sudo certbot-3.6 certonly --standalone -d ngu.nctu.me
+: 1544465596:0;sudo service nginx staln
+: 1544465598:0;sudo service nginx start
+: 1544465606:0;sudo service nginx stop
+: 1544465787:0;sudo certbot-3.6 certonly --standalone -d ngu.nctu.me
+: 1544465814:0;less /var/log/letsencrypt
+: 1544465819:0;lss /var/log/letsencrypt
+: 1544465821:0;ls /var/log/letsencrypt
+: 1544465823:0;sudo ls /var/log/letsencrypt
+: 1544465834:0;sudo less /var/log/letsencrypt/letsencrypto.log
+: 1544465837:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544465870:0;sudo certbot-3.6 certonly --standalone -d ngu.nctu.me
+: 1544465910:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544466085:0;sudo certbot-3.6 certonly --standalone -d ngu.nctu.me --preferred-challenges http
+: 1544466203:0;sudo certbot-3.6 certonly --webroot -d ngu.nctu.me -w /usr/local/www
+: 1544466217:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544466368:0;sudo service nginx start
+: 1544466371:0;sudo certbot-3.6 certonly --webroot -d ngu.nctu.me -w /usr/local/www
+: 1544466407:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www 
+: 1544466415:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www  -d ngu.nctu.me
+: 1544466462:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544466992:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544467060:0;sudo service nginx reload
+: 1544467070:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www  -d ngu.nctu.me
+: 1544467091:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544467237:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544467293:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www  -d ngu.nctu.me
+: 1544467381:0;sudo service nginx reload
+: 1544467385:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www  -d ngu.nctu.me
+: 1544467470:0;sudo service nginx reload
+: 1544467473:0;sudo service nginx restart
+: 1544467476:0;sudo certbot-3.6 certonly --webroot  -w /usr/local/www  -d ngu.nctu.me
+: 1544467485:0;sudo less
+: 1544467488:0;sudo less /var/log/letsencrypt/letsencrypt.log
+: 1544467666:0;l
+: 1544467667:0;cd 
+: 1544467670:0;l
+: 1544467678:0;mkdir certs
+: 1544467679:0;cd certs
+: 1544467679:0;l
+: 1544467714:0;openssl rand -out rnd 1024
+: 1544467715:0;l
+: 1544467716:0;file *
+: 1544467740:0;rm rnd
+: 1544467743:0;cd 
+: 1544467746:0;rmdir certs
+: 1544467753:0;cd /etc/ssl
+: 1544467754:0;l
+: 1544467760:0;cd private
+: 1544467760:0;l
+: 1544467762:0;cd ..
+: 1544467772:0;sudo mkdir RootCA
+: 1544467775:0;cd RootCA/
+: 1544467785:0;sudo mkdir private
+: 1544467787:0;cd private
+: 1544467788:0;l
+: 1544467802:0;sudo openssl rand -out .rnd 1024
+: 1544467803:0;l
+: 1544467814:0;sudo chmod go-rwx .rnd
+: 1544467815:0;l
+: 1544467844:0;sudo openssl genrsa -des3 -rand .rnd -out rootca.key.pem 2048
+: 1544467865:0;sudo chmod go-rwx rootca.key.pem
+: 1544467874:0;file *
+: 1544467880:0;file .*
+: 1544467886:0;sudo cat rootca.key.pem
+: 1544467924:0;sudo openssl req -new -key rootca.key.pem -out rootca.req.pem
+: 1544467983:0;l
+: 1544467991:0;cat rootca.req.pem
+: 1544468044:0;sudo openssl x509 -req -days 5109 -sha1 -extfile /etc/ssl/openssl.cnf -extensions v3_ca -signkey rootca.key.pem -in rootca.req.pem -out rootca.crt.pem
+: 1544468048:0;l
+: 1544468069:0;sudo chmod 600 rootca.req.pem
+: 1544468072:0;sudo chmod 600 rootca.crt.pem
+: 1544468073:0;l
+: 1544468087:0;sudo rm rootca.req.pem
+: 1544468113:0;sudo openssl genrsa -out my.key.pem 2048
+: 1544468125:0;sudo chmod 600 my.key.pem
+: 1544468126:0;l
+: 1544468163:0;sudo openssl req -new -key my.key.pem -out my.req.pem
+: 1544468197:0;l
+: 1544468273:0;sudo x509 -req -days 365 -sha1 -extfile /etc/ssl/openssl.cnf -extensions v3_ca -CA rootca.crt.pem -CAkey rootca.key.pem -CAserial rootca.srl -CAcreateserial -in my.req.pem -out my.crt.pem
+: 1544468279:0;sudo openssl x509 -req -days 365 -sha1 -extfile /etc/ssl/openssl.cnf -extensions v3_ca -CA rootca.crt.pem -CAkey rootca.key.pem -CAserial rootca.srl -CAcreateserial -in my.req.pem -out my.crt.pem
+: 1544468287:0;l
+: 1544468323:0;sudo chmod 400 *
+: 1544468326:0;sudo chmod 400 .rnd
+: 1544468327:0;l
+: 1544468372:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544468478:0;cd ..
+: 1544468485:0;sudo mkdir my
+: 1544468486:0;l
+: 1544468501:0;sudo mkdir my/private
+: 1544468512:0;sudo mv RootCA/private/my* my/private
+: 1544468513:0;l
+: 1544468514:0;find
+: 1544468516:0;find .
+: 1544468596:0;cd my/private
+: 1544468597:0;l
+: 1544468600:0;sudo rm my.req.pem
+: 1544468602:0;l
+: 1544468608:0;sudo mv my.crt.pem ..
+: 1544468608:0;l
+: 1544468609:0;cd ..
+: 1544468610:0;l
+: 1544468612:0;cd ..
+: 1544468614:0;cd RootCA
+: 1544468614:0;l
+: 1544468620:0;sudo mv private/rootca.crt.pem .
+: 1544468620:0;l
+: 1544468622:0;cd ..
+: 1544468624:0;find .
+: 1544468649:0;sudo service apache24 reload
+: 1544468661:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544468736:0;sudo service apache24 reload
+: 1544468937:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544468992:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544469002:0;sudo service apache24 reload
+: 1544469064:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544514614:0;sudo service apache24 reload
+: 1544514884:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544514938:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544514979:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544515013:0;sudo service apache24 reload
+: 1544515133:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544515473:0;less /var/log/auth.log
+: 1544515476:0;sudo less /var/log/auth.log
+: 1544515485:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544515509:0;sudo service nginx stop
+: 1544515513:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544515556:0;less /var/log/httpd-access.log
+: 1544515562:0;less /var/log/httpd-error.log
+: 1544515582:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544515592:0;l
+: 1544515593:0;cd ..
+: 1544515594:0;l
+: 1544515595:0;cd ..
+: 1544515595:0;l
+: 1544515606:0;cd apache24
+: 1544515606:0;l
+: 1544515608:0;cat .htaccess
+: 1544515611:0;sudo rm .htaccess
+: 1544515635:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544515661:0;sudo service apache24 reload
+: 1544515729:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544515744:0;sudo service apache24 reload
+: 1544515768:0;less /var/log/httpd-error.log
+: 1544515783:0;sudo service apache24 restart
+: 1544515787:0;less /var/log/httpd-error.log
+: 1544515841:0;sudo service apache24 restart
+: 1544515845:0;less /var/log/httpd-error.log
+: 1544515880:0;less /var/log/httpd-access.log
+: 1544515910:0;sudo service apache24 restart
+: 1544515925:0;less /var/log/httpd-access.log
+: 1544515932:0;less /var/log/httpd-error.log
+: 1544515990:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544516193:0;sudo service apache24 restart
+: 1544516230:0;sudo service apache24 reload
+: 1544516243:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544516280:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544516298:0;sudo service apache24 reload
+: 1544516309:0;sudo service apache24 restart
+: 1544516316:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544516424:0;sudo service apache24 reload
+: 1544516695:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544516717:0;sudo service apache24 reload
+: 1544516734:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544516752:0;l
+: 1544516755:0;cd my/-
+: 1544516757:0;cd my/
+: 1544516758:0;l
+: 1544516767:0;openssl x509 my.crt.pem
+: 1544516775:0;openssl x509 -in my.crt.pem
+: 1544516781:0;sudo openssl x509 -in my.crt.pem
+: 1544516785:0;sudo openssl x509 -text -in my.crt.pem
+: 1544516854:0;l
+: 1544516894:0;openssl req -new -key private/my.key.pem -out \
+private/my.req.pem
+: 1544516909:0;openssl req -new -key private/my.key.pem -outprivate/my.req.pem
+: 1544516911:0;openssl req -new -key private/my.key.pem -out private/my.req.pem
+: 1544516913:0;sudo openssl req -new -key private/my.key.pem -out private/my.req.pem
+: 1544517012:0;sudo openssl x509 -req -days 365 -sha1 -extfile /etc/ssl/openssl.cnf -extensions v3_ca -CA /etc/ssl/RootCA/private/rootca.crt.pem -CAkey /etc/ssl/RootCA/private/rootca.key.pem -CAserial /etc/ssl/RootCA/private/rootca.srl -CAcreateserial -in /etc/ssl/my/private/my.req.pem -out /etc/ssl/my/my.crt.pem
+: 1544517029:0;sudo openssl x509 -req -days 365 -sha1 -extfile /etc/ssl/openssl.cnf -extensions v3_ca -CA /etc/ssl/RootCA/rootca.crt.pem -CAkey /etc/ssl/RootCA/private/rootca.key.pem -CAserial /etc/ssl/RootCA/private/rootca.srl -CAcreateserial -in /etc/ssl/my/private/my.req.pem -out /etc/ssl/my/my.crt.pem
+: 1544517032:0;l
+: 1544517035:0;cd ..
+: 1544517036:0;find .
+: 1544517053:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544517064:0;sudo service apache24 reload
+: 1544517068:0;sudo service apache24 restart
+: 1544517072:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544517274:0;l
+: 1544517291:0;sudo mkdir nasa
+: 1544517293:0;cd nasa
+: 1544517300:0;sudo openssl genrsa -des3 -passout pass:x -out nasa.pass.key 2048
+: 1544517302:0;l
+: 1544517322:0;sudo mv  nasa.pass.key server.pass.key
+: 1544517329:0;sudo openssl rsa -passin pass:x -in server.pass.key -out server.key
+: 1544517334:0;l
+: 1544517341:0;sudo openssl req -new -key server.key -out server.csr
+: 1544517395:0;sudo openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+: 1544517397:0;l
+: 1544517481:0;sudo service apache24 restart
+: 1544517489:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544517513:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544517545:0;sudo service apache24 reload
+: 1544517563:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544517582:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544517598:0;sudo service apache24 reload
+: 1544517646:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544517649:0;sudo service apache24 reload
+: 1544517655:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544517667:0;less /var/log/httpd-access.log
+: 1544517709:0;sudo service apache24 reload
+: 1544517804:0;cd /usr/local/www
+: 1544517804:0;l
+: 1544517808:0;cd public
+: 1544517810:0;cd admin
+: 1544517810:0;l
+: 1544517813:0;cat .htaccess
+: 1544517817:0;cd ..
+: 1544517818:0;l
+: 1544517820:0;cd ..
+: 1544517846:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544518017:0;sudo service apache24 reload
+: 1544518039:0;less /var/log/httpd-access.log
+: 1544518052:0;less /var/log/httpd-error.log
+: 1544518064:0;less /var/log/httpd-ssl_request.log
+: 1544518099:0;sudo service apache24 reload
+: 1544518255:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544518281:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544518303:0;sudo service apache24 reload
+: 1544518571:0;l
+: 1544518576:0;sudo vim .htaccess
+: 1544518698:0;sudo service apache24 reload
+: 1544518907:0;less /var/log/httpd-error.log
+: 1544518915:0;less /var/log/httpd-access.log
+: 1544518919:0;less /var/log/httpd-ssl_request.log
+: 1544518925:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544518978:0;sudo service apache24 reload
+: 1544518994:0;less /var/log/httpd-error.log
+: 1544519011:0;sudo service apache24 reload
+: 1544519015:0;less /var/log/httpd-error.log
+: 1544519044:0;sudo service apache24 reload
+: 1544519434:0;less /var/log/httpd-error.log
+: 1544519441:0;less /var/log/httpd-access.log
+: 1544519521:0;l
+: 1544519525:0;cat .htaccess
+: 1544519585:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544519611:0;cd /usr/local/www
+: 1544519612:0;l
+: 1544519614:0;sudo vim .htaccess
+: 1544520061:0;sudo service apache24 reload
+: 1544520266:0;less /var/log/httpd-access.log
+: 1544520275:0;less /var/log/httpd-error.log
+: 1544520366:0;sudo service apache24 reload
+: 1544521042:0;sudo service apache24 restart
+: 1544521069:0;sudo service apache24 reload
+: 1544521145:0;sudo service apache24 stop
+: 1544521180:0;sudo service apache24 status
+: 1544521188:0;sudo service nginx status
+: 1544521195:0;sudo service nginx start
+: 1544521254:0;sudo vim /usr/local/etc/nginx/nginx.conf
+: 1544521400:0;sudo service nginx reload
+: 1544521474:0;ls /var/log/nginx/access.log
+: 1544521478:0;less /var/log/nginx/access.log
+: 1544521498:0;sudo service nginx reload
+: 1544522816:0;cd hw/hw
+: 1544522818:0;cd hw/
+: 1544522820:0;mkdir hw4
+: 1544522821:0;cd hw
+: 1544522823:0;cd hw4
+: 1544522839:0;ln -s /usr/local/etc/apache24/httpd.conf
+: 1544522840:0;s
+: 1544522841:0;l
+: 1544522845:0;git status
+: 1544522856:0;rm httpd.conf
+: 1544522861:0;cp /usr/local/etc/apache24/httpd.conf .
+: 1544522873:0;cp /usr/local/etc/apache24/extra/httpd-ssl.conf .
+: 1544522882:0;cp /usr/local/etc/apache24/extra/httpd-vhosts.conf .
+: 1544522883:0;l
+: 1544522888:0;git add -
+: 1544522889:0;git add -A
+: 1544522891:0;git status
+: 1544522897:0;l
+: 1544522912:0;git commit -m 'fix hw3 bug and add hw4'
+: 1544522914:0;git push
+: 1544523026:0;sudo service nginx stop
+: 1544523034:0;sudo service apache24 start
+: 1544523092:0;l
+: 1544523096:0;cat .htaccess
+: 1544523165:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544523230:0;less /var/log/httpd-access.log
+: 1544523234:0;less /var/log/httpd-error.log
+: 1544523450:0;sudo service apache24 reload
+: 1544523487:0;less /var/log/httpd-error.log
+: 1544523613:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544523695:0;sudo service apache24 reload
+: 1544524072:0;less /var/log/httpd-error.log
+: 1544524091:0;less /var/log/httpd-ssl_request.log
+: 1544524098:0;less /var/log/httpd-access.log
+: 1544524161:0;sudo service apache24 reload
+: 1544524847:0;less /var/log/apache24-ngu.nctu.me.log
+: 1544524858:0;less /var/log/httpd-error.log
+: 1544524874:0;less /var/log/httpd-access.log
+: 1544524930:0;curl -v https://localhost
+: 1544524966:0;sudo service apache24 reload
+: 1544524967:0;curl -v https://localhost
+: 1544524997:0;sudo service apache24 reload
+: 1544524998:0;curl -v https://localhost
+: 1544525239:0;sudo service apache24 reload
+: 1544525370:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544525417:0;sudo service apache24 reload
+: 1544525451:0;less /var/log/httpd-error.log
+: 1544525650:0;sudo service apache24 reload
+: 1544525680:0;less /var/log/httpd-error.log
+: 1544525743:0;sudo service apache24 reload
+: 1544525923:0;less /var/log/httpd-error.log
+: 1544526166:0;sudo service apache24 reload
+: 1544526344:0;less /var/log/httpd-error.log
+: 1544526367:0;sudo service apache24 reload
+: 1544526650:0;python3
+: 1544526651:0;python
+: 1544526655:0;python3.6
+: 1544527107:0;sudo service apache24 reload
+: 1544527466:0;l
+: 1544527469:0;cd
+: 1544527470:0;cd hw
+: 1544527473:0;cd hw4
+: 1544527503:0;sudo cp /usr/local/etc/apache24/httpd.conf .
+: 1544527510:0;sudo cp /usr/local/etc/apache24/extra/httpd-ssl.conf .
+: 1544527513:0;sudo cp /usr/local/etc/apache24/extra/httpd-vhosts.conf .
+: 1544527514:0;l
+: 1544527537:0;sudo cp /usr/local/www/public/admin/.htaccess .
+: 1544527538:0;l
+: 1544527542:0;cat .htaccess
+: 1544527546:0;git add -A
+: 1544527551:0;git commit -m 'xx'
+: 1544527553:0;git push
+: 1544527669:0;sudo service apache24 stop
+: 1544527677:0;sudo service nginx start
+: 1544527690:0;sudo vim /usr/local/etc/nginx
+: 1544527785:0;sudo service nginx reload
+: 1544527793:0;less /var/log/nginx/error.log
+: 1544527820:0;sudo service nginx reload
+: 1544527859:0;less /var/log/nginx/error.log
+: 1544527898:0;sudo service nginx reload
+: 1544527960:0;sudo vim /usr/local/etc/nginx/scgi_params
+: 1544528734:0;sudo service nginx reload
+: 1544528763:0;tail /var/log/nginx/error.log
+: 1544528789:0;sudo service nginx reload
+: 1544529035:0;tail /var/log/nginx/error.log
+: 1544529132:0;sudo service nginx reload
+: 1544529650:0;tail /var/log/nginx/error.log
+: 1544529696:0;sudo service nginx reload
+: 1544530038:0;tail /var/log/nginx/error.log
+: 1544530097:0;tail /var/log/nginx/access.log
+: 1544530160:0;sudo service nginx reload
+: 1544530355:0;curl -v localhost
+: 1544530368:0;curl -v ngu.nctu.me
+: 1544530375:0;curl -v https://ngu.nctu.me
+: 1544530470:0;sudo service nginx reload
+: 1544530511:0;l
+: 1544530534:0;sudo cp /usr/local/etc/nginx/nginx.conf .
+: 1544530538:0;git add -A 
+: 1544530540:0;git status
+: 1544530548:0;git commit -m 'add nginx'
+: 1544530549:0;git push
+: 1544530591:0;sudo service nginx stop
+: 1544530595:0;sudo service apache start
+: 1544530599:0;sudo service apache24 start
+: 1544530622:0;sudo vim /usr/local/etc/apache24
+: 1544530650:0;sudo vim /usr/local/etc/apache24/extra/httpd-ssl.conf
+: 1544530731:0;sudo service apache24 reload
+: 1544530746:0;tail /var/log/httpd-error.log
+: 1544530752:0;tail /var/log/httpd-access.log
+: 1544530757:0;tail /var/log/httpd-ssl_request.log
+: 1544530764:0;tail /var/log/httpd-error.log
+: 1544530773:0;tail /var/log/apache24-ngu.nctu.me.log
+: 1544530786:0;curl ngu.nctu.me/reverse
+: 1544530789:0;curl ngu.nctu.me/reverse -v
+: 1544530795:0;curl https://ngu.nctu.me/reverse -v
+: 1544530801:0;curl https://ngu.nctu.me/reverse -v -k
+: 1544530987:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544531006:0;sudo service apache24 reload
+: 1544531023:0;tail /var/log/apache24-ngu.nctu.me.log
+: 1544531029:0;tail /var/log/http-custom.log
+: 1544531032:0;tail /var/log/http-custom.log httpd-vhosts.conf
+: 1544531050:0;tail /var/log/httpd-error.log
+: 1544531056:0;tail /var/log/httpd-access.log
+: 1544531104:0;sudo vim /usr/local/etc/apache24/httpd.conf
+: 1544531121:0;sudo service apache24 reload
+: 1544531129:0;tail /var/log/httpd-error.log
+: 1544531135:0;tail /var/log/httpd-access.log
+: 1544531138:0;tail /var/log/httpd-ssl_request.log
+: 1544531182:0;curl https://ngu.nctu.me/reverse -v -k
+: 1544531217:0;sudo service apache24 reload
+: 1544531291:0;tail /var/log/httpd-ssl_request.log
+: 1544531294:0;tail /var/log/httpd-error.log
+: 1544531299:0;tail /var/log/httpd-access.log
+: 1544531304:0;less /var/log/httpd-error.log
+: 1544531392:0;sudo service apache24 reload
+: 1544531418:0;git status
+: 1544531422:0;cp /usr/local/etc/apache24/extra/httpd-vhosts.conf .
+: 1544531428:0;cp /usr/local/etc/apache24/extra/httpd-ssl.conf .
+: 1544531434:0;cp /usr/local/etc/apache24/httpd.conf .
+: 1544531437:0;git add -A 
+: 1544531442:0;git commit aaa 
+: 1544531445:0;git commit -m aaa 
+: 1544531447:0;git push
+: 1544601892:0;sudo service apache24 status
+: 1544601960:0;tail /var/log/apache24-ngu.nctu.me.log
+: 1544601981:0;tail /var/log/a
+: 1544601982:0;tail /var/log/apache24-ngu.nctu.me.log
+: 1544601991:0;tail /var/log/http-custom.log
+: 1544602001:0;tail /var/log/httpd-error.log
+: 1544602007:0;tail /var/log/httpd-ssl_request.log
+: 1544602011:0;tail /var/log/httpd-access.log
+: 1544602018:0;tail /var/log/http-custom.log
+: 1544602066:0;apachectl configtest
+: 1544602070:0;sudo apachectl configtest
+: 1544602108:0;sudo service apache24 reload
+: 1544602128:0;curl ngu.nctu.me/reverse
+: 1544602132:0;curl ngu.nctu.me/reverse -vk
+: 1544602140:0;curl https://ngu.nctu.me/reverse -v -k
+: 1544602150:0;curl https://ngu.nctu.me -v -k
+: 1544602243:0;tail /var/log/http-custom.log
+: 1544602246:0;tail /var/log/httpd-access.log
+: 1544602249:0;tail /var/log/httpd-ssl_request.log
+: 1544602265:0;tail /var/log/httpd-error.log
+: 1544602286:0;sudo service apache24 reload
+: 1544602291:0;sudo service apache24 start
+: 1544602300:0;tail /var/log/httpd-error.log
+: 1544602339:0;sudo service apache24 start
+: 1544602343:0;tail /var/log/httpd-error.log
+: 1544602445:0;sudo service apache24 stop
+: 1544602448:0;sudo service nginx start
+: 1544605434:0;sudo service nginx stop
+: 1544605481:0;sudo service apache24 start
+: 1544605630:0;sudo service apache24 stop
+: 1544605635:0;sudo service nginx start
+: 1544605927:0;sudo service nginx stop
+: 1544605956:0;sudo service apache24 start
+: 1544606612:0;sudo vim /usr/local/etc/apache24/extra/httpd-vhosts.conf
+: 1544606729:0;sudo service apache24 reload
+: 1544606777:0;l
+: 1544606791:0;git status
+: 1544606798:0;cp /usr/local/etc/apache24/httpd.conf .
+: 1544606806:0;cp /usr/local/etc/apache24/extra/httpd-ssl.conf .
+: 1544606809:0;cp /usr/local/etc/apache24/extra/httpd-vhosts.conf .
+: 1544606810:0;l
+: 1544606822:0;cp /usr/local/etc/nginx/nginx.conf .
+: 1544606823:0;l
+: 1544606834:0;lsudo chown soyccan nginx.conf
+: 1544606836:0;sudo chown soyccan nginx.conf
+: 1544606837:0;l
+: 1544606839:0;cp /usr/local/etc/nginx/nginx.conf .
+: 1544606842:0;git status
+: 1544606844:0;git add -A
+: 1544606850:0;git commit -m 'final'
+: 1544606854:0;git push
+: 1544607008:0;sudo vim /etc/rc.conf
+: 1544607020:0;sudo poweroff
+: 1545724342:0;sudo service
+: 1545724351:0;sudo service nisdomainname
+: 1545724357:0;sudo service nisdomain
+: 1545724360:0;sudo service nisdomain status
+: 1545724365:0;sudo service nisdomainname status
+: 1545724450:0;man ypbind
+: 1545724548:0;sudo vim /etc/rc.conf
+: 1545724786:0;cat
+: 1545724847:0;cat|hd
+: 1545724879:0;cat
+: 1545724894:0;vim .zshrc
+: 1545725003:0;cat 
+: 1545725052:0;vim .vimrc
+: 1545725120:0;locate vimrc
+: 1545725129:0;sudo vim /usr/local/etc/vim/vimrc
+: 1545725176:0;sudo su
+: 1545725275:0;cat 
+: 1545725300:0;sudo vim /tmp/aaa
+: 1545725414:0;man vimrc
+: 1545725417:0;man .vimrc
+: 1545725424:0;man vim
+: 1545725454:0;sudo ls /home/
+: 1545725460:0;sudo su
+: 1545725495:0;less hello
+: 1545725501:0;less /var/log/nginx
+: 1545725503:0;less /var/log/nginx/access.log
+: 1545725546:0;l
+: 1545725566:0;sudo vim /tmp/aaa
+: 1545725579:0;sudo vim /etc/rc.conf
+: 1545725611:0;cat /root/.vimrc
+: 1545725622:0;vim .vimrc
+: 1545725642:0;sudo vim /etc/rc.conf
+: 1545725648:0;vim .vimrc
+: 1545725698:0;sudo vim /etc/rc.conf
+: 1545725710:0;vim .vimrc --verbose
+: 1545725715:0;vim -v
+: 1545725722:0;man vim
+: 1545725735:0;vim -D .vimrc
+: 1545725780:0;echo $VIM_RUNTIME
+: 1545725799:0;locate *.vim
+: 1545725802:0;locate .vim
+: 1545725822:0;sudo pkg show vim
+: 1545725982:0;cd /usr/local/share/vim
+: 1545725982:0;l
+: 1545725986:0;ls vimfiles
+: 1545725989:0;ls vimfiles/syntax
+: 1545726004:0;ls vim81
+: 1545726031:0;ls vimfiles/indent
+: 1545726038:0;find vimfiles/
+: 1545726049:0;cp vimfiles/* vim81 -r
+: 1545726053:0;cp -r vimfiles/* vim81 
+: 1545726056:0;sudo cp -r vimfiles/* vim81 
+: 1545726057:0;l
+: 1545726064:0;find vim81|grep nginx
+: 1545726077:0;sudo rm vimfiles
+: 1545726080:0;sudo rm vimfiles -rf
+: 1545726086:0;sudo rm -rf vimfiles 
+: 1545726091:0;sudo ln vim81 vimfiles
+: 1545726094:0;sudo ln -s vim81 vimfiles
+: 1545726095:0;l
+: 1545726103:0;sudo vim /etc/rc.conf
+: 1545726123:0;ls vimfiles
+: 1545726127:0;ls vimfiles/
+: 1545726386:0;sudo vim /etc/rc.conf
+: 1545726523:0;l
+: 1545726578:0;sudo vim /etc/rc.conf
+: 1545726610:0;vim .vimrc
+: 1545726627:0;sudo vim /etc/rc.conf
+: 1545726662:0;cat /root/.vimrc
+: 1545726679:0;sudo vim /etc/rc.conf
+: 1545726704:0;vim .vimrc
+: 1545726715:0;sudo vim /etc/rc.conf
+: 1545726760:0;sudo rm /usr/local/etc/vim/vimrc
+: 1545726762:0;sudo vim /etc/rc.conf
+: 1545726853:0;sudo vim /usr/local/share/vim/vim81/filetype.vim
+: 1545726913:0;sudo vim /etc/rc.conf
+: 1545726945:0;vim .vimrc
+: 1545726956:0;cd misc
+: 1545726957:0;l
+: 1545726961:0;git status
+: 1545726968:0;git diff
+: 1545726985:0;vim ../.vim
+: 1545726989:0;vim ../.vimrc
+: 1545726995:0;git diff
+: 1545727011:0;git add .vimrc
+: 1545727016:0;git commit -m 'vimrc'
+: 1545727018:0;git push
+: 1545727035:0;l
+: 1545727038:0;cd
+: 1545727053:0;sudo vim /etc/rc.conf
+: 1545727213:0;sudo pkg show py
+: 1545727216:0;sudo pkg show yp
+: 1545727221:0;cd /var/py/
+: 1545727227:0;cd /var/yp
+: 1545727228:0;/
+: 1545727232:0;popd
+: 1545727233:0;l
+: 1545727238:0;vim Makefile
+: 1545727270:0;sudo vim Makefile
+: 1545727276:0;l
+: 1545727281:0;sudo vim Makefile
+: 1545727308:0;sudo vim 
+: 1545727314:0;sudo vim /tmp/aaa
+: 1545727322:0;l /tmp
+: 1545727325:0;l
+: 1545727337:0;cd ..
+: 1545727340:0;l account
+: 1545727347:0;l crash/minfree
+: 1545727350:0;cd py
+: 1545727352:0;cd yp
+: 1545727382:0;sudo cp Makefile.dist Makefile
+: 1545727389:0;sudo rm Makefile
+: 1545727390:0;sudo cp Makefile.dist Makefile
+: 1545727391:0;l
+: 1545727400:0;sudo chmod o+w Makefile
+: 1545727401:0;l
+: 1545727405:0;sudo chmod o-w Makefile
+: 1545727408:0;sudo chmod u+w Makefile
+: 1545727410:0;l
+: 1545727414:0;sudo vim Makefile
+: 1545727441:0;cd /var/yp
+: 1545727441:0;l
+: 1545727558:0;man py
+: 1545727559:0;man yp
+: 1545727585:0;/bin/domainname
+: 1545727993:0;sudo vim /etc/rc.conf
+: 1545728039:0;cp /etc/master.passwd .
+: 1545728040:0;l
+: 1545728044:0;sudocp /etc/master.passwd .
+: 1545728048:0;sudo cp /etc/master.passwd .
+: 1545728052:0;l
+: 1545728068:0;sudo cp /etc/group .
+: 1545728071:0;l
+: 1545728077:0;sudo vipw
+: 1545728119:0;sudo vim master.passwd
+: 1545728257:0;cat /etc/master.passwd
+: 1545728259:0;sudo cat /etc/master.passwd
+: 1545728441:0;sudo vipw
+: 1545728504:0;l
+: 1545728505:0;cat group
+: 1545728513:0;sudo vim group
+: 1545728540:0;sudo vim /etc/group
+: 1545728616:0;ypinit
+: 1545728680:0;sudo vim Makefile
+: 1545728716:0;ypinit -m pro
+: 1545728719:0;sudo ypinit -m pro
+: 1545728739:0;hostname
+: 1545728744:0;hostname --help
+: 1545728747:0;hostname pro
+: 1545728750:0;sudo hostname pro
+: 1545728752:0;domainname
+: 1545728771:0;domainname e
+: 1545728778:0;sudo domainname sa
+: 1545728780:0;domainname 
+: 1545728785:0;hostname 
+: 1545728794:0;sudo vim /etc/rc.conf
+: 1545728813:0;hostname 
+: 1545728816:0;domainname 
+: 1545728828:0;ps
+: 1545728834:0;pgrep vim
+: 1545728837:0;pgrep sudo
+: 1545728840:0;kill 2447
+: 1545728846:0;sudo kill 2447
+: 1545728856:0;kill 2447
+: 1545728860:0;pgrep sudo
+: 1545728885:0;sudo vim /etc/rc.conf
+: 1545728981:0;man rc.conf
+: 1545729092:0;sudo vim Makefile
+: 1545814795:0;cd /var/yp
+: 1545814795:0;l
+: 1545814798:0;ls pro
+: 1545815158:0;sudo ls pro
+: 1545815166:0;sudo vim Makefile
+: 1545815462:0;locate sudoer
+: 1545815469:0;cd /var/yp
+: 1545815469:0;l
+: 1545815472:0;sudo mkdir src
+: 1545815481:0;sudo mv group master.passwd src
+: 1545815482:0;l
+: 1545815485:0;cd src
+: 1545815485:0;l
+: 1545815496:0;sudo cp /usr/local/etc/sudoers .
+: 1545815497:0;l
+: 1545815505:0;sudo chmod u+w sudoers
+: 1545815505:0;l
+: 1545815508:0;sudo vim sudoers
+: 1545815530:0;l
+: 1545815734:0;sudo vim Makefile
+: 1545815752:0;pywhich
+: 1545815755:0;ypwhich
+: 1545815779:0;sudo cp /etc/hosts .
+: 1545815779:0;l
+: 1545815822:0;cat group
+: 1545815825:0;cat hosts
+: 1545815829:0;cat master.passwd
+: 1545815834:0;sudo cat master.passwd
+: 1545815853:0;sudo vim group
+: 1545815965:0;sudo vim Makefile
+: 1545815986:0;ls 
+: 1545815992:0;sudo vim Makefile
+: 1545816001:0;ls
+: 1545816012:0;sudo vim ypservers
+: 1545816019:0;sudo vim Makefile
+: 1545816046:0;l
+: 1545816047:0;c ..
+: 1545816055:0;cd ..
+: 1545816055:0;l
+: 1545816062:0;sudo touch passwd
+: 1545816067:0;find
+: 1545816068:0;find .
+: 1545816230:0;locate autofs
+: 1545816232:0;locate autofs.map
+: 1545816247:0;sudo touch src/autofs.map
+: 1545816249:0;find .
+: 1545816272:0;ls
+: 1545816280:0;sudo touch netgroup
+: 1545816281:0;l
+: 1545816382:0;LS
+: 1545816384:0;ls
+: 1545816437:0;sudo vim src/group
+: 1545816755:0;ls
+: 1545816759:0;cd src
+: 1545816759:0;l
+: 1545816762:0;cd ..
+: 1545816821:0;ls
+: 1545816842:0;sudo ypinit
+: 1545816850:0;sudo ypinit -m sa
+: 1545816894:0;cat /etc/rc.conf
+: 1545816919:0;sudo vim /etc/rc.conf
+: 1545816958:0;sudo ypinit -m sa
+: 1545817021:0;man ypinit
+: 1545817045:0;sudo ypinit -u sa
+: 1545817054:0;ls
+: 1545817061:0;sudo service ypserv start
+: 1545817070:0;sudo service rpc start
+: 1545817081:0;sudo service rpcbind
+: 1545817083:0;sudo service rpcbind start
+: 1545817098:0;sudo service ypbind start
+: 1545817103:0;sudo service ypbind status
+: 1545817124:0;sudo vim /etc/rc.conf
+: 1545817148:0;sudo service rpcbind start
+: 1545817156:0;sudo ypinit -m sa
+: 1545817188:0;vim Makefile
+: 1545817233:0;sudo ypinit -m sa
+: 1545817329:0;locate networks.byname
+: 1545817331:0;locate networks
+: 1545817337:0;cat /etc/networks
+: 1545817357:0;ls
+: 1545817360:0;sudo rmdir pro
+: 1545817361:0;l
+: 1545817367:0;ls binding
+: 1545817374:0;cd src
+: 1545817381:0;sudo cp /etc/networks .
+: 1545817383:0;sudo vim networks
+: 1545817435:0;cd ..
+: 1545817439:0;sudo ypinit -m sa
+: 1545817447:0;ls
+: 1545817456:0;sudo cp /etc/protocols src
+: 1545817460:0;sudo vim src/protocols
+: 1545817464:0;sudo ypinit -m sa
+: 1545817476:0;sudo cp /etc/rpc src
+: 1545817480:0;sudo vim src
+: 1545817484:0;sudo vim src/rpc
+: 1545817498:0;sudo vim Makefile
+: 1545817530:0;cd src
+: 1545817530:0;l
+: 1545817545:0;sudo cp /etc/services .
+: 1545817548:0;cat services
+: 1545817566:0;sudo cp /etc/shells .
+: 1545817573:0;l
+: 1545817622:0;locate ipnodes
+: 1545817626:0;sudo ypinit -m sa
+: 1545817639:0;ls
+: 1545817642:0;sudo mv master.passwd ..
+: 1545817643:0;cd ..
+: 1545817645:0;cat master.passwd
+: 1545817650:0;sudo vim master.passwd
+: 1545817709:0;sudo ypinit -m sa
+: 1545817728:0;sudo service rpcbind stop
+: 1545817733:0;sudo service ypbind stop
+: 1545817737:0;sudo service ypserv stop
+: 1545817758:0;sudo service ypserv start
+: 1545817762:0;sudo service ypbind start
+: 1545817780:0;ls 
+: 1545817782:0;ls binding
+: 1545817784:0;ls sa
+: 1545817787:0;sudo ls sa
+: 1545878900:0;domainname
+: 1545878975:0;sudo vim /etc/rc.conf
+: 1545879016:0;sudo vim Makefile
+: 1545879060:0;sudo su
+: 1545879068:0;sudo vim /etc/master.passwd
+: 1545879253:0;sudo vipw
+: 1545879270:0;sudo ls
+: 1545879488:0;sudo service ypserv start
+: 1545879490:0;sudo service ypserv restart
+: 1545879496:0;sudo service rpcbind restart
+: 1545879598:0;sudo service rpcbind stop
+: 1545879658:0;sudo service ypserv stop
+: 1545879692:0;sudo service ypbind
+: 1545879708:0;sudo ls
+: 1545879996:0;sudo su
+: 1545880006:0;cd /var/yp
+: 1545880007:0;l
+: 1545880009:0;cat ma
+: 1545880011:0;cat master.passwd
+: 1545880014:0;sudo cat master.passwd
+: 1545880057:0;rpcinfo
+: 1545880072:0;rpcinfo -p localhost
+: 1545880115:0;sudo vim src/group 
+: 1545880151:0;passwd god
+: 1545880155:0;sudo passwd go
+: 1545880157:0;sudo passwd god
+: 1545880761:0;who
+: 1545880763:0;whoami
+: 1545880764:0;id
+: 1545881234:0;sudo vim master.passwd
+: 1545881333:0;sudo vim src/group
+: 1545881389:0;sudo vim master.passwd
+: 1545881414:0;sudo vim src/group
+: 1545881420:0;sudo vim master.passwd
+: 1545881424:0;sudo vim src/group
+: 1545881431:0;man group
+: 1545881484:0;sudo vim src/group
+: 1545881515:0;sudo passwd god
+: 1545881554:0;sudo yppasswd god
+: 1545881647:0;cat /etc/passwd
+: 1545881661:0;cat /etc/master.passwd
+: 1545881664:0;sudo cat /etc/master.passwd
+: 1545881677:0;ll /etc/passwd
+: 1545881682:0;ll /etc/master.passwd
+: 1545881685:0;ll /etc/master.passwd -i
+: 1545881689:0;ll -i /etc/master.passwd 
+: 1545881693:0;ll -i /etc/passwd 
+: 1545882046:0;cat /etc/passwd
+: 1545882081:0;cat /etc/master.passwd
+: 1545882085:0;sudo cat /etc/master.passwd
+: 1545882156:0;sudo cat /etc/shadow
+: 1545882242:0;sudo ypinit -u sa
+: 1545882254:0;make
+: 1545882258:0;ls sa
+: 1545882260:0;l
+: 1545882267:0;sudo ls sa
+: 1545882276:0;sudo cat sa/passwd.byname
+: 1545882295:0;ls
+: 1545882301:0;cat passwd
+: 1545882304:0;cat master.passwd
+: 1545882307:0;sudo cat master.passwd
+: 1545882307:0;l
+: 1545882318:0;cat master.passwd
+: 1545882338:0;sudo cp master.passwd passwd
+: 1545882344:0;sudo cat master.passwd passwd 
+: 1545882355:0;sudo make
+: 1545882604:0;sudo vim src/hosts
+: 1545882679:0;cat /etc/nsswitch.conf
+: 1545882716:0;sudo make
+: 1545883276:0;sudo ypinit -u
+: 1545883283:0;sudo make
+: 1545883293:0;sudo make all
+: 1545883340:0;sudo service ypbind stop
+: 1545883346:0;sudo service ypserv stop
+: 1545883351:0;sudo service rpcbind stop
+: 1545883355:0;sudo service rpcbind start
+: 1545883550:0;cd /var/yp
+: 1545883553:0;sudo make
+: 1545883560:0;sudo make all
+: 1545883564:0;sudo make 
+: 1545883661:0;service rpcbind status
+: 1545883672:0;host playground
+: 1545883674:0;sudo so
+: 1545883677:0;sudo su
+: 1545883688:0;host playgrounde
+: 1545883694:0;ping 10.0.0.12
+: 1545883699:0;ping 10.0.0.11
+: 1545883703:0;ping 10.0.0.10
+: 1545883706:0;cat /etc/hosts
+: 1545883827:0;ls
+: 1545883835:0;cd ..
+: 1545883836:0;l
+: 1545883837:0;cd yp
+: 1545883838:0;l
+: 1545883844:0;sudo ypinit -s
+: 1545883849:0;sudo ypinit -s pro sa
+: 1545883883:0;service status ypserv
+: 1545883903:0;sudo vim /etc/rc.conf
+: 1545883917:0;sudo ypinit -m 
+: 1545883947:0;sudo make
+: 1545883949:0;sudo make all
+: 1545884007:0;cat /etc/rc.conf
+: 1545884122:0;sudo make 
+: 1545884123:0;sudo make al
+: 1545884125:0;sudo make all
+: 1545884129:0;sudo yppush
+: 1545884186:0;sudo vim src/netgroup
+: 1545884485:0;sudo vim /etc/rc.conf
+: 1545884746:0;ypwhich
+: 1545884754:0;yptest
+: 1545884941:0;sudo make 
+: 1545884953:0;sudo make netgroup
+: 1545884955:0;sudo make netgrou
+: 1545884956:0;sudo make netgroup
+: 1545884959:0;ls
+: 1545884974:0;sudo ypinit -u
+: 1545884997:0;sudo make 
+: 1545884998:0;sudo make all
+: 1545885035:0;sudo yppush
+: 1545885039:0;sudo yppush sa
+: 1545885045:0;sudo yppush netgroup
+: 1545885076:0;sudo service yppasswdd stop
+: 1545885083:0;sudo service ypbind stop
+: 1545885092:0;sudo service ypserv stop
+: 1545885115:0;sudo ls
+: 1545885125:0;sudo su
+: 1545885140:0;sudo service ypserv start
+: 1545885143:0;sudo service ypbind start
+: 1545885148:0;sudo service yppasswdd start
+: 1545885161:0;sudo yppush netgroup
+: 1545885200:0;rpcinfo -p
+: 1545885381:0;ls
+: 1545885384:0;l
+: 1545885397:0;sudo ypinit -u
+: 1545885410:0;l
+: 1545885427:0;sudo rm netgroup*
+: 1545885428:0;l
+: 1545885438:0;ls src
+: 1545885468:0;sudo rm sudoers shadow* protocols.byn* passwd.*
+: 1545885469:0;l
+: 1545885501:0;sudo rm autofs.map group.by* hosts.by* ipnodes.by* master.passwd.by* netid.byname networks.by* rpc.byn* services.byname
+: 1545885502:0;l
+: 1545885509:0;sudo rm shells
+: 1545885515:0;sudo ypinit -m 
+: 1545885520:0;sudo ypinit 
+: 1545885523:0;sudo ypinit -m sa
+: 1545885550:0;ls
+: 1545885553:0;ls binding
+: 1545885599:0;yppush
+: 1545885651:0;yppush s
+: 1545885652:0;yppush se
+: 1545885653:0;yppush sa
+: 1545885659:0;sudo yppush sa
+: 1545885663:0;l
+: 1545885669:0;sudo yppush netgroup
+: 1545885675:0;ls rc
+: 1545885678:0;ls src
+: 1545885681:0;ls sa
+: 1545885684:0;sudo ls sa
+: 1545885697:0;sudo vim Makefile
+: 1545885725:0;sudo mv src/netgroup .
+: 1545885728:0;sudo make
+: 1545885754:0;cat netgroup
+: 1545885823:0;cat src/group
+: 1545885830:0;sudo vim src/group
+: 1545885841:0;sudo make
+: 1545885893:0;sudo vim netgroup
+: 1545885925:0;sudo make
+: 1545886040:0;sudo passwd god
+: 1545886051:0;sudo ypbind statsu
+: 1545886053:0;sudo ypbind status
+: 1545886062:0;sudo service ypbind status
+: 1545886066:0;sudo service yppasswd status
+: 1545886069:0;sudo service yppasswdd status
+: 1545886075:0;sudo yppasswd god
+: 1545886080:0;cat master.passwd
+: 1545886084:0;sudo cat master.passwd
+: 1545886091:0;sudo cat passwd
+: 1545886302:0;sudo ypcat passwd
+: 1545886311:0;ypcat passwd
+: 1545886392:0;sudo cat /etc/passwd
+: 1545886396:0;sudo cat /etc/master.passwd
+: 1545886450:0;tail /etc/passwd
+: 1545886454:0;tail passw
+: 1545886456:0;tail passwd
+: 1545886475:0;vim passwd
+: 1545886479:0;sudo vim passwd
+: 1545886631:0;cat /etc/passwd
+: 1545886660:0;cat /etc/master.passwd
+: 1545886663:0;sudo cat /etc/master.passwd
+: 1545886685:0;sudo vim master.passwd
+: 1545886994:0;group
+: 1545886995:0;id
+: 1545887023:0;id pro
+: 1545887025:0;id god
+: 1545887030:0;cat passwd
+: 1545887040:0;ccat src/group
+: 1545887044:0;cat src/group
+: 1545887075:0;sudo vim passwd
+: 1545887092:0;sudo vim master.passwd 
+: 1545887099:0;l
+: 1545887102:0;cat src/group
+: 1545887109:0;ls src
+: 1545887116:0;cat Makefile
+: 1545887120:0;vim Makefile
+: 1545887145:0;sudo make
+: 1545887194:0;passwd god
+: 1545887195:0;passwd gode
+: 1545887197:0;passwd god
+: 1545887199:0;sudo passwd god
+: 1545887211:0;passwd user
+: 1545887291:0;sudo make
+: 1545887340:0;cat /etc/rc.conf
+: 1545887556:0;sudo passwd
+: 1545887562:0;sudo passwd god
+: 1545887569:0;sudo passwd 0710029
+: 1545887577:0;sudo passwd users
+: 1545887578:0;sudo passwd user
+: 1545887592:0;cat /etc/rc.conf
+: 1545887631:0;sudo cat master.passwd
+: 1545887638:0;cat passwd
+: 1545887656:0;ls
+: 1545887675:0;ls src
+: 1545887892:0;sudo make
+: 1545887895:0;sudo make all
+: 1545887944:0;locate ipnodes
+: 1545887953:0;cat /etc/group
+: 1545887963:0;sudo vim /etc/group
+: 1545888028:0;sudo vim /etc/passwd
+: 1545888042:0;sudo vim /etc/master.passwd
+: 1545888056:0;man ypbind
+: 1545888854:0;sudo vim /etc/nsswitch.conf
+: 1545889003:0;sudo vim /etc/rc.conf
+: 1545889066:0;sudo vim src/hosts
+: 1545889238:0;sudo make
+: 1545891121:0;sudo vim /etc/rc.conf
+: 1545891204:0;sudo service nfsd start
+: 1545891212:0;sudo service nfsd stop
+: 1545891217:0;sudo service mountd stop
+: 1545891227:0;nfsstat
+: 1545891231:0;sudo nfsstat
+: 1545891381:0;cd /net
+: 1545891382:0;ls
+: 1545891401:0;sudo mkdir home
+: 1545891406:0;sudo mkdir shares
+: 1545891410:0;sudo mkdir datas
+: 1545891419:0;ls
+: 1545891425:0;sudo vim /etc/exports
+: 1545891665:0;cd /var/p
+: 1545891666:0;cd /var/yp
+: 1545891666:0;l
+: 1545891678:0;cat ypupdate.log
+: 1545891681:0;sudo cat ypupdate.log
+: 1545891729:0;ls
+: 1545891735:0;vim Makefile
+: 1545891890:0;ls
+: 1545891892:0;cat passwd
+: 1545891906:0;sudo make
+: 1545891908:0;sudo make all
+: 1545891910:0;l
+: 1545891931:0;vim Makefile
+: 1545891956:0;echo $@.$$$$
+: 1545891960:0;echo $@.$$$
+: 1545891961:0;echo $@.$$
+: 1545891964:0;echo $@
+: 1545891965:0;echo $@.
+: 1545891966:0;echo $@.$
+: 1545891968:0;echo $@.$$
+: 1545891970:0;echo $@$
+: 1545891971:0;echo $$
+: 1545891976:0;echo $@.$$
+: 1545891978:0;echo $@$$
+: 1545891980:0;echo $@$$$
+: 1545891981:0;echo $@$$$$
+: 1545891982:0;echo $@$$$$$
+: 1545891987:0;echo $@.$$$$$
+: 1545891990:0;echo $@.$$$$
+: 1545891996:0;$@
+: 1545892000:0;echo $@
+: 1545892004:0;echo $$
+: 1545892020:0;cat netgroup.byhost
+: 1545892022:0;sudo cat netgroup.byhost
+: 1545892026:0;sudo cat netgroup.byname
+: 1545892029:0;sudo cat netgroup.byuser
+: 1545892035:0;cat netgroup
+: 1545892038:0;sudo cat netgroup
+: 1545892039:0;ll
+: 1545892043:0;sudo cat sudoers
+: 1545892050:0;ls src
+: 1545892059:0;vim Makefile
+: 1545892114:0;/bin/domainname
+: 1545892117:0;ls
+: 1545892120:0;ls sa
+: 1545892123:0;sudo ls -l sa
+: 1545892128:0;l
+: 1545892163:0;ls *.*
+: 1545892168:0;ls
+: 1545892170:0;ls *.*
+: 1545892203:0;sudo rm autofs.map group.by* hosts.by* ipnodes.by* master.passwd.by* networks.by* shadow.by* rpc.byn*
+: 1545892204:0;l
+: 1545892223:0;sudo rm  netgroup.by* netid.byname passwd.by* protocols.byn* services.byname shells
+: 1545892225:0;l
+: 1545892235:0;sudo rm sudoers 
+: 1545892235:0;l
+: 1545892245:0;sudo rm passwd
+: 1545892247:0;l
+: 1545892248:0;ls
+: 1545892256:0;sudo vim netgroup
+: 1545892332:0;sudo make
+: 1545892333:0;l
+: 1545892336:0;ls sa
+: 1545892340:0;sudo ls -l sa
+: 1545892360:0;ls
+: 1545892365:0;ls passwd
+: 1545892368:0;cat passwd
+: 1545892384:0;cat netgroup
+: 1545892391:0;sudo cat netgroup
+: 1545892393:0;l
+: 1545892406:0;sudo +r netgroup
+: 1545892409:0;sudo chmod +r netgroup
+: 1545892409:0;l
+: 1545892429:0;sudo chmod +r ypservers ypupdate.log
+: 1545892430:0;l
+: 1545892450:0;cat netgroup
+: 1545892685:0;sudo vim /etc/exports
+: 1545892884:0;sudo service nfsd start
+: 1545892898:0;cat /var/run/mountd.pid
+: 1545892900:0;sudo cat /var/run/mountd.pid
+: 1545892907:0;kill -1 5311
+: 1545892909:0;sudo kill -1 5311
+: 1545893019:0;nfsd --version
+: 1545893023:0;man nfsd
+: 1545893052:0;man nfsv4
+: 1545893072:0;sudo vim /etc/rc.conf
+: 1545893148:0;sudo service nfsd restart
+: 1545893168:0;mount
+: 1545893275:0;sudo vim Makefile
+: 1545893312:0;cat /etc/exports
+: 1545893317:0;sudo vim /etc/exports
+: 1545893361:0;pgrep mountd
+: 1545893366:0;sudo kill -1 5311
+: 1545893375:0;sudo service nfsd restart
+: 1545893381:0;sudo service mountd restart
+: 1545893388:0;sudo vim /etc/rc.conf
+: 1545893399:0;sudo service mountd restart
+: 1545893407:0;pgrep mountd
+: 1545893413:0;sudo kill -1 5597
+: 1545894059:0;man auto_master
+: 1545895486:0;sudo vim /etc/auto_map
+: 1545895608:0;sudo vim /etc/autom
+: 1545895612:0;sudo vim /etc/auto_master
+: 1545895700:0;sudo kill -1 $(pgrep automountd)
+: 1545895706:0;sudo kill -1 `pgrep automountd`
+: 1545895711:0;sudo kill -1 $(pgrep automountd)
+: 1545895719:0;pgrep automountd
+: 1545895720:0;pgrep automount
+: 1545895732:0;sudo vim /etc/auto_master
+: 1545895741:0;sudo vim /etc/auto_map
+: 1545895811:0;sudo rm /etc/auto_map
+: 1545895821:0;service automountd status
+: 1545895916:0;sudo vim /etc/exports
+: 1545895924:0;man exports
+: 1545895950:0;sudo service mountd reload
+: 1545896016:0;sudo vim /etc/exports
+: 1545896218:0;ls /net
+: 1545896418:0;sudo service mountd reload 
+: 1545896736:0;man exports
+: 1545896773:0;sudo service mountd reload 
+: 1545896875:0;sudo service mountd restart
+: 1545896884:0;sudo service nfsd reload
+: 1545896887:0;sudo service nfsd restart
+: 1545896890:0;sudo service mountd restart
+: 1545897150:0;netstat -lt
+: 1545897153:0;netstat -l
+: 1545897156:0;netstat -ln
+: 1545897166:0;rpcinfo 
+: 1545897168:0;rpcinfo -p
+: 1545897408:0;showmount -a
+: 1545897412:0;showmount -e pro
+: 1545897432:0;nfsstat
+: 1545897438:0;sudo nfsstat
+: 1545897449:0;sudo nfsstat -s
+: 1545897540:0;sudo service mountd restart
+: 1545897652:0;cd /net
+: 1545897653:0;ls
+: 1545897663:0;touch home/this_is_home
+: 1545897665:0;sudo touch home/this_is_home
+: 1545897672:0;sudo touch datas/this_is_datas
+: 1545897677:0;sudo touch shares/this_is_shares
+: 1545897783:0;find
+: 1545897785:0;find .
+: 1545897872:0;sudo service mountd reload
+: 1545898687:0;sudo poweroff 
+: 1545932342:0;cd /tmp
+: 1545932345:0;vim a.py
+: 1545932354:0;python3 a.py
+: 1545932358:0;python a.py
+: 1545932365:0;python3.6
+: 1545932373:0;python3.6 -m numpy
+: 1546067825:0;sudo vim /etc/exports
+: 1546067849:0;sudo service mountd status
+: 1546067855:0;sudo service mountd reload
+: 1546068124:0;showmount -a
+: 1546068181:0;sudo service nfsd status
+: 1546068185:0;sudo service nfsd reload
+: 1546068189:0;sudo service nfsd restart
+: 1546068197:0;sudo service mountd statsu
+: 1546068199:0;sudo service mountd reload
+: 1546068203:0;showmount -a
+: 1546068207:0;ls /net
+: 1546068209:0;ls /net/datas
+: 1546068214:0;ls /net/shares
+: 1546068250:0;sudo service mountd stop
+: 1546068258:0;sudo service nfsd restart
+: 1546068261:0;sudo service mountd start
+: 1546068276:0;sudo service mountd reload
+: 1546068280:0;showmount -a
+: 1546068288:0;sudo service mountd reload
+: 1546068291:0;showmount -a
+: 1546068350:0;nfsstat -c
+: 1546068353:0;sudo nfsstat -c
+: 1546068432:0;showmount -c pro
+: 1546068434:0;showmount -e pro
+: 1546068599:0;cat /etc/exports
+: 1546068727:0;rpcbind -p
+: 1546068733:0;rpcinfo -p
+: 1546068984:0;sudo service mountd reload
+: 1546068992:0;showmount -e pro
+: 1546069036:0;sudo service mountd reload
+: 1546069077:0;showmount -e pro
+: 1546069080:0;sudo service mountd reload
+: 1546069119:0;showmount -e pro
+: 1546069429:0;sudo service mountd reload
+: 1546069583:0;showmount -e pro
+: 1546069881:0;sudo vim /etc/exports
+: 1546069960:0;sudo service mountd reload
+: 1546070459:0;showmount -e pro
+: 1546070520:0;sudo service mountd reload
+: 1546070521:0;showmount -e pro
+: 1546070535:0;sudo service mountd reload
+: 1546070555:0;showmount -e pro
+: 1546070741:0;cat /etc/defaults/f
+: 1546070753:0;locate nfs-ker
+: 1546070755:0;locate nfs-
+: 1546070863:0;sudo service mountd reload
+: 1546070939:0;sudo service mountd stop
+: 1546070941:0;sudo service mountd start
+: 1546070961:0;sudo service mountd stop
+: 1546070962:0;sudo service mountd start
+: 1546071053:0;sudo service mountd restart
+: 1546071146:0;cd hw
+: 1546071147:0;l
+: 1546071149:0;git pull
+: 1546071156:0;ls hw2
+: 1546071158:0;ls hw3
+: 1546071162:0;cd hw
+: 1546071163:0;cd hw3
+: 1546071164:0;ls
+: 1546071169:0;ls zbackup
+: 1546071172:0;cat zbackup
+: 1546071174:0;ls
+: 1546071179:0;cat ftp_watchd
+: 1546071213:0;cat /usr/local/etc/pureftpd.passwd
+: 1546071215:0;sudo cat /usr/local/etc/pureftpd.passwd
+: 1546071238:0;sudo cat /usr/local/etc/pure-ftpd.conf
+: 1546071243:0;cp /usr/local/etc/pure-ftpd.conf .
+: 1546071244:0;l
+: 1546071254:0;sudo chown soyccan mipool\]upload@2018.11.28_10:13:04.xz.enc
+: 1546071256:0;l
+: 1546071259:0;git status
+: 1546071264:0;git add -A 
+: 1546071277:0;git commit -m pure-ftpd.conf(hw3)
+: 1546071280:0;git commit -m 'pure-ftpd.conf(hw3)'
+: 1546071283:0;git push 
+: 1546071298:0;cd ..
+: 1546071298:0;l
+: 1546071302:0;ll
+: 1546071306:0;cd ..
+: 1546071307:0;lr
+: 1546071314:0;cd hw
+: 1546071316:0;find .
+: 1546071455:0;cd
+: 1546071459:0;sudo service mountd restart
+: 1546071575:0;cd /tmp
+: 1546071576:0;l
+: 1546071582:0;mkdir home shares datas
+: 1546071590:0;sudo service mountd restart
+: 1546071876:0;man mountd
+: 1546071971:0;cat /etc/rc.conf
+: 1546072017:0;cat /etc/zfs/exports
+: 1546072032:0;locate zfss
+: 1546072033:0;locate zfs
+: 1546072052:0;zfsh
+: 1546072053:0;zfs
+: 1546072057:0;sudo zfs
+: 1546072063:0;sudo zfs show
+: 1546072066:0;sudo zfs list
+: 1546072077:0;cat /etc/zfs/exports
+: 1546072093:0;strace
+: 1546072105:0;sudo service zfs status
+: 1546072109:0;sudo service zfsd status
+: 1546072113:0;sudo service zfs stop
+: 1546072119:0;pgrep zfs
+: 1546072241:0;sudo service mountd restart
+: 1546072483:0;sudo service mountd stop
+: 1546072486:0;sudo service mountd start
+: 1546072501:0;ls /net
+: 1546072505:0;ls /net -l
+: 1546072510:0;l /net
+: 1546072545:0;sudo service mountd restart
+: 1546072566:0;cat /etc/rc.conf
+: 1546072690:0;cd 
+: 1546072692:0;l
+: 1546072694:0;cd /
+: 1546072695:0;l
+: 1546072705:0;ls mipool
+: 1546072713:0;sudo mkdir export_home
+: 1546072715:0;sudo mkdir export_shares
+: 1546072718:0;sudo mkdir export_datas
+: 1546072737:0;sudo rm net/*
+: 1546072744:0;sudo rm -rf net/* 
+: 1546072745:0;ls net
+: 1546072747:0;ls
+: 1546072760:0;sudo touch export_home/hommmmme
+: 1546072771:0;sudo touch export_shares/sharrrrrres
+: 1546072775:0;sudo touch export_datas/dataaaaaaaas
+: 1546072780:0;find export*
+: 1546072808:0;sudo service mountd restart
+: 1546073173:0;showmount -e pro
+: 1546073234:0;sudo service mountd restart
+: 1546073240:0;ls
+: 1546073261:0;sudo mount --bind export_shares /net/shares
+: 1546073268:0;man bind
+: 1546073276:0;man mount
+: 1546073291:0;ls
+: 1546073297:0;sudo mkdir net/shares
+: 1546073299:0;sudo mkdir net/datas
+: 1546073301:0;sudo mkdir net/home
+: 1546073303:0;ls
+: 1546073320:0;sudo service mountd restart
+: 1546073377:0;showmount -e pro
+: 1546073586:0;showmount -a
+: 1546073589:0;showmount -e pro
+: 1546075305:0;sudo service nfsd status
+: 1546075312:0;sudo service nfsuserd status
+: 1546075318:0;sudo service mountd status
+: 1546075678:0;sudo service automountd restart
+: 1546075691:0;sudo service mountd restart
+: 1546075808:0;cd /net
+: 1546075809:0;ls
+: 1546075816:0;sudo touch datas/dataassssss
+: 1546075825:0;sudo touch home/hooooome
+: 1546075835:0;sudo touch shares/shhhhhares
+: 1546075904:0;sudo service mountd restart
+: 1546075914:0;cd shares
+: 1546075915:0;ls
+: 1546075916:0;ll
+: 1546075928:0;sudo chown god shhhhhares
+: 1546075930:0;ls
+: 1546075931:0;ll
+: 1546075971:0;sudo chown 0710029 shhhhhares
+: 1546075978:0;ll
+: 1546076005:0;l
+: 1546076008:0;cd .
+: 1546076010:0;ll ../
+: 1546076012:0;ll ../home
+: 1546076111:0;cat shhhhhares
+: 1546076115:0;ll
+: 1546076172:0;sudo vim /usr/local/etc/sudoers
+: 1546076182:0;ll /usr/local/etc/sudoers
+: 1546076185:0;sudo visudo
+: 1546076217:0;man sudoers
+: 1546076309:0;sudo vim /net/data/sudoers
+: 1546076324:0;sudo visudo
+: 1546076669:0;tail /var/lib/nfs/etab
+: 1546076695:0;sudo vim /net/data/sudoers
+: 1546076713:0;ll /net/datas
+: 1546076720:0;l /net/datas
+: 1546076727:0;sudo vim /net/data/sudoers
+: 1546076734:0;cd /net/datas
+: 1546076735:0;ls
+: 1546076741:0;sudo vim sudoers
+: 1546076755:0;cat /usr/local/etc/sudoers
+: 1546076964:0;setenv EDITOR vim
+: 1546076996:0;setenv
+: 1546077001:0;export EDITOR=vim
+: 1546077005:0;sudo visudo
+: 1546077028:0;export EDITOR=vim
+: 1546077031:0;where vim
+: 1546077036:0;export EDITOR=/usr/local/bin/vim
+: 1546077038:0;sudo visudo
+: 1546077055:0;export EDITOR=/usr/local/bin/vim
+: 1546077056:0;env
+: 1546077087:0;sudo visudo
+: 1546077122:0;sudo ls
+: 1546077127:0;id 
+: 1546077129:0;id pro
+: 1546077132:0;id god
+: 1546077150:0;ypcat passwd
+: 1546077156:0;ypcat group
+: 1546077168:0;id 0710029
+: 1546077181:0;id user
+: 1546077221:0;man sudoers
+: 1546077485:0;tmux a
+: 1546077486:0;tmux 
+: 1546077561:0;sudo vim /etc/rc.conf
+: 1546077596:0;sudo service inetd start
+: 1546077604:0;sudo vim /etc/host.allow
+: 1546077610:0;sudo vim /etc/hosts.allow
+: 1546077750:0;sudo service inetd start
+: 1546077755:0;sudo service inetd reload
+: 1546078158:0;u
+: 1546078161:0;ls
+: 1546081946:0;cd hw
+: 1546081948:0;ls
+: 1546081951:0;mkdir hw5
+: 1546081953:0;ll
+: 1546081964:0;cd hw5
+: 1546081966:0;ls
+: 1546081998:0;ln /etc/passwd .
+: 1546081999:0;ll
+: 1546082010:0;l
+: 1546082013:0;ls /etc/passwd
+: 1546082019:0;cat /etc/passwd
+: 1546082023:0;\ln
+: 1546082028:0;\ln /etc/passwd .
+: 1546082028:0;ll
+: 1546082029:0;l
+: 1546082038:0;\ln /etc/master.passwd .
+: 1546082048:0;mkdir etc 
+: 1546082051:0;mv master.passwd passwd etc
+: 1546082052:0;l
+: 1546082056:0;mkdir var
+: 1546082059:0;mkdir var/yp
+: 1546082062:0;cd var/yp
+: 1546082069:0;git status
+: 1546082072:0;cd ..
+: 1546082076:0;git status
+: 1546082079:0;cd ..
+: 1546082081:0;git status
+: 1546082086:0;cd hw5/var/yp
+: 1546082087:0;ll
+: 1546082099:0;\ln /var/yp/* .
+: 1546082101:0;l
+: 1546082118:0;ll /var/yp/
+: 1546082120:0;ll /var/yp/src
+: 1546082125:0;ll /var/yp/sa
+: 1546082131:0;mkdir src
+: 1546082133:0;cd src
+: 1546082143:0;\ln /var/yp/src/* .
+: 1546082144:0;l
+: 1546082145:0;cd ..
+: 1546082147:0;find
+: 1546082148:0;find .
+: 1546082154:0;cd ..
+: 1546082155:0;ls
+: 1546082160:0;ls etc
+: 1546082167:0;cd ..
+: 1546082168:0;ll
+: 1546082188:0;\ln /etc/rc.conf rc.conf.pro
+: 1546082189:0;l
+: 1546082202:0;ls hw5
+: 1546082205:0;ls hw5/etc
+: 1546082215:0;cd hw5
+: 1546082216:0;l
+: 1546082220:0;cd etc
+: 1546082230:0;mv ../../rc.conf.pro .
+: 1546082236:0;ll
+: 1546082239:0;ll /etc/passwd
+: 1546082244:0;ll /etc/rc.conf
+: 1546082249:0;ll
+: 1546082254:0;cd ..
+: 1546082256:0;cd etc
+: 1546082262:0;\ln /etc/hosts
+: 1546082264:0;l
+: 1546082268:0;\ln /etc/hosts.allow
+: 1546082303:0;\ln /usr/local/etc/sudoers .
+: 1546082304:0;l
+: 1546082318:0;cd ..
+: 1546082319:0;l
+: 1546082325:0;cd etc
+: 1546082356:0;cat /etc/auto_master
+: 1546082359:0;cd ..
+: 1546082360:0;l
+: 1546082361:0;mkdir pro
+: 1546082366:0;mv etc var pro
+: 1546082367:0;ll
+: 1546082369:0;cd pro
+: 1546082370:0;c d
+: 1546082371:0;l
+: 1546082376:0;cd etc
+: 1546082376:0;ll
+: 1546082381:0;mv rc.conf.pro rc.conf
+: 1546082382:0;l
+: 1546082408:0;vim ~/.zsh_history
+: 1546082426:0;cd ..
+: 1546082444:0;\ln ~/.zsh_history zsh_history
+: 1546082444:0;l
+: 1546082450:0;cd hw5
+: 1546082452:0;l
+: 1546082453:0;cd pro
+: 1546082462:0;vim ~/.zsh_history
+: 1546082522:0;cd etc
+: 1546082522:0;l
+: 1546082530:0;\ln /etc/exports .
+: 1546082530:0;l
+: 1546082539:0;git add -A
+: 1546082544:0;cd ..
+: 1546082548:0;git status
+: 1546082553:0;sudo git add -A

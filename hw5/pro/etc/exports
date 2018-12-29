@@ -1,0 +1,6 @@
+V4: /net -sec=sys 
+#/net/home -maproot=nobody 
+#/net/shares -mapall=user:users -network=10.0.0.12 -mask=255.255.255.255
+#/net/datas -ro playground
+/net/home /net/shares /net/datas -maproot=nobody playground
+
