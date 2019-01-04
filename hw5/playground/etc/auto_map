@@ -1,3 +1,3 @@
 home    -rw,soft,nosuid    pro:/net/home
 shares  -rw,soft,nosuid    pro:/net/shares
-datas   -rw,soft,nosuid    pro:/net/datas
+datas   -ro,soft,nosuid    pro:/net/datas
