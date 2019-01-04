@@ -1,6 +1,10 @@
 V4: /net -sec=sys 
+# in NFSv4 one filesystem should be in ONLY ONE LINE
+# so following settings won't work:
 #/net/home -maproot=nobody 
 #/net/shares -mapall=user:users -network=10.0.0.12 -mask=255.255.255.255
 #/net/datas -ro playground
+# the solution is to create multiple virtual disk using ZFS for each directory
+# and mount --bind them onto /net
 /net/home /net/shares /net/datas -maproot=nobody playground
 
