@@ -1,3 +1,4 @@
-proadm:*:2000:god,0710029
-users:*:2001:god,user,0710029
+acctadm:*:2000:god,0710029
+storadm:*:2001:god,0710029
+users:*:2002:god,user,0710029
 

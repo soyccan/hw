@@ -3654,3 +3654,12 @@ private/my.req.pem
 : 1546082544:0;cd ..
 : 1546082548:0;git status
 : 1546082553:0;sudo git add -A
+: 1546082558:0;git status
+: 1546082596:0;git commit -m 'hw5 config files from machine "pro"'
+: 1546082601:0;sudo git commit -m 'hw5 config files from machine "pro"'
+: 1546082616:0;sudo git config --global soyccan@gmail.com
+: 1546082623:0;sudo git config --global user.email soyccan@gmail.com
+: 1546082624:0;sudo git config --global soyccan@gmail.com
+: 1546082626:0;sudo git commit -m 'hw5 config files from machine "pro"'
+: 1546082630:0;git push
+: 1546083226:0;sudo reboot

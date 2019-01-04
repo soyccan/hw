@@ -1,4 +1,4 @@
-god:$6$s7apd.ADpApAjEGf$FV/qdXhtUgP.9KHQhGErP2ULal9aOzeqQ9rka74TTJiUFzKfLSfTikgvYGrZmuEWosy6cyrQYmr86c132GknL/:2000:2000::0:0:GOD:/net/home/god:/bin/tcsh
-user:$6$.haLSjFL.R0MaF5Z$g57xfLlafQOAPI1mT78w9zv2bRdgXfreeXKZgIonHp50Lf77ebjhRRgOfTueIhv7rTfkXJCrOuJYGF/XrBtXS1:2001:2001::0:0:normal user:/net/home/user:/bin/tcsh
+god:$6$Z0k72/eaDPQVwLKc$aRG2TG3XWU6LEE.yQs2Ic5I5qmCLDoDTWMAHz5Py1.VnQN4ovxB.b0t39l3AHm.qtmHksmhNC.Wde7zz4Pig7.:2000:2000::0:0:GOD:/net/home/god:/bin/tcsh
+user:$6$.haLSjFL.R0MaF5Z$g57xfLlafQOAPI1mT78w9zv2bRdgXfreeXKZgIonHp50Lf77ebjhRRgOfTueIhv7rTfkXJCrOuJYGF/XrBtXS1:2001:2002::0:0:normal user:/net/home/user:/bin/tcsh
 0710029:$6$75DEDDQeTJHHKhVU$.p.zr3syNCvkaVEAlRaYRCvRVuWPfiDG8KDzsfC.qxP16f9MyBvLgeNfc/fMv4lac2aLmZ6Gmsiny4Rvpna5L.:2002:2000::0:0:Student ID &:/net/home/0710029:/bin/tcsh
-
+batman::2003:2001::0:0: I'm BATMAN (automatically created account):/net/home/batman:/bin/tcsh
